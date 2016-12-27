@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../scss/fonts/Lato-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../scss/fonts/Lato-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Lato-ThinItalic';
+  src: url("../scss/fonts/Lato-ThinItalic.ttf") format("truetype"); }
+
+.title {
+  font-family: "Lato-Regular";
+  font-size: 32px; }
+  @media (min-device-width: 992px) {
+    .title {
+      font-size: 48px; } }
+
+.panel-title, .button_primary {
+  font-family: "Lato-Regular";
+  font-size: 16px; }
+  @media (min-device-width: 992px) {
+    .panel-title, .button_primary {
+      font-size: 18px; } }
+
+.nav-tabs > li > a, .custom-dropdown .dropdown-toggle {
+  font-family: "Lato-Regular";
+  font-size: 14px; }
+  @media (min-device-width: 992px) {
+    .nav-tabs > li > a, .custom-dropdown .dropdown-toggle {
+      font-size: 14px; } }
+
+.scrtabs-tab-scroll-arrow {
+  font-family: "Lato-Regular";
+  font-size: 10px; }
+  @media (min-device-width: 992px) {
+    .scrtabs-tab-scroll-arrow {
+      font-size: 10px; } }
+
+label {
+  font-family: "Lato-Regular";
+  font-size: 14px; }
+  @media (min-device-width: 992px) {
+    label {
+      font-size: 16px; } }
+
+.landing_wrapper {
+  background: url("../Images/Background.svg") no-repeat right;
+  min-height: 100vh; }
+
+.title {
+  color: #ffffff;
+  padding: 0 0 0 25px;
+  margin: 40px 0; }
+
+.right {
+  text-align: right; }
+
+.no-padding {
+  padding: 0; }
+
+.no-float {
+  float: none;
+  display: inline-block;
+  text-align: left; }
+
+.center {
+  text-align: center; }
+
+.parallelogram {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  -webkit-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+      transform: skew(-20deg); }
+  .parallelogram.active {
+    background-color: #ffffff;
+    color: #215B99; }
+
+.nav-tabs > li > a {
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  margin: 0; }
+  .nav-tabs > li > a:hover {
+    background-color: #ffffff;
+    color: #215B99; }
+  .nav-tabs > li > a:focus {
+    background-color: #ffffff;
+    color: #215B99;
+    outline: none; }
+
+.scrtabs-tab-container {
+  position: relative; }
+
+.scrtabs-tabs-fixed-container {
+  width: 100% !important;
+  padding-left: 8px; }
+
+.scrtabs-tab-scroll-arrow {
+  border: none;
+  color: #ffffff;
+  width: auto; }
+  .scrtabs-tab-scroll-arrow:hover, .scrtabs-tab-scroll-arrow :focus, .scrtabs-tab-scroll-arrow :active {
+    background-color: transparent;
+    color: #CCCCCC; }
+
+.scrtabs-js-tab-scroll-arrow-right {
+  position: absolute;
+  right: 0; }
+  .scrtabs-js-tab-scroll-arrow-right:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 8px;
+    background: url("../Images/chevron_right.svg") no-repeat center; }
+
+.scrtabs-js-tab-scroll-arrow-left:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 8px;
+  background: url("../Images/chevron_left.svg") no-repeat center; }
+
+.form {
+  margin-top: 24px; }
+
+.form-group {
+  margin-bottom: 10px; }
+
+label {
+  color: #ffffff;
+  margin-bottom: 10px; }
+
+.custom-dropdown .dropdown-toggle {
+  background-color: #ffffff;
+  border: none;
+  color: #CCCCCC;
+  padding: 10px;
+  width: 100%; }
+  .custom-dropdown .dropdown-toggle:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: url("../Images/down_chevron.svg") no-repeat center;
+    margin-left: 10px; }
+  .custom-dropdown .dropdown-toggle.selected {
+    color: #404040; }
+
+.custom-dropdown .dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  position: relative;
+  padding: 0;
+  width: 100%; }
+  .custom-dropdown .dropdown-menu .dropdown-item {
+    display: block;
+    color: #CCCCCC;
+    padding: 5px 10px; }
+    .custom-dropdown .dropdown-menu .dropdown-item:hover, .custom-dropdown .dropdown-menu .dropdown-item :focus, .custom-dropdown .dropdown-menu .dropdown-item :active {
+      background-color: #FAFAFA;
+      text-decoration: none;
+      color: #404040;
+      cursor: pointer; }
+
+.form-check-inline {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 36px; }
+  .form-check-inline:first-child {
+    margin-left: 16px; }
+
+.checkbox-custom {
+  opacity: 0;
+  position: absolute; }
+
+.checkbox-custom + .checkbox-custom-label:before {
+  content: '';
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center; }
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  background: white;
+  box-shadow: inset 0px 0px 0px 4px #215B99; }
+
+.panel {
+  background-color: transparent;
+  border: none;
+  box-shadow: none; }
+
+.panel-title {
+  color: #ffffff;
+  text-align: center; }
+  .panel-title a:hover,
+  .panel-title a:focus,
+  .panel-title a:active {
+    text-decoration: none; }
+  .panel-title a:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: url("../Images/dropdown_down.svg") no-repeat center;
+    margin-left: 10px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease; }
+
+.open:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease; }
+
+.panel-group .panel-heading + .panel-collapse > .list-group,
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border: none;
+  padding: 0; }
+
+.panel-body {
+  text-align: center; }
+
+.button_primary {
+  background-color: #ffffff;
+  border: none;
+  color: #215B99;
+  padding: 10px;
+  border-radius: 30px;
+  width: 250px; }
+  .button_primary:hover,
+  .button_primary :focus,
+  .button_primary :active {
+    background-color: #FAFAFA;
+    outline: none; }

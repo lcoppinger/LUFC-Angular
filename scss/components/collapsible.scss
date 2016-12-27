@@ -1,0 +1,51 @@
+.panel {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.panel-title {
+  @extend %sub-title-font;
+  color: $base-font_inverse;
+  text-align: center;
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+
+  a:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 10px;
+    background: url("../Images/dropdown_down.svg") no-repeat center;
+    margin-left: 10px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+  }
+}
+
+.open:after {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group,
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+  border: none;
+  padding: 0;
+}
+
+.panel-body {
+  text-align: center;
+}

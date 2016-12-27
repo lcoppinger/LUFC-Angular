@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="595px" height="456px" viewBox="0 0 595 456" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Football parts</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="450" cy="450" rx="450" ry="450"></ellipse>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="902" height="902">
+            <rect x="-1" y="-1" width="902" height="902" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-1" y="-1" width="902" height="902">
+            <rect x="-1" y="-1" width="902" height="902" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD">
+            <g id="Football-parts" transform="translate(143.558177, 4.626349) rotate(11.000000) translate(-143.558177, -4.626349) translate(-306.441823, -445.373651)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask" stroke="#215B99" mask="url(#mask-2)" stroke-width="2">
+                    <use mask="url(#mask-4)" xlink:href="#path-1"></use>
+                </g>
+                <g mask="url(#mask-3)">
+                    <g transform="translate(149.000000, 131.000000)">
+                        <path d="M89,682 L260.5,745 L296.5,771 C296.5,771 231.595766,773.270875 152.5,746.5 C73.4042342,719.729125 36.5,683 36.5,683 L89,682 Z" id="Polygon-15" stroke="#215B99"></path>
+                        <path d="M656,537 L729.5,474.5 C729.5,474.5 691.232134,558.500266 640.5,617 C589.767866,675.499734 520.5,715.5 520.5,715.5 L536,675.5 L656,537 Z" id="Polygon-10" stroke="#215B99"></path>
+                        <g id="Segment" stroke="none" fill-rule="evenodd" transform="translate(607.000000, 251.000000)">
+                            <polygon id="Triangle-17" fill-opacity="0.8" fill="#215B99" points="62.5 0 141.5 20 66 120"></polygon>
+                            <polygon id="Triangle-18" fill-opacity="0.8" fill="#5C92CC" points="62.5 5.96855898e-13 138 140 0.5 175"></polygon>
+                            <polygon id="Triangle-19" fill-opacity="0.8" fill="#1A4A7E" points="141 20 133 168.5 27 100"></polygon>
+                            <polygon id="Triangle-20" fill-opacity="0.8" fill="#397FC9" points="142 100 113.5 230.5 1 175"></polygon>
+                            <polygon id="Triangle-21" fill-opacity="0.8" fill="#215B99" points="126 200 49 285.5 1 175"></polygon>
+                            <polygon id="Triangle-22" fill-opacity="0.8" fill="#2C5F97" points="27 100 138.5 140 126 205"></polygon>
+                            <polygon id="Triangle-23" fill-opacity="0.8" fill="#215B99" points="20.5 120 114 230.5 49 286"></polygon>
+                            <polygon id="Triangle-24" fill-opacity="0.8" fill="#215B99" points="141 20 153.5 146.5 115.5 132"></polygon>
+                            <polygon id="Triangle-25" fill-opacity="0.8" fill="#5184BA" points="48.5 40 126 194 113.5 231.5"></polygon>
+                            <path d="M62.5,5.68434189e-14 L142,20 C142,20 151.179574,86.8998159 148,120 C144.820426,153.100184 122.5,223 122.5,223 L49,286 L0.5,175 L62.5,5.68434189e-14 Z" id="Polygon-8" stroke="#215B99"></path>
+                        </g>
+                        <g id="Segment" stroke="none" fill-rule="evenodd" transform="translate(260.000000, 675.000000)">
+                            <polygon id="Triangle-26" fill-opacity="0.8" fill="#215B99" points="275.5 0.5 262 35.5 171 54"></polygon>
+                            <polygon id="Triangle-27" fill-opacity="0.8" fill="#498DD6" points="125.5 7 275.5 1 171 54"></polygon>
+                            <polygon id="Triangle-28" fill-opacity="0.8" fill="#8BB4E0" points="125.5 7 187 69.5 15.5 81"></polygon>
+                            <polygon id="Triangle-29" fill-opacity="0.8" fill="#215B99" points="125.5 7 34.5 94 1 70"></polygon>
+                            <polygon id="Triangle-30" fill-opacity="0.8" fill="#215B99" points="94.5 22.5 208 65.5 147.5 83"></polygon>
+                            <polygon id="Triangle-31" fill-opacity="0.8" fill="#2A5787" points="125.5 7 262 36.5 206 66"></polygon>
+                            <polygon id="Triangle-32" fill-opacity="0.8" fill="#2F78C7" points="261.5 36.5 267.5 21 167 16"></polygon>
+                            <polygon id="Triangle-33" fill-opacity="0.8" fill="#5D8EC2" points="145.5 82 204 63.5 164.5 35.5"></polygon>
+                            <polygon id="Triangle-34" fill-opacity="0.8" fill="#5392D5" points="95 22.5 147 81.5 97 92.5"></polygon>
+                            <polygon id="Triangle-35" fill-opacity="0.8" fill="#1D456F" points="79.5 51 132 93 34 94.5"></polygon>
+                            <path d="M125.5,7 L276,0.5 L260.5,40.5 C260.5,40.5 190.053544,71.5670907 154,80.5 C117.946456,89.4329093 36.5,96 36.5,96 L0.5,70 L125.5,7 Z" id="Polygon-9"></path>
+                        </g>
+                        <polygon id="Polygon-4" stroke="#215B99" points="166.5 500.5 348.5 568.5 385.5 682 260.5 745 89 682 52 553.5"></polygon>
+                        <polygon id="Polygon-5" stroke="#215B99" points="295.5 1.70530257e-13 410 117 357 278 176.5 324 63.5 205.5 127.5 43.5"></polygon>
+                        <g id="Segment" stroke="none" fill-rule="evenodd" transform="translate(166.000000, 278.000000)">
+                            <g id="Inner-vector" transform="translate(0.000000, 0.000000)">
+                                <polygon id="Triangle-12" fill-opacity="0.8" fill="#4C8BCE" points="191 6.82121026e-13 147 193 43.5 213"></polygon>
+                                <polygon id="Triangle-13" fill-opacity="0.8" fill="#215B99" points="119 18.5 191 5.1159077e-13 66.5 247"></polygon>
+                                <polygon id="Triangle" fill-opacity="0.8" fill="#215B99" points="191 4.54747351e-13 280.5 133 158 93"></polygon>
+                                <polygon id="Triangle-2" fill-opacity="0.8" fill="#5693D4" points="227 53 294 153 216.5 248.5"></polygon>
+                                <polygon id="Triangle-3" fill-opacity="0.8" fill="#1F4F82" points="280.5 133 294 153 147.5 193"></polygon>
+                                <polygon id="Triangle-4" fill-opacity="0.9" fill="#3475BA" points="158 93 280 133 147.5 193"></polygon>
+                                <polygon id="Triangle-6" fill-opacity="0.8" fill="#84BDFA" points="220 173 229.5 233 182.5 290"></polygon>
+                                <polygon id="Triangle-11" fill-opacity="0.8" fill="#6E9CCD" points="11 46.5 129.5 16 0.5 222.5"></polygon>
+                                <polygon id="Triangle-5" fill-opacity="0.8" fill="#215B99" points="220.5 173 183 290.5 114.5 264.5"></polygon>
+                                <polygon id="Triangle-9" fill-opacity="0.8" fill="#90BDEC" points="11 46 107.5 133 28 233"></polygon>
+                                <polygon id="Triangle-8" fill-opacity="0.8" fill="#215B99" points="11 46.5 174 213 115 265"></polygon>
+                                <polygon id="Triangle-10" fill-opacity="0.8" fill="#18426F" points="106 53 127.5 133 0.5 222.5"></polygon>
+                                <polygon id="Triangle-14" fill-opacity="0.8" fill="#4C88C9" points="118.5 18.5 82 253 0.5 222.5"></polygon>
+                                <polygon id="Triangle-7" fill-opacity="0.8" fill="#528ECD" points="115 265 221.5 173 0.5 222.5"></polygon>
+                                <polygon id="Triangle-15" fill-opacity="0.8" fill="#174678" points="87 26.5 4.5 153 26.5 42"></polygon>
+                                <polygon id="Triangle-16" fill-opacity="0.8" fill="#3076C0" points="8 93 166 113 3.5 173"></polygon>
+                            </g>
+                            <polygon id="Polygon" stroke="#215B99" points="191.213626 3.41060513e-13 294.5 153 182.724927 290.520868 0.5 222.5 10.5 46"></polygon>
+                        </g>
+                        <polygon id="Polygon-6" stroke="#215B99" points="63.5 205.5 176.5 324 166.5 500.5 52 553.5 13 517.5 13 231"></polygon>
+                        <polygon id="Polygon-2" stroke="#215B99" points="568 107.5 669.5 251 607.5 426 460.5 431 357 278 410 117"></polygon>
+                        <polygon id="Polygon-3" stroke="#215B99" points="607.5 426 656 537 536 675.5 385.5 682 349 568.5 460.5 431"></polygon>
+                        <path d="M553.5,11 L628.5,11 C628.5,11 663.5,40.5 703.5,119.5 C743.5,198.5 749,271 749,271 L669.5,251 L568,107.5 L553.5,11 Z" id="Polygon-7" stroke="#215B99"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

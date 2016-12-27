@@ -1,0 +1,16 @@
+.button_primary {
+  @extend %sub-title-font;
+  background-color: $default_background;
+  border: none;
+  color: $hightlight_font;
+  padding: 10px;
+  border-radius: 30px;
+  width: 250px;
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: $hover_background;
+    outline: none;
+  }
+}

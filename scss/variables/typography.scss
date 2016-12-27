@@ -1,0 +1,82 @@
+//font-size
+$base-font-size--xs: 14px;
+$base-font-size--sm: $base-font-size--xs;
+$base-font-size--md: 16px;
+$base-font-size--lg: $base-font-size--md;
+
+$title-font-size--xs: 32px;
+$title-font-size--sm: $title-font-size--xs;
+$title-font-size--md: 48px;
+$title-font-size--lg: $title-font-size--md;
+
+$sub-title-font-size--xs: 16px;
+$sub-title-font-size--sm: $sub-title-font-size--xs;
+$sub-title-font-size--md: 18px;
+$sub-title-font-size--lg: $sub-title-font-size--md;
+
+$small-font-size--xs: 14px;
+$small-font-size--sm: $small-font-size--xs;
+$small-font-size--md: 14px;
+$small-font-size--lg: $small-font-size--md;
+
+$tab-font-size--xs: 10px;
+$tab-font-size--sm: $tab-font-size--xs;
+$tab-font-size--md: 10px;
+$tab-font-size--lg: $tab-font-size--md;
+
+$light__font-family__Lato: 'Lato-Light';
+$regular__font-family__Lato: 'Lato-Regular';
+
+%base-font {
+  font-family: $light__font-family__Lato;
+  font-size: $base-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $base-font-size--md;
+  }
+}
+
+%title-font {
+  font-family: $regular__font-family__Lato;
+  font-size: $title-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $title-font-size--md;
+  }
+}
+
+%sub-title-font {
+  font-family: $regular__font-family__Lato;
+  font-size: $sub-title-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $sub-title-font-size--md;
+  }
+}
+
+%small-font {
+  font-family: $regular__font-family__Lato;
+  font-size: $small-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $small-font-size--md;
+  }
+}
+
+%tab-font {
+  font-family: $regular__font-family__Lato;
+  font-size: $tab-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $tab-font-size--md;
+  }
+}
+
+%label {
+  font-family: $regular__font-family__Lato;
+  font-size: $base-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $base-font-size--md;
+  }
+}

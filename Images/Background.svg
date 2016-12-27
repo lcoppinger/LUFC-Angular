@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1038px" height="880px" viewBox="0 0 1038 880" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Background</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-402.000000, 0.000000)" fill="#215B99">
+            <g id="Form" transform="translate(402.000000, 0.000000)">
+                <g id="Background">
+                    <polygon id="Rectangle" fill-opacity="0.699999988" points="597.5 0 1038 0 1038 880 0.5 880"></polygon>
+                    <polygon id="Rectangle" points="705.5 0 1038 0 1038 880 114 880"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

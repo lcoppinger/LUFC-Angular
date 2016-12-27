@@ -1,0 +1,256 @@
+<!DOCTYPE>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LUFC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/vendor/jquery.scrolling-tabs.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="landing_wrapper">
+          <img src="Images/Football.svg"/>
+          <div class="col-md-6 pull-right">
+            <div class="col-md-8 pull-right right">
+              <h1 class="title">Leeds United match statistics</h1>
+              <ul class="nav nav-tabs" role="tablist">
+                <li><a href="#" class="parallelogram active">All</a></li>
+                <li><a href="#" class="parallelogram">2016/17</a></li>
+                <li><a href="#" class="parallelogram">2015/16</a></li>
+                <li><a href="#" class="parallelogram">2014/15</a></li>
+                <li><a href="#" class="parallelogram">2013/14</a></li>
+                <li><a href="#" class="parallelogram">2012/13</a></li>
+                <li><a href="#" class="parallelogram">2011/12</a></li>
+                <li><a href="#" class="parallelogram">2010/11</a></li>
+                <li><a href="#" class="parallelogram">2009/10</a></li>
+                <li><a href="#" class="parallelogram">2008/09</a></li>
+                <li><a href="#" class="parallelogram">2007/08</a></li>
+              </ul>
+            </div>
+            <form class="col-md-12 form">
+              <div class="col-md-9 pull-right no-padding">
+                <div class="form-group col-md-5 custom-select no-padding">
+                  <label>Competition</label>
+                  <div class="custom-dropdown">
+                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                      Choose a competition
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" data-value="All">All</a>
+                      <a class="dropdown-item" data-value="Championship">Championship</a>
+                      <a class="dropdown-item" data-value="League Cup">League Cup</a>
+                      <a class="dropdown-item" data-value="FA Cup">FA Cup</a>
+                      <a class="dropdown-item" data-value="League One">League One</a>
+                      <a class="dropdown-item" data-value="Football League Trophy">Football League Trophy</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-md-7 no-padding">
+                  <div class="form-check-inline">
+                    <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" value="Home">
+                    <label for="checkbox-1" class="checkbox-custom-label">Home</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox" value="Away">
+                    <label for="checkbox-2" class="checkbox-custom-label">Away</label>
+                  </div>
+                  <div class="form-check-inline">
+                    <input id="checkbox-3" class="checkbox-custom" name="checkbox-3" type="checkbox" value="Neutral">
+                    <label for="checkbox-3"class="checkbox-custom-label">Neutral</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 pull-right no-padding">
+                  <div class="form-group col-md-5 custom-select no-padding">
+                    <label>Manager</label>
+                    <div class="custom-dropdown">
+                      <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                        Choose a manager
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" data-value="All">All</a>
+                        <a class="dropdown-item" data-value="Garry Monk">Garry Monk</a>
+                        <a class="dropdown-item" data-value="Uwe Rosler">Uwe Rosler</a>
+                        <a class="dropdown-item" data-value="Steve Evans">Steve Evans</a>
+                        <a class="dropdown-item" data-value="David Hockaday">David Hockaday</a>
+                        <a class="dropdown-item" data-value="Neil Redfearn">Neil Redfearn</a>
+                        <a class="dropdown-item" data-value="Darko Milanič">Darko Milanič</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-7 no-padding">
+                    <div class="form-check-inline">
+                      <input id="checkbox-4" class="checkbox-custom" name="checkbox-1" type="checkbox" value="Won">
+                      <label for="checkbox-4" class="checkbox-custom-label">Won</label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input id="checkbox-5" class="checkbox-custom" name="checkbox-2" type="checkbox" value="Lost">
+                      <label for="checkbox-5" class="checkbox-custom-label">Lost</label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input id="checkbox-6" class="checkbox-custom" name="checkbox-3" type="checkbox" value="Draw">
+                      <label for="checkbox-6"class="checkbox-custom-label">Draw</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-11 pull-right no-padding">
+                    <div class="form-group col-md-4 custom-select no-padding">
+                      <label>Venue</label>
+                      <div class="custom-dropdown">
+                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                          Choose a venue
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" data-value="All">All</a>
+                          <a class="dropdown-item" data-value="Ellen Road">Ellen Road</a>
+                          <a class="dropdown-item" data-value="Loftus Road">Loftus Road</a>
+                          <a class="dropdown-item" data-value="Highbury Stadium">Highbury Stadium</a>
+                          <a class="dropdown-item" data-value="Hillsborough Stadium">Hillsborough Stadium</a>
+                          <a class="dropdown-item" data-value="Kenilworth Road">Kenilworth Road</a>
+                          <a class="dropdown-item" data-value="City Ground">City Ground</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 custom-select">
+                      <label>Goal scorers</label>
+                      <div class="custom-dropdown">
+                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                          Choose a player
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" data-value="All">All</a>
+                          <a class="dropdown-item" data-value="Chris Wood">Chris Wood</a>
+                          <a class="dropdown-item" data-value="Marcus Antonsson">Marcus Antonsson</a>
+                          <a class="dropdown-item" data-value="Pablo Hernández">Pablo Hernández</a>
+                          <a class="dropdown-item" data-value="Hadi Sacko">Hadi Sacko</a>
+                          <a class="dropdown-item" data-value="Tyler Denton">Tyler Denton</a>
+                          <a class="dropdown-item" data-value="Kemar Roofe">Kemar Roofe</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4 custom-select no-padding">
+                      <label>Opposition</label>
+                      <div class="custom-dropdown">
+                        <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                          Choose an opposition
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" data-value="All">All</a>
+                          <a class="dropdown-item" data-value="Garry Monk">Queens Park Rangers</a>
+                          <a class="dropdown-item" data-value="Uwe Rosler">Fleetwood Town</a>
+                          <a class="dropdown-item" data-value="Steve Evans">Steve Evans</a>
+                          <a class="dropdown-item" data-value="David Hockaday">Sheffield Wednesday</a>
+                          <a class="dropdown-item" data-value="Neil Redfearn">Luton Town</a>
+                          <a class="dropdown-item" data-value="Darko Milanič">Nottingham Forest</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 pull-right no-padding">
+                    <div class="panel-group">
+                      <div class="panel">
+                        <div class="panel-heading">
+                          <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse1" class="more_button">More options</a>
+                          </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                          <div class="panel-body">
+                            <div class="form-group col-md-5 custom-select no-float">
+                              <label>City</label>
+                              <div class="custom-dropdown">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                                  Choose a city
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" data-value="All">All</a>
+                                  <a class="dropdown-item" data-value="Leeds">Leeds</a>
+                                  <a class="dropdown-item" data-value="London">London</a>
+                                  <a class="dropdown-item" data-value="Sheffield">Sheffield</a>
+                                  <a class="dropdown-item" data-value="Luton">Luton</a>
+                                  <a class="dropdown-item" data-value="Nottingham">Nottingham</a>
+                                  <a class="dropdown-item" data-value="Cardiff">Cardiff</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-5 custom-select no-float">
+                              <label>Opposition manager</label>
+                              <div class="custom-dropdown">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                                  Choose an opposition manager
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" data-value="All">All</a>
+                                  <a class="dropdown-item" data-value="Jimmy Floyd Hasselbaink">Jimmy Floyd Hasselbaink</a>
+                                  <a class="dropdown-item" data-value="Uwe Rosler">Uwe Rosler</a>
+                                  <a class="dropdown-item" data-value="Gary Rowett">Gary Rowett</a>
+                                  <a class="dropdown-item" data-value="Slavisa Jokanovic">Slavisa Jokanovic</a>
+                                  <a class="dropdown-item" data-value="Carlos Carvalhal">Carlos Carvalhal</a>
+                                  <a class="dropdown-item" data-value="Nathan Jones">Nathan Jones</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-5 custom-select no-float">
+                              <label>Referee</label>
+                              <div class="custom-dropdown">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                                  Choose a referee
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" data-value="All">All</a>
+                                  <a class="dropdown-item" data-value="Oliver Langford">Oliver Langford</a>
+                                  <a class="dropdown-item" data-value="David Coote">David Coote</a>
+                                  <a class="dropdown-item" data-value="Paul Tierney">Paul Tierney</a>
+                                  <a class="dropdown-item" data-value="Chris Kavanagh">Chris Kavanagh</a>
+                                  <a class="dropdown-item" data-value="Simon Hooper">Simon Hooper</a>
+                                  <a class="dropdown-item" data-value="Kevin Johnson">Kevin Johnson</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group col-md-5 custom-select no-float">
+                              <label>Assistant manager</label>
+                              <div class="custom-dropdown">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                                  Choose an assistant manager
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" data-value="All">All</a>
+                                  <a class="dropdown-item" data-value="Pep Clotet">Pep Clotet</a>
+                                  <a class="dropdown-item" data-value="Rob Kelly">Rob Kelly</a>
+                                  <a class="dropdown-item" data-value="Paul Raynor">Paul Raynor</a>
+                                  <a class="dropdown-item" data-value="Junior Lewis">Junior Lewis</a>
+                                  <a class="dropdown-item" data-value="Novica Nikčević">Novica Nikčević</a>
+                                  <a class="dropdown-item" data-value="Steve Thompson">Steve Thompson</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 pull-right center">
+                    <button type="button" class="button_primary">Search</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          <div class="col-md-6">
+            <h4>test</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.scrolling-tabs.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

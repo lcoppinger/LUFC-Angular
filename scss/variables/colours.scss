@@ -1,0 +1,21 @@
+//pallette
+
+$white: #ffffff;
+$dark_grey: #404040;
+$light_grey: #CCCCCC;
+$hover_grey: #FAFAFA;
+$color: #215B99;
+
+//fonts
+$base-font_default: $dark_grey;
+$base-font_inverse: $white;
+$hightlight_font: $color;
+$unfocus_font: $light_grey;
+
+//background
+$default_background: $white;
+$highlight_background: $color;
+$hover_background: $hover_grey;
+
+//border
+$border-color_inverse: 1px solid $white;
