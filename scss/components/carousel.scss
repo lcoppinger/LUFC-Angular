@@ -1,0 +1,27 @@
+.slider {
+  @extend %carousel-font;
+  color: $base-font--default;
+  margin-top: 60px;
+  overflow: hidden;
+
+  .highlight {
+    color: $hightlight--font;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+.slide {
+  padding-right: 250px;
+}

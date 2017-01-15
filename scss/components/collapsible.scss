@@ -1,12 +1,12 @@
 .panel {
   background-color: transparent;
-  border: none;
+  border: 0;
   box-shadow: none;
 }
 
 .panel-title {
   @extend %sub-title-font;
-  color: $base-font_inverse;
+  color: $base-font--inverse;
   text-align: center;
 
   a:hover,
@@ -15,34 +15,27 @@
     text-decoration: none;
   }
 
-  a:after {
+  a::after {
+    background: url('../Images/dropdown_down.svg') no-repeat center;
     content: '';
     display: inline-block;
-    width: 15px;
     height: 10px;
-    background: url("../Images/dropdown_down.svg") no-repeat center;
     margin-left: 10px;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease;
+    transition-duration: .5s;
     transition-timing-function: ease;
+    width: 15px;
   }
 }
 
-.open:after {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
+.open::after {
   transform: rotate(180deg);
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease;
+  transition-duration: .5s;
   transition-timing-function: ease;
 }
 
 .panel-group .panel-heading+.panel-collapse>.list-group,
 .panel-group .panel-heading+.panel-collapse>.panel-body {
-  border: none;
+  border: 0;
   padding: 0;
 }
 

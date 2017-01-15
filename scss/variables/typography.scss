@@ -24,11 +24,16 @@ $tab-font-size--sm: $tab-font-size--xs;
 $tab-font-size--md: 10px;
 $tab-font-size--lg: $tab-font-size--md;
 
-$light__font-family__Lato: 'Lato-Light';
-$regular__font-family__Lato: 'Lato-Regular';
+$carousel-font-size--xs: 26px;
+$carousel-font-size--sm: $carousel-font-size--xs;
+$carousel-font-size--md: 32px;
+$carousel-font-size--lg: $carousel-font-size--md;
+
+$light--font-family--lato: 'Lato-Light';
+$regular--font-family--lato: 'Lato-Regular';
 
 %base-font {
-  font-family: $light__font-family__Lato;
+  font-family: $light--font-family--lato;
   font-size: $base-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {
@@ -37,7 +42,7 @@ $regular__font-family__Lato: 'Lato-Regular';
 }
 
 %title-font {
-  font-family: $regular__font-family__Lato;
+  font-family: $regular--font-family--lato;
   font-size: $title-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {
@@ -46,7 +51,7 @@ $regular__font-family__Lato: 'Lato-Regular';
 }
 
 %sub-title-font {
-  font-family: $regular__font-family__Lato;
+  font-family: $regular--font-family--lato;
   font-size: $sub-title-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {
@@ -55,7 +60,7 @@ $regular__font-family__Lato: 'Lato-Regular';
 }
 
 %small-font {
-  font-family: $regular__font-family__Lato;
+  font-family: $regular--font-family--lato;
   font-size: $small-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {
@@ -64,7 +69,7 @@ $regular__font-family__Lato: 'Lato-Regular';
 }
 
 %tab-font {
-  font-family: $regular__font-family__Lato;
+  font-family: $regular--font-family--lato;
   font-size: $tab-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {
@@ -72,8 +77,17 @@ $regular__font-family__Lato: 'Lato-Regular';
   }
 }
 
+%carousel-font {
+  font-family: $regular--font-family--lato;
+  font-size: $carousel-font-size--xs;
+
+  @media (min-device-width: $screen-md-min) {
+    font-size: $carousel-font-size--md;
+  }
+}
+
 %label {
-  font-family: $regular__font-family__Lato;
+  font-family: $regular--font-family--lato;
   font-size: $base-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {

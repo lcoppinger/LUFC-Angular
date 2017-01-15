@@ -1,13 +1,13 @@
-.landing_wrapper {
-  background: url("../Images/Background.svg") no-repeat right;
+.landing-wrapper {
+  background: url('../Images/Background.svg') no-repeat right;
   min-height: 100vh;
 }
 
 .title {
   @extend %title-font;
-  color: $base-font_inverse;
-  padding: 0 0 0 25px;
+  color: $base-font--inverse;
   margin: 40px 0;
+  padding: 0 0 0 25px;
 }
 
 .right {
@@ -19,11 +19,15 @@
 }
 
 .no-float {
-  float: none;
   display: inline-block;
+  float: none;
   text-align: left;
 }
 
 .center {
   text-align: center;
+}
+
+.results-wrapper {
+  margin: 40px 5%;
 }

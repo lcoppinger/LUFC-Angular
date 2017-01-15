@@ -2,31 +2,29 @@
   text-align: center;
   width: 100px;
 	height: 40px;
-	-webkit-transform: skew(-20deg);
-	-moz-transform: skew(-20deg);
 	transform: skew(-20deg);
 
   &.active {
-    background-color: $default_background;
-    color: $hightlight_font;
+    background-color: $default-background;
+    color: $hightlight--font;
   }
 }
 
 .nav-tabs>li>a {
   @extend %small-font;
-  border: $border-color_inverse;
+  border: $border-color--inverse;
   border-radius: 0;
-  color: $base-font_inverse;
+  color: $base-font--inverse;
   margin: 0;
 
   &:hover {
-    background-color: $default_background;
-    color: $hightlight_font;
+    background-color: $default-background;
+    color: $hightlight--font;
   }
 
   &:focus {
-    background-color: $default_background;
-    color: $hightlight_font;
+    background-color: $default-background;
+    color: $hightlight--font;
     outline: none;
   }
 
@@ -44,12 +42,12 @@
 .scrtabs-tab-scroll-arrow {
   @extend %tab-font;
   border: none;
-  color: $base-font_inverse;
+  color: $base-font--inverse;
   width: auto;
 
   &:hover, :focus, :active {
     background-color: transparent;
-    color: $unfocus_font;
+    color: $unfocus--font;
   }
 }
 

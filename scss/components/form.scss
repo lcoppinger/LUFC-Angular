@@ -9,51 +9,54 @@
 //select boxes
 label {
   @extend %label;
-  color: $base-font_inverse;
+  color: $base-font--inverse;
   margin-bottom: 10px;
 }
+
 .custom-dropdown {
   .dropdown-toggle {
     @extend %small-font;
-    background-color: $default_background;
-    border: none;
-    color: $unfocus_font;
+    background-color: $default-background;
+    border: 0;
+    color: $unfocus--font;
     padding: 10px;
     width: 100%;
 
-    &:after {
+    &::after {
+      background: url('../Images/down_chevron.svg') no-repeat center;
       content: '';
       display: inline-block;
-      width: 15px;
       height: 10px;
-      background: url("../Images/down_chevron.svg") no-repeat center;
       margin-left: 10px;
+      width: 15px;
     }
 
     &.selected {
-      color: $base-font_default;
+      color: $base-font--default;
     }
   }
 
   .dropdown-menu {
-    background-color: $default_background;
-    border-radius: 0;
+    background-color: $default-background;
     border: 0;
+    border-radius: 0;
     box-shadow: none;
-    position: relative;
     padding: 0;
+    position: absolute;
     width: 100%;
 
     .dropdown-item {
+      color: $unfocus--font;
       display: block;
-      color: $unfocus_font;
       padding: 5px 10px;
 
-      &:hover, :focus, :active {
-        background-color: $hover_background;
-        text-decoration: none;
-        color: $base-font_default;
+      &:hover,
+      :focus,
+      :active {
+        background-color: $hover-background;
+        color: $base-font--default;
         cursor: pointer;
+        text-decoration: none;
       }
     }
   }
@@ -75,21 +78,21 @@ label {
   position: absolute;
 }
 
-.checkbox-custom + .checkbox-custom-label:before {
-  content: '';
+.checkbox-custom + .checkbox-custom-label::before {
   background: transparent;
-  border: $border-color_inverse;
+  border: $border-color--inverse;
   border-radius: 50%;
+  content: '';
   display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  padding: 2px;
+  text-align: center;
   vertical-align: middle;
   width: 25px;
-  height: 25px;
-  padding: 2px;
-  margin-right: 10px;
-  text-align: center;
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
-    background: white;
-    box-shadow: inset 0px 0px 0px 4px $highlight_background;
+    background: $default-background;
+    box-shadow: inset 0 0 0 4px $highlight-background;
 }

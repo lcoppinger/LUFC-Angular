@@ -1,21 +1,30 @@
 //pallette
 
-$white: #ffffff;
-$dark_grey: #404040;
-$light_grey: #CCCCCC;
-$hover_grey: #FAFAFA;
-$color: #215B99;
+$white: #fff;
+$dark-grey: #404040;
+$light-grey: #ccc;
+$hover-grey: #fafafa;
+$color: #215b99;
+$won: #8dbe58;
+$loss: #c33f3f;
+$draw: #ffb439;
 
 //fonts
-$base-font_default: $dark_grey;
-$base-font_inverse: $white;
-$hightlight_font: $color;
-$unfocus_font: $light_grey;
+$base-font--default: $dark-grey;
+$base-font--inverse: $white;
+$hightlight--font: $color;
+$unfocus--font: $light-grey;
 
 //background
-$default_background: $white;
-$highlight_background: $color;
-$hover_background: $hover_grey;
+$default-background: $white;
+$highlight-background: $color;
+$hover-background: $hover-grey;
 
 //border
-$border-color_inverse: 1px solid $white;
+$border-color--inverse: 1px solid $white;
+$border-color--color: 1px solid $color;
+
+//won/loss/draw
+$won-background: transparentize($won, .5);
+$loss-background: transparentize($loss, .5);
+$draw-background: transparentize($draw, .5);

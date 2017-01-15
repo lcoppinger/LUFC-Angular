@@ -1,0 +1,94 @@
+.table-responsive {
+  overflow: hidden;
+  position: relative;
+}
+
+.table {
+  border: $border-color--color;
+}
+
+.table>thead>tr>th {
+  @extend %sub-title-font;
+  background-color: $highlight-background;
+  border: 0;
+  color: $base-font--inverse;
+  vertical-align: middle;
+}
+
+.table>tbody>tr>td {
+  @extend %base-font;
+  border: 0;
+  vertical-align: middle;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.table>tbody>tr:hover {
+  background-color: $hover-background;
+}
+
+.won {
+  background-color: $won-background;
+  text-align: center;
+}
+
+.draw {
+  background-color: $draw-background;
+  text-align: center;
+}
+
+.lost {
+  background-color: $loss-background;
+  text-align: center;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.drop {
+  cursor: pointer;
+
+  &::after {
+    background: url('../Images/chevron-down_dark.svg') no-repeat center;
+    content: '';
+    display: inline-block;
+    float: right;
+    height: 22px;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    width: 12px;
+  }
+
+  &.open::after {
+    transform: rotate(180deg);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+  }
+}
+
+.dropdown-content {
+  background-color: $hover-background;
+  display: none;
+  padding: 10px 0;
+  position: absolute;
+  width: calc(100% + 8px);
+  z-index: 2;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.extra-table {
+  background-color: $default-background;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  z-index: 2;
+}
