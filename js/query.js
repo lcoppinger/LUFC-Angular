@@ -15,15 +15,9 @@ function search(season) {
     if(data.hasOwnProperty('values')){
       for (var i = 0; i < data.values.length; i++) {
           var values = data.values[i];
-          var select = $("#competition").attr("data-value");
-
-          if (values[0] === select){
-            console.log(values);
-          }
-
-          var competition = "<td data-value=" + values[0] + ">" + values[0] + "</td>";
-          var date = "<td data-value=" + values[3] + ">" + values[3] + "</td>";
-          var han = "<td>" + values[4] + "</td>";
+          var competition = "<td class='competition' data-value='"+values[0]+"'>" + values[0] + "</td>";
+          var date = "<td data-value='"+values[3]+"'>" + values[3] + "</td>";
+          var han = "<td class='han' data-value='"+values[4]+"'>" + values[4] + "</td>";
           var venue = "<td>" + values[7] + "</td>";
           var result = "<td>" + values[13] + "</td>";
           var manager = (typeof values[14] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[14] + "</td>";
@@ -44,11 +38,11 @@ function search(season) {
 
           //Determine Result and styling
           if (values[13] == "Won" || values[13] == "Won (P)") {
-            var result = "<td class='won'>" + values[13] + "</td>";
+            var result = "<td class='won result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (values[13] == "Draw") {
-            var result = "<td class='draw'>" + values[13] + "</td>";
+            var result = "<td class='draw result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (values[13] == "Lost" || values[13] == "Lost (P)") {
-            var result = "<td class='lost'>" + values[13] + "</td>";
+            var result = "<td class='lost result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (typeof values[14] === "undefined") {
             var result = "<td>" + "-" + "</td>";
           }
@@ -71,18 +65,32 @@ function search(season) {
           document.getElementById("extra-results").innerHTML += "<tr>" + assistant_manager + opposition_manager + referee + city + "</tr>";
       }
     }
+
+    var competition = $("#competition").attr("data-value");
+    var checkbox = $(".checkbox-custom");
+
+    if (competition !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".competition").attr("data-value");
+
+        if (result !== competition) {
+          $(this).hide();
+        }
+      });
+    } else if ($(checkbox).is(':checked')) {
+      $('.checkbox-custom:checked').each(function() {
+         var checked = this.value;
+
+         $("tbody tr").each(function(){
+           var result = $(this).find(".han").attr("data-value");
+           console.log(result);
+           if (result !== checked) {
+             $(this).hide();
+           }
+         });
+      });
+    }
   });
-};
-
-function filter() {
-  var competition = $("#competition").attr("data-value");
-  var values = $("td").attr("data-value", competition);
-
-  if (competition === "null") {
-    return false;
-  } else {
-
-  }
 };
 
 $(document).ready(function(){
@@ -90,7 +98,6 @@ $(document).ready(function(){
   $(".search").click(function(){
     var season = $(".active").attr("data-value");
     search(season);
-    //filter();
     $(".results-wrapper").show();
     $('html, body').animate({
       scrollTop: $(".results-wrapper").offset().top
