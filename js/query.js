@@ -53,11 +53,11 @@ function search(season) {
           } else if (typeof values[19] === "undefined") {
             var scorers = "<td class='scorer' data-value='"+values[18]+"'>" + values[18] + "</td>";
           } else {
-            var scorer3 = (typeof values[20] === "undefined") ? "" : "<p class='scorer' data-value='"+values[20]+"'>" + values[20] + "</p>";
-            var scorer4 = (typeof values[21] === "undefined") ? "" : "<p class='scorer' data-value='"+values[21]+"'>" + values[21] + "</p>";
-            var scorer5 = (typeof values[22] === "undefined") ? "" : "<p class='scorer' data-value='"+values[22]+"'>" + values[22] + "</p>";
+            var scorer3 = (typeof values[20] === "undefined") ? "" : "<p class='scorer3' data-value='"+values[20]+"'>" + values[20] + "</p>";
+            var scorer4 = (typeof values[21] === "undefined") ? "" : "<p class='scorer4' data-value='"+values[21]+"'>" + values[21] + "</p>";
+            var scorer5 = (typeof values[22] === "undefined") ? "" : "<p class='scorer5' data-value='"+values[22]+"'>" + values[22] + "</p>";
             var scorers = "<td>" + "<div class='dropdown'>" + "<div class='drop scorer' data-value='"+values[18]+"'>" + values[18] + "</div>"
-                          + "<div class='dropdown-content'>" + "<p class='scorer' data-value='"+values[19]+"'>" + values[19] + "</p>" + scorer3
+                          + "<div class='dropdown-content'>" + "<p class='scorer2' data-value='"+values[19]+"'>" + values[19] + "</p>" + scorer3
                           + scorer4 + scorer5 + "</div>" + "</div>" + "</td>";
           }
 
@@ -109,9 +109,13 @@ function search(season) {
     if (scorer !== "null") {
       $("tbody tr").each(function(){
         var result = $(this).find(".scorer").attr("data-value");
+        var result2 = $(this).find(".scorer2").attr("data-value");
 
         if (result !== scorer) {
           $(this).hide();
+        } if (result2 === scorer) {
+          $(this).find(".scorer").html("<td>"+result2+"</td");
+          $(this).show();
         }
       });
     }
