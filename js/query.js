@@ -18,9 +18,9 @@ function search(season) {
           var competition = "<td class='competition' data-value='"+values[0]+"'>" + values[0] + "</td>";
           var date = "<td data-value='"+values[3]+"'>" + values[3] + "</td>";
           var han = "<td class='han' data-value='"+values[4]+"'>" + values[4] + "</td>";
-          var venue = "<td>" + values[7] + "</td>";
+          var venue = "<td class='venue' data-value='"+values[7]+"'>" + values[7] + "</td>";
           var result = "<td>" + values[13] + "</td>";
-          var manager = (typeof values[14] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[14] + "</td>";
+          var manager = (typeof values[14] === "undefined") ? "<td>" + "-" + "</td>" : "<td class='manager' data-value='"+values[14]+"'>" + values[14] + "</td>";
 
           var assistant_manager = (typeof values[15] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[15] + "</td>";
           var opposition_manager = (typeof values[16] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[16] + "</td>";
@@ -29,10 +29,10 @@ function search(season) {
 
           // Determine if Home or Away
           if (values[4] == "Home") {
-            var opposition = "<td>" + values[12] + "</td>";
+            var opposition = "<td class='opposition' data-value='"+values[12]+"'>" + values[12] + "</td>";
             var score = "<td>" + "<span>" + values[9] + "</span>" + " - " + values[11] + " " + values[10] + "</td>";
           } else {
-            var opposition = "<td>" + values[8] + "</td>";
+            var opposition = "<td class='opposition' data-value='"+values[8]+"'>" + values[8] + "</td>";
             var score = "<td>" + values[9] + " - " + "<span>" + values[11] + "</span>" + " " + values[10] + "</td>";
           }
 
@@ -51,13 +51,13 @@ function search(season) {
           if (typeof values[18] === "undefined") {
             var scorers = "<td>" + "-" + "</td>";
           } else if (typeof values[19] === "undefined") {
-            var scorers = "<td>" + values[18] + "</td>";
+            var scorers = "<td class='scorer' data-value='"+values[18]+"'>" + values[18] + "</td>";
           } else {
-            var scorer3 = (typeof values[20] === "undefined") ? "" : "<p>" + values[20] + "</p>";
-            var scorer4 = (typeof values[21] === "undefined") ? "" : "<p>" + values[21] + "</p>";
-            var scorer5 = (typeof values[22] === "undefined") ? "" : "<p>" + values[22] + "</p>";
-            var scorers = "<td>" + "<div class='dropdown'>" + "<div class='drop'>" + values[18] + "</div>"
-                          + "<div class='dropdown-content'>" + "<p>" + values[19] + "</p>" + scorer3
+            var scorer3 = (typeof values[20] === "undefined") ? "" : "<p class='scorer' data-value='"+values[20]+"'>" + values[20] + "</p>";
+            var scorer4 = (typeof values[21] === "undefined") ? "" : "<p class='scorer' data-value='"+values[21]+"'>" + values[21] + "</p>";
+            var scorer5 = (typeof values[22] === "undefined") ? "" : "<p class='scorer' data-value='"+values[22]+"'>" + values[22] + "</p>";
+            var scorers = "<td>" + "<div class='dropdown'>" + "<div class='drop scorer' data-value='"+values[18]+"'>" + values[18] + "</div>"
+                          + "<div class='dropdown-content'>" + "<p class='scorer' data-value='"+values[19]+"'>" + values[19] + "</p>" + scorer3
                           + scorer4 + scorer5 + "</div>" + "</div>" + "</td>";
           }
 
@@ -66,8 +66,15 @@ function search(season) {
       }
     }
 
+    //filtering
     var competition = $("#competition").attr("data-value");
-    var checkbox = $(".checkbox-custom");
+    var checkbox = $("#wld .checkbox-custom");
+    var checkbox2 = $("#han .checkbox-custom");
+    var manager = $("#manager").attr("data-value");
+    var venue = $("#venue").attr("data-value");
+    var scorer = $("#scorer").attr("data-value");
+    var opposition = $("#opposition").attr("data-value");
+
 
     if (competition !== "null") {
       $("tbody tr").each(function(){
@@ -77,21 +84,81 @@ function search(season) {
           $(this).hide();
         }
       });
-    } else if ($(checkbox).is(':checked')) {
-      $('.checkbox-custom:checked').each(function() {
-         var checked = this.value;
+    }
 
-         $("tbody tr").each(function(){
-           var result = $(this).find(".han").attr("data-value");
-           console.log(result);
-           if (result !== checked) {
-             $(this).hide();
-           }
-         });
+    if (manager !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".manager").attr("data-value");
+
+        if (result !== manager) {
+          $(this).hide();
+        }
+      });
+    }
+
+    if (venue !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".venue").attr("data-value");
+
+        if (result !== venue) {
+          $(this).hide();
+        }
+      });
+    }
+
+    if (scorer !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".scorer").attr("data-value");
+
+        if (result !== scorer) {
+          $(this).hide();
+        }
+      });
+    }
+
+    if (opposition !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".opposition").attr("data-value");
+
+        if (result !== opposition) {
+          $(this).hide();
+        }
+      });
+    }
+
+    if ($(checkbox).is(':checked')) {
+      var arr = [];
+      $('.checkbox-custom:checked').each(function() {
+         arr.push(this.value)
+      });
+      $("tbody tr").each(function(){
+        var result = $(this).find(".result").attr("data-value");
+
+        if ($.inArray(result, arr) === -1) {
+          $(this).hide();
+        }
+
+      });
+    }
+
+    if ($(checkbox2).is(':checked')) {
+      var arr = [];
+      $('.checkbox-custom:checked').each(function() {
+         arr.push(this.value)
+      });
+      $("tbody tr").each(function(){
+        var result = $(this).find(".han").attr("data-value");
+
+        if ($.inArray(result, arr) === -1) {
+          $(this).hide();
+        }
+
       });
     }
   });
 };
+
+
 
 $(document).ready(function(){
   $(".results-wrapper").hide();
