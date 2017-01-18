@@ -15,11 +15,8 @@ function search(season) {
     if(data.hasOwnProperty('values')){
       for (var i = 0; i < data.values.length; i++) {
           var values = data.values[i];
-          var select = $("#competition").attr("data-value");
-
-          if (values[0] === select){
-            console.log(values);
-          }
+          var comSelect = $("#competition").attr("data-value");
+          var venueSelect = $("#venue").attr("data-value");
 
           var competition = "<td data-value=" + values[0] + ">" + values[0] + "</td>";
           var date = "<td data-value=" + values[3] + ">" + values[3] + "</td>";
