@@ -6,6 +6,8 @@ function search(season) {
 
   //empty previous search result
   $("#results").empty();
+  $(".collapse-hide").removeClass('collapse-show');
+  $(".plus").show();
 
   //request season data
   $.get(request, function(data){
@@ -22,10 +24,10 @@ function search(season) {
           var result = "<td>" + values[13] + "</td>";
           var manager = (typeof values[14] === "undefined") ? "<td>" + "-" + "</td>" : "<td class='manager' data-value='"+values[14]+"'>" + values[14] + "</td>";
 
-          var assistant_manager = (typeof values[15] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[15] + "</td>";
-          var opposition_manager = (typeof values[16] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[16] + "</td>";
-          var referee = (typeof values[17] === "undefined") ? "<td>" + "-" + "</td>" : "<td>" + values[17] + "</td>";
-          var city = "<td>" + values[6] + "</td>";
+          var assistant_manager = (typeof values[15] === "undefined") ? "<td class='collapse-hide'>" + "-" + "</td>" : "<td class='collapse-hide assistant_manager' data-value='"+values[15]+"'>" + values[15] + "</td>";
+          var opposition_manager = (typeof values[16] === "undefined") ? "<td class='collapse-hide'>" + "-" + "</td>" : "<td class='collapse-hide opposition_manager' data-value='"+values[16]+"'>" + values[16] + "</td>";
+          var referee = (typeof values[17] === "undefined") ? "<td class='collapse-hide'>" + "-" + "</td>" : "<td class='collapse-hide referee' data-value='"+values[17]+"'>" + values[17] + "</td>";
+          var city = "<td class='collapse-hide city' data-value='"+values[6]+"'>" + values[6] + "</td>";
 
           // Determine if Home or Away
           if (values[4] == "Home") {
@@ -61,8 +63,7 @@ function search(season) {
                           + scorer4 + scorer5 + "</div>" + "</div>" + "</td>";
           }
 
-          document.getElementById("results").innerHTML += "<tr>" + competition + date + han + venue + opposition + score + result + scorers + manager + "</tr>";
-          document.getElementById("extra-results").innerHTML += "<tr>" + assistant_manager + opposition_manager + referee + city + "</tr>";
+          document.getElementById("results").innerHTML += "<tr>" + competition + date + han + venue + opposition + score + result + scorers + manager + assistant_manager + opposition_manager + referee + city + "</tr>";
       }
     }
 
@@ -74,8 +75,12 @@ function search(season) {
     var venue = $("#venue").attr("data-value");
     var scorer = $("#scorer").attr("data-value");
     var opposition = $("#opposition").attr("data-value");
+    var assistant_manager = $("#assistant_manager").attr("data-value");
+    var opposition_manager = $("#opposition_manager").attr("data-value");
+    var referee = $("#referee").attr("data-value");
+    var city = $("#city").attr("data-value");
 
-
+    //select box filters
     if (competition !== "null") {
       $("tbody tr").each(function(){
         var result = $(this).find(".competition").attr("data-value");
@@ -115,6 +120,7 @@ function search(season) {
           $(this).hide();
         } if (result2 === scorer) {
           $(this).find(".scorer").html("<td>"+result2+"</td");
+          $(".drop").addClass('no-view');
           $(this).show();
         }
       });
@@ -130,6 +136,56 @@ function search(season) {
       });
     }
 
+    //extra data select box filters
+    if (assistant_manager !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".assistant_manager").attr("data-value");
+
+        if (result !== assistant_manager) {
+          $(this).hide();
+          $(".collapse-hide").addClass('collapse-show');
+          $(".plus").hide();
+        }
+      });
+    }
+
+    if (opposition_manager !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".opposition_manager").attr("data-value");
+
+        if (result !== opposition_manager) {
+          $(this).hide();
+          $(".collapse-hide").addClass('collapse-show');
+          $(".plus").hide();
+        }
+      });
+    }
+
+    if (referee !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".referee").attr("data-value");
+
+        if (result !== referee) {
+          $(this).hide();
+          $(".collapse-hide").addClass('collapse-show');
+          $(".plus").hide();
+        }
+      });
+    }
+
+    if (city !== "null") {
+      $("tbody tr").each(function(){
+        var result = $(this).find(".city").attr("data-value");
+
+        if (result !== city) {
+          $(this).hide();
+          $(".collapse-hide").addClass('collapse-show');
+          $(".plus").hide();
+        }
+      });
+    }
+
+    //checkbox filters
     if ($(checkbox).is(':checked')) {
       var arr = [];
       $('.checkbox-custom:checked').each(function() {
@@ -158,6 +214,11 @@ function search(season) {
         }
 
       });
+    }
+
+    if ($("tbody tr").length === 0) {
+      console.log("none");
+      $(".table-responsive").hide();
     }
   });
 };

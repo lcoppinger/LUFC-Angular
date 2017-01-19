@@ -64,11 +64,13 @@ $(document).ready(function() {
 
   //toggle extra table
   $("#plus").click(function() {
-    $(".extra-table").animate({width: "650px"}, 500);
+    $(".collapse-hide").addClass('collapse-show');
+    $(".plus").hide();
   });
 
   $("#minus").click(function() {
-    $(".extra-table").animate({width: "0"}, 500);
+    $(".collapse-hide").removeClass('collapse-show');
+    $(".plus").show();
   });
 
 });

@@ -166,7 +166,7 @@
                         <div class="form-group col-md-5 custom-select no-float">
                           <label>City</label>
                           <div class="custom-dropdown">
-                            <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="dropdown-toggle" id="city" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
                               Choose a city
                             </button>
                             <div class="dropdown-menu">
@@ -183,7 +183,7 @@
                         <div class="form-group col-md-5 custom-select no-float">
                           <label>Opposition manager</label>
                           <div class="custom-dropdown">
-                            <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="dropdown-toggle" id="opposition_manager" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
                               Choose an opposition manager
                             </button>
                             <div class="dropdown-menu">
@@ -200,7 +200,7 @@
                         <div class="form-group col-md-5 custom-select no-float">
                           <label>Referee</label>
                           <div class="custom-dropdown">
-                            <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="dropdown-toggle" id="referee" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
                               Choose a referee
                             </button>
                             <div class="dropdown-menu">
@@ -217,7 +217,7 @@
                         <div class="form-group col-md-5 custom-select no-float">
                           <label>Assistant manager</label>
                           <div class="custom-dropdown">
-                            <button type="button" class="dropdown-toggle" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="dropdown-toggle" id="assistant_manager" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
                               Choose an assistant manager
                             </button>
                             <div class="dropdown-menu">
@@ -282,22 +282,15 @@
                   <th>Opposition</th>
                   <th>Score</th>
                   <th>Result</th>
-                  <th>Goal Scorers</th>
-                  <th>Manager <button type="button" class="plus-button" id="plus"><img src="Images/Plus_button.svg"/></button></th>
+                  <th class="goal-scorers">Goal Scorers</th>
+                  <th>Manager <button type="button" class="plus-button plus" id="plus"><img src="Images/Plus_button.svg"/></button></th>
+                  <th class="collapse-hide">Assistant Manager</th>
+                  <th class="collapse-hide">Opposition Manager</th>
+                  <th class="collapse-hide">Referee</th>
+                  <th class="collapse-hide">City <button type="button" class="plus-button" id="minus"><img src="Images/Minus-button.svg"/></button></th>
                 </tr>
               </thead>
               <tbody id="results"></tbody>
-            </table>
-            <table class="table extra-table">
-              <thead>
-                <tr>
-                  <th>Assistant Manager</th>
-                  <th>Opposition Manager</th>
-                  <th>Referee</th>
-                  <th>City <button type="button" class="plus-button" id="minus"><img src="Images/Minus-button.svg"/></button></th>
-                </tr>
-              </thead>
-              <tbody id="extra-results"></tbody>
             </table>
           </div>
         </div>

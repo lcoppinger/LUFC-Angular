@@ -29,6 +29,10 @@
   background-color: $hover-background;
 }
 
+.goal-scorers {
+  min-width: 122px;
+}
+
 .won {
   background-color: $won-background;
   text-align: center;
@@ -69,6 +73,10 @@
     transition-duration: .5s;
     transition-timing-function: ease;
   }
+
+  &.no-view::after {
+    display: none;
+  }
 }
 
 .dropdown-content {
@@ -84,11 +92,14 @@
   }
 }
 
-.extra-table {
-  background-color: $default-background;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  z-index: 2;
+.collapse-hide {
+  display: none;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+}
+
+.collapse-show {
+  display: table-cell;
+  transition-duration: .5s;
+  transition-timing-function: ease;
 }

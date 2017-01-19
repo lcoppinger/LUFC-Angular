@@ -320,6 +320,9 @@ label {
 .table > tbody > tr:hover {
   background-color: #fafafa; }
 
+.goal-scorers {
+  min-width: 122px; }
+
 .won {
   background-color: rgba(141, 190, 88, 0.5);
   text-align: center; }
@@ -358,6 +361,8 @@ label {
             transition-duration: .5s;
     -webkit-transition-timing-function: ease;
             transition-timing-function: ease; }
+  .drop.no-view::after {
+    display: none; }
 
 .dropdown-content {
   background-color: #fafafa;
@@ -369,10 +374,16 @@ label {
   .dropdown-content.visible {
     display: block; }
 
-.extra-table {
-  background-color: #fff;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  z-index: 2; }
+.collapse-hide {
+  display: none;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
+
+.collapse-show {
+  display: table-cell;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
