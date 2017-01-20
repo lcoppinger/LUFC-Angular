@@ -7,8 +7,8 @@ $(document).ready(function() {
 
   //custom tab controllers
   $(".glyphicon").remove();
-  $(".scrtabs-js-tab-scroll-arrow-right").text("more seasons");
-  $(".scrtabs-js-tab-scroll-arrow-left").text("less seasons");
+  $(".scrtabs-js-tab-scroll-arrow-right").text("previous seasons");
+  $(".scrtabs-js-tab-scroll-arrow-left").text("recent seasons");
 
   $(".parallelogram").click(function() {
     $(".parallelogram").not(this).each(function() {
@@ -48,7 +48,7 @@ $(document).ready(function() {
     $(this).toggleClass("open");
   });
 
-  //Carousel
+  //Facts Carousel
   $('.slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -72,5 +72,6 @@ $(document).ready(function() {
     $(".collapse-hide").removeClass('collapse-show');
     $(".plus").show();
   });
+
 
 });

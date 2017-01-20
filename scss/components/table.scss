@@ -103,3 +103,16 @@
   transition-duration: .5s;
   transition-timing-function: ease;
 }
+
+.no-results {
+  display: table;
+  height: 100px;
+  text-align: center;
+  width: 100%;
+
+  p {
+    @extend %base-font;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

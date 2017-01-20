@@ -16,12 +16,56 @@
     cursor: pointer;
     text-decoration: none;
   }
+
+  .slick-arrow {
+    display: none !important;
+  }
 }
 
-.slick-arrow {
-  display: none !important;
+.slick-slide img {
+  display: inline-block;
 }
 
 .slide {
   padding-right: 250px;
+}
+
+.season-wrapper {
+  margin: 30px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.season-tab {
+  @extend %base-font;
+  color: $base-font--default;
+  display: inline-block;
+  position: relative;
+  width: 350px;
+
+  .season {
+    text-align: center;
+  }
+
+  .slick-center {
+    @extend %sub-title-font;
+    color: $hightlight--font;
+  }
+
+  .slick-prev {
+    background: url('../Images/previous-arrow.svg') no-repeat center;
+    border: 0;
+    height: 25px;
+    left: -20px;
+    position: absolute;
+  }
+
+  .slick-next {
+    background: url('../Images/next-arrow.svg') no-repeat center;
+    border: 0;
+    height: 25px;
+    position: absolute;
+    right: -20px;
+    top: 0;
+  }
 }

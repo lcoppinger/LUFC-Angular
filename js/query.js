@@ -212,21 +212,23 @@ function search(season) {
         if ($.inArray(result, arr) === -1) {
           $(this).hide();
         }
-
       });
     }
-
-    if ($("tbody tr").length === 0) {
-      console.log("none");
-      $(".table-responsive").hide();
-    }
   });
+
 };
 
+/*
+if ($("tbody tr:visible").length === 0) {
+  console.log($("tbody tr:visible").length);
+  $(".table-responsive").hide();
+  $(".no-results").show();
+}
+*/
 
-
-$(document).ready(function(){
+$(document).ready(function() {
   $(".results-wrapper").hide();
+  $(".no-results").hide();
   $(".search").click(function(){
     var season = $(".active").attr("data-value");
     search(season);
@@ -234,5 +236,21 @@ $(document).ready(function(){
     $('html, body').animate({
       scrollTop: $(".results-wrapper").offset().top
     }, 2000);
+
+    //Season Carousel
+    $('.season-tab').slick({
+      centerMode: true,
+      centerPadding: '0',
+      slidesToShow: 3
+    });
+
+
+    $(".slick-arrow").empty();
+  });
+
+  $(this).on("click", ".slick-arrow", function() {
+    event.preventDefault();
+    var season = $(".slick-center").attr("data-value");
+    search(season);
   });
 });
