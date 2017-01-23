@@ -39,11 +39,11 @@ function search(season) {
           }
 
           //Determine Result and styling
-          if (values[13] == "Won" || values[13] == "Won (P)") {
+          if (values[13] == "Won" || values[13] == "Won (P)" || values[13] == "Won (P)") {
             var result = "<td class='won result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (values[13] == "Draw") {
             var result = "<td class='draw result' data-value='"+values[13]+"'>" + values[13] + "</td>";
-          } else if (values[13] == "Lost" || values[13] == "Lost (P)") {
+          } else if (values[13] == "Lost" || values[13] == "Lost (P)" || values[13] == "Lost (ET)") {
             var result = "<td class='lost result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (typeof values[14] === "undefined") {
             var result = "<td>" + "-" + "</td>";
@@ -191,7 +191,7 @@ function search(season) {
       $('.checkbox-custom:checked').each(function() {
          arr.push(this.value)
       });
-      $("tbody tr").each(function(){
+      $("tbody tr").each(function() {
         var result = $(this).find(".result").attr("data-value");
 
         if ($.inArray(result, arr) === -1) {
@@ -244,13 +244,17 @@ $(document).ready(function() {
       slidesToShow: 3
     });
 
+    $(".season").each(function(){
+      if ($(this).attr("data-value") === season) {
+        console.log(this);
+        $(this).addClass('picked');
+      }
+    });
 
     $(".slick-arrow").empty();
   });
 
   $(this).on("click", ".slick-arrow", function() {
     event.preventDefault();
-    var season = $(".slick-center").attr("data-value");
-    search(season);
   });
 });

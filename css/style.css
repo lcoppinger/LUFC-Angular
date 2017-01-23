@@ -182,9 +182,9 @@ label {
     color: #ccc;
     display: block;
     padding: 5px 10px; }
-    .custom-dropdown .dropdown-menu .dropdown-item::hover,
-    .custom-dropdown .dropdown-menu .dropdown-item ::focus,
-    .custom-dropdown .dropdown-menu .dropdown-item ::active {
+    .custom-dropdown .dropdown-menu .dropdown-item:hover,
+    .custom-dropdown .dropdown-menu .dropdown-item :focus,
+    .custom-dropdown .dropdown-menu .dropdown-item :active {
       background-color: #fafafa;
       color: #404040;
       cursor: pointer;
