@@ -1,9 +1,8 @@
 app.controller('FormController', ['$scope', 'filter', function($scope, filter){
-  var data = filter.get('competition');
   $scope.competition = {
     label: 'Competition',
     placeholder: 'Choose a competition',
-    options: data
+    options: []
   };
   $scope.han = {
     label: 'han',

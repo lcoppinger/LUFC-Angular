@@ -4,6 +4,7 @@ app.factory('filter', ['$http', function($http){
       $http.get("/json/"+name+".json").then(successCallback, errorCallback);
 
       function successCallback(response){
+          console.log(response.data);
           return response.data;
       }
       function errorCallback(error){
