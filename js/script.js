@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   //scroll nav tabs
   $('.nav-tabs').scrollingTabs({
     scrollToTabEdge: true
@@ -32,7 +31,7 @@ $(document).ready(function() {
 
     $(dropdown).children(".dropdown-item").each(function(){
       $(this).click(function(){
-        var data = $(this).attr("data-value")
+        var data = $(this).attr("data-value");
         $(button).html($(this).html()).addClass('selected');
         $(button).attr("data-value", data);
         $(dropdown).slideToggle();

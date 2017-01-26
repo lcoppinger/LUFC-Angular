@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/vendor/slick.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
-  <body>
-    <div class="container-fluid landing-wrapper">
+  <body ng-app="LUFCApp">
+    <div class="container-fluid landing-wrapper" ng-controller="FormController">
       <div class="row">
         <img src="Images/Football.svg"/>
         <div class="col-md-6 pull-right">
@@ -41,68 +41,15 @@
           <form class="col-md-12 form">
             <div class="col-md-9 pull-right no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
-                <label>Competition</label>
-                <div class="custom-dropdown">
-                  <button type="button" class="dropdown-toggle" id="competition" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                    Choose a competition
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" data-value="null">All</a>
-                    <a class="dropdown-item" data-value="Championship">Championship</a>
-                    <a class="dropdown-item" data-value="League Cup">League Cup</a>
-                    <a class="dropdown-item" data-value="FA Cup">FA Cup</a>
-                    <a class="dropdown-item" data-value="League One">League One</a>
-                    <a class="dropdown-item" data-value="Football League Trophy">Football League Trophy</a>
-                  </div>
-                </div>
+                <form-select select="competition"></form-select>
               </div>
-              <div class="form-group col-md-7 no-padding" id="han">
-                <div class="form-check-inline">
-                  <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" value="Home">
-                  <label for="checkbox-1" class="checkbox-custom-label">Home</label>
-                </div>
-                <div class="form-check-inline">
-                  <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox" value="Away">
-                  <label for="checkbox-2" class="checkbox-custom-label">Away</label>
-                </div>
-                <div class="form-check-inline">
-                  <input id="checkbox-3" class="checkbox-custom" name="checkbox-3" type="checkbox" value="Neutral">
-                  <label for="checkbox-3" class="checkbox-custom-label">Neutral</label>
-                </div>
-              </div>
+              <form-checkbox check="han"></form-checkbox>
             </div>
             <div class="col-md-10 pull-right no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
-                <label>Manager</label>
-                  <div class="custom-dropdown">
-                    <button type="button" class="dropdown-toggle" data-toggle="dropdown" id="manager" data-value="null" aria-haspopup="true" aria-expanded="false">
-                      Choose a manager
-                    </button>
-                    <div class="dropdown-menu">
-                      <a class="dropdown-item" data-value="null">All</a>
-                      <a class="dropdown-item" data-value="Garry Monk">Garry Monk</a>
-                      <a class="dropdown-item" data-value="Uwe Rosler">Uwe Rosler</a>
-                      <a class="dropdown-item" data-value="Steve Evans">Steve Evans</a>
-                      <a class="dropdown-item" data-value="David Hockaday">David Hockaday</a>
-                      <a class="dropdown-item" data-value="Neil Redfearn">Neil Redfearn</a>
-                      <a class="dropdown-item" data-value="Darko Milanič">Darko Milanič</a>
-                    </div>
-                  </div>
+                <form-select select="manager"></form-select>
               </div>
-              <div class="form-group col-md-7 no-padding" id="wld">
-                <div class="form-check-inline">
-                  <input id="checkbox-4" class="checkbox-custom" name="checkbox-4" type="checkbox" value="Won">
-                  <label for="checkbox-4" class="checkbox-custom-label">Won</label>
-                </div>
-                <div class="form-check-inline">
-                  <input id="checkbox-5" class="checkbox-custom" name="checkbox-5" type="checkbox" value="Lost">
-                  <label for="checkbox-5" class="checkbox-custom-label">Lost</label>
-                </div>
-                <div class="form-check-inline">
-                  <input id="checkbox-6" class="checkbox-custom" name="checkbox-6" type="checkbox" value="Draw">
-                  <label for="checkbox-6" class="checkbox-custom-label">Draw</label>
-                </div>
-              </div>
+              <form-checkbox check="wld"></form-checkbox>
             </div>
             <div class="col-md-11 pull-right no-padding">
               <div class="form-group col-md-4 custom-select no-padding">
@@ -316,11 +263,30 @@
         </div>
       </div>
     </div>
+
+    <!-- vendor scripts -->
+    <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
+
+    <!-- carousel scripts -->
     <script src="js/vendor/jquery.scrolling-tabs.min.js"></script>
     <script src="js/vendor/slick.min.js"></script>
-    <script src="js/query.js"></script>
+
+    <!-- module -->
+    <script src="js/app.js"></script>
+
+    <!-- controllers -->
+    <script src="js/controllers/FormController.js"></script>
+
+    <!-- services -->
+    <script src="js/services/filter.js"></script>
+
+    <!-- directives -->
+    <script src="js/directives/formSelect.js"></script>
+    <script src="js/directives/formCheckbox.js"></script>
+
+    <!-- page jquery -->
     <script src="js/script.js"></script>
   </body>
 </html>

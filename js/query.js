@@ -30,37 +30,40 @@ function search(season) {
           var city = "<td class='collapse-hide city' data-value='"+values[6]+"'>" + values[6] + "</td>";
 
           // Determine if Home or Away
+          var opposition = [];
+          var score = [];
           if (values[4] == "Home") {
-            var opposition = "<td class='opposition' data-value='"+values[12]+"'>" + values[12] + "</td>";
-            var score = "<td>" + "<span>" + values[9] + "</span>" + " - " + values[11] + " " + values[10] + "</td>";
+            opposition = "<td class='opposition' data-value='"+values[12]+"'>" + values[12] + "</td>";
+            score = "<td>" + "<span>" + values[9] + "</span>" + " - " + values[11] + " " + values[10] + "</td>";
           } else {
-            var opposition = "<td class='opposition' data-value='"+values[8]+"'>" + values[8] + "</td>";
-            var score = "<td>" + values[9] + " - " + "<span>" + values[11] + "</span>" + " " + values[10] + "</td>";
+            opposition = "<td class='opposition' data-value='"+values[8]+"'>" + values[8] + "</td>";
+            score = "<td>" + values[9] + " - " + "<span>" + values[11] + "</span>" + " " + values[10] + "</td>";
           }
 
           //Determine Result and styling
           if (values[13] == "Won" || values[13] == "Won (P)" || values[13] == "Won (P)") {
-            var result = "<td class='won result' data-value='"+values[13]+"'>" + values[13] + "</td>";
+            result = "<td class='won result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (values[13] == "Draw") {
-            var result = "<td class='draw result' data-value='"+values[13]+"'>" + values[13] + "</td>";
+            result = "<td class='draw result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (values[13] == "Lost" || values[13] == "Lost (P)" || values[13] == "Lost (ET)") {
-            var result = "<td class='lost result' data-value='"+values[13]+"'>" + values[13] + "</td>";
+            result = "<td class='lost result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (typeof values[14] === "undefined") {
-            var result = "<td>" + "-" + "</td>";
+            result = "<td>" + "-" + "</td>";
           }
 
           //Determine goal scoreres
+          var scorers = [];
           if (typeof values[18] === "undefined") {
-            var scorers = "<td>" + "-" + "</td>";
+            scorers = "<td>" + "-" + "</td>";
           } else if (typeof values[19] === "undefined") {
-            var scorers = "<td class='scorer' data-value='"+values[18]+"'>" + values[18] + "</td>";
+            scorers = "<td class='scorer' data-value='"+values[18]+"'>" + values[18] + "</td>";
           } else {
             var scorer3 = (typeof values[20] === "undefined") ? "" : "<p class='scorer3' data-value='"+values[20]+"'>" + values[20] + "</p>";
             var scorer4 = (typeof values[21] === "undefined") ? "" : "<p class='scorer4' data-value='"+values[21]+"'>" + values[21] + "</p>";
             var scorer5 = (typeof values[22] === "undefined") ? "" : "<p class='scorer5' data-value='"+values[22]+"'>" + values[22] + "</p>";
-            var scorers = "<td>" + "<div class='dropdown'>" + "<div class='drop scorer' data-value='"+values[18]+"'>" + values[18] + "</div>"
-                          + "<div class='dropdown-content'>" + "<p class='scorer2' data-value='"+values[19]+"'>" + values[19] + "</p>" + scorer3
-                          + scorer4 + scorer5 + "</div>" + "</div>" + "</td>";
+            scorers = "<td>" + "<div class='dropdown'>" + "<div class='drop scorer' data-value='"+values[18]+"'>" + values[18] + "</div>" +
+                      "<div class='dropdown-content'>" + "<p class='scorer2' data-value='"+values[19]+"'>" + values[19] + "</p>" + scorer3 +
+                      scorer4 + scorer5 + "</div>" + "</div>" + "</td>";
           }
 
           document.getElementById("results").innerHTML += "<tr>" + competition + date + han + venue + opposition + score + result + scorers + manager + assistant_manager + opposition_manager + referee + city + "</tr>";
@@ -189,7 +192,7 @@ function search(season) {
     if ($(checkbox).is(':checked')) {
       var arr = [];
       $('.checkbox-custom:checked').each(function() {
-         arr.push(this.value)
+         arr.push(this.value);
       });
       $("tbody tr").each(function() {
         var result = $(this).find(".result").attr("data-value");
@@ -204,7 +207,7 @@ function search(season) {
     if ($(checkbox2).is(':checked')) {
       var arr = [];
       $('.checkbox-custom:checked').each(function() {
-         arr.push(this.value)
+         arr.push(this.value);
       });
       $("tbody tr").each(function(){
         var result = $(this).find(".han").attr("data-value");
@@ -215,8 +218,7 @@ function search(season) {
       });
     }
   });
-
-};
+}
 
 /*
 if ($("tbody tr:visible").length === 0) {

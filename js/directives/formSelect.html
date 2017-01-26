@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<label>{{ select.label }}</label>
+<div class="custom-dropdown">
+  <button type="button" class="dropdown-toggle" ng-id="{{ select.label }}" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
+    {{ select.placeholder }}
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" ng-repeat="product in select.options" data-value="{{ product.name }}">{{ product.name }}</a>
+  </div>
+</div>
