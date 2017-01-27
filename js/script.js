@@ -16,10 +16,6 @@ $(document).ready(function() {
     $(this).addClass('active');
   });
 
-  if ($("#tab1").is(':visible')) {
-    $(".scrtabs-js-tab-scroll-arrow-left").hide();
-  }
-
   //custom select form element
   $(".custom-dropdown").each(function(){
     var button = $(this).children(".dropdown-toggle");

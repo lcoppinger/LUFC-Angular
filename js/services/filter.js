@@ -1,15 +1,13 @@
 app.factory('filter', ['$http', function($http){
-  return {
-    get: function(name) {
-      $http.get("/json/"+name+".json").then(successCallback, errorCallback);
-
-      function successCallback(response){
-          console.log(response.data);
-          return response.data;
-      }
-      function errorCallback(error){
-          return error;
-      }
-    }
-  };
+var selectOptions = {
+  get: function(name) {
+    var promise = $http.get("/json/"+name+".json").then(function (response) {
+       return response.data;
+     }).then(function(err){
+       return err;
+     });
+     return promise;
+  }
+};
+return selectOptions;
 }]);

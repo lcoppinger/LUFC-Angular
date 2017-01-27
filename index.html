@@ -21,21 +21,7 @@
           <div class="col-md-8 pull-right right">
             <h1 class="title">Leeds United match statistics</h1>
             <ul class="nav nav-tabs" role="tablist">
-              <li><a href="#" class="parallelogram" id="tab1" data-value="2016-17">All</a></li>
-              <li><a href="#" class="parallelogram active" data-value="2016-17">2016/17</a></li>
-              <li><a href="#" class="parallelogram" data-value="2015-16">2015/16</a></li>
-              <li><a href="#" class="parallelogram" data-value="2014-15">2014/15</a></li>
-              <li><a href="#" class="parallelogram" data-value="2013-14">2013/14</a></li>
-              <li><a href="#" class="parallelogram" data-value="2012-13">2012/13</a></li>
-              <li><a href="#" class="parallelogram" data-value="2011-12">2011/12</a></li>
-              <li><a href="#" class="parallelogram" data-value="2010-11">2010/11</a></li>
-              <li><a href="#" class="parallelogram" data-value="2009-10">2009/10</a></li>
-              <li><a href="#" class="parallelogram" data-value="2008-09">2008/09</a></li>
-              <li><a href="#" class="parallelogram" data-value="2007-08">2007/08</a></li>
-              <li><a href="#" class="parallelogram" data-value="2006-07">2006/07</a></li>
-              <li><a href="#" class="parallelogram" data-value="2005-06">2005/06</a></li>
-              <li><a href="#" class="parallelogram" data-value="2004-05">2004/05</a></li>
-              <li><a href="#" class="parallelogram" data-value="2003-04">2003/04</a></li>
+              <li ng-repeat="product in season"><a href="#" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</a></li>
             </ul>
           </div>
           <form class="col-md-12 form">
@@ -53,55 +39,13 @@
             </div>
             <div class="col-md-11 pull-right no-padding">
               <div class="form-group col-md-4 custom-select no-padding">
-                <label>Venue</label>
-                <div class="custom-dropdown">
-                  <button type="button" class="dropdown-toggle" id="venue" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                    Choose a venue
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" data-value="null">All</a>
-                    <a class="dropdown-item" data-value="Elland Road">Elland Road</a>
-                    <a class="dropdown-item" data-value="Loftus Road">Loftus Road</a>
-                    <a class="dropdown-item" data-value="Highbury Stadium">Highbury Stadium</a>
-                    <a class="dropdown-item" data-value="Hillsborough Stadium">Hillsborough Stadium</a>
-                    <a class="dropdown-item" data-value="Kenilworth Road">Kenilworth Road</a>
-                    <a class="dropdown-item" data-value="City Ground">City Ground</a>
-                  </div>
-                </div>
+                <form-select select="venue"></form-select>
               </div>
               <div class="form-group col-md-4 custom-select">
-                <label>Goal scorers</label>
-                <div class="custom-dropdown">
-                  <button type="button" class="dropdown-toggle" id="scorer" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                    Choose a player
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" data-value="null">All</a>
-                    <a class="dropdown-item" data-value="Chris Wood">Chris Wood</a>
-                    <a class="dropdown-item" data-value="Marcus Antonsson">Marcus Antonsson</a>
-                    <a class="dropdown-item" data-value="Pablo Hernández">Pablo Hernández</a>
-                    <a class="dropdown-item" data-value="Hadi Sacko">Hadi Sacko</a>
-                    <a class="dropdown-item" data-value="Tyler Denton">Tyler Denton</a>
-                    <a class="dropdown-item" data-value="Kemar Roofe">Kemar Roofe</a>
-                  </div>
-                </div>
+                <form-select select="scorers"></form-select>
               </div>
               <div class="form-group col-md-4 custom-select no-padding">
-                <label>Opposition</label>
-                <div class="custom-dropdown">
-                  <button type="button" class="dropdown-toggle" id="opposition" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                    Choose an opposition
-                  </button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" data-value="null">All</a>
-                    <a class="dropdown-item" data-value="Queens Park Rangers">Queens Park Rangers</a>
-                    <a class="dropdown-item" data-value="Fleetwood Town">Fleetwood Town</a>
-                    <a class="dropdown-item" data-value="Steve Evans">Steve Evans</a>
-                    <a class="dropdown-item" data-value="Sheffield Wednesday">Sheffield Wednesday</a>
-                    <a class="dropdown-item" data-value="Luton Town">Luton Town</a>
-                    <a class="dropdown-item" data-value="Nottingham Forest">Nottingham Forest</a>
-                  </div>
-                </div>
+                <form-select select="opposition"></form-select>
               </div>
             </div>
             <div class="col-md-12 pull-right no-padding">
@@ -115,72 +59,16 @@
                   <div id="collapse1" class="panel-collapse collapse">
                     <div class="panel-body">
                       <div class="form-group col-md-5 custom-select no-float">
-                        <label>City</label>
-                        <div class="custom-dropdown dropup">
-                          <button type="button" class="dropdown-toggle" id="city" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                            Choose a city
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" data-value="null">All</a>
-                            <a class="dropdown-item" data-value="Leeds">Leeds</a>
-                            <a class="dropdown-item" data-value="London">London</a>
-                            <a class="dropdown-item" data-value="Sheffield">Sheffield</a>
-                            <a class="dropdown-item" data-value="Luton">Luton</a>
-                            <a class="dropdown-item" data-value="Nottingham">Nottingham</a>
-                            <a class="dropdown-item" data-value="Cardiff">Cardiff</a>
-                          </div>
-                        </div>
+                        <form-select select="city"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <label>Opposition manager</label>
-                        <div class="custom-dropdown dropup">
-                          <button type="button" class="dropdown-toggle" id="opposition_manager" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                            Choose an opposition manager
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" data-value="null">All</a>
-                            <a class="dropdown-item" data-value="Jimmy Floyd Hasselbaink">Jimmy Floyd Hasselbaink</a>
-                            <a class="dropdown-item" data-value="Uwe Rosler">Uwe Rosler</a>
-                            <a class="dropdown-item" data-value="Gary Rowett">Gary Rowett</a>
-                            <a class="dropdown-item" data-value="Slavisa Jokanovic">Slavisa Jokanovic</a>
-                            <a class="dropdown-item" data-value="Carlos Carvalhal">Carlos Carvalhal</a>
-                            <a class="dropdown-item" data-value="Nathan Jones">Nathan Jones</a>
-                          </div>
-                        </div>
+                        <form-select select="opp_manager"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <label>Referee</label>
-                        <div class="custom-dropdown dropup">
-                          <button type="button" class="dropdown-toggle" id="referee" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                            Choose a referee
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" data-value="null">All</a>
-                            <a class="dropdown-item" data-value="Oliver Langford">Oliver Langford</a>
-                            <a class="dropdown-item" data-value="David Coote">David Coote</a>
-                            <a class="dropdown-item" data-value="Paul Tierney">Paul Tierney</a>
-                            <a class="dropdown-item" data-value="Chris Kavanagh">Chris Kavanagh</a>
-                            <a class="dropdown-item" data-value="Simon Hooper">Simon Hooper</a>
-                            <a class="dropdown-item" data-value="Kevin Johnson">Kevin Johnson</a>
-                          </div>
-                        </div>
+                        <form-select select="referee"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <label>Assistant manager</label>
-                        <div class="custom-dropdown dropup">
-                          <button type="button" class="dropdown-toggle" id="assistant_manager" data-toggle="dropdown" data-value="null" aria-haspopup="true" aria-expanded="false">
-                            Choose an assistant manager
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" data-value="null">All</a>
-                            <a class="dropdown-item" data-value="Pep Clotet">Pep Clotet</a>
-                            <a class="dropdown-item" data-value="Rob Kelly">Rob Kelly</a>
-                            <a class="dropdown-item" data-value="Paul Raynor">Paul Raynor</a>
-                            <a class="dropdown-item" data-value="Junior Lewis">Junior Lewis</a>
-                            <a class="dropdown-item" data-value="Novica Nikčević">Novica Nikčević</a>
-                            <a class="dropdown-item" data-value="Steve Thompson">Steve Thompson</a>
-                          </div>
-                        </div>
+                        <form-select select="assistant_manager"></form-select>
                       </div>
                     </div>
                   </div>
