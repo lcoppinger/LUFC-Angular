@@ -21,7 +21,7 @@
           <div class="col-md-8 pull-right right">
             <h1 class="title">Leeds United match statistics</h1>
             <ul class="nav nav-tabs" role="tablist">
-              <li ng-repeat="product in season"><a href="#" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</a></li>
+              <li ng-repeat="product in season"><a href="#" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</a></li>
             </ul>
           </div>
           <form class="col-md-12 form">
@@ -123,7 +123,7 @@
               <div class="season" data-value="2007-08">2007/08</div>
             </div>
           </div>
-          <div class="table-responsive">
+          <div class="table-responsive" ng-controller="ResultsController">
             <table class="table">
               <thead>
                 <tr>
@@ -142,7 +142,18 @@
                   <th class="collapse-hide">City <button type="button" class="plus-button" id="minus"><img src="Images/Minus-button.svg"/></button></th>
                 </tr>
               </thead>
-              <tbody id="results"></tbody>
+              <tbody id="results">
+                <tr ng-repeat="result in results">
+                  <td class="competition" data-value="{{result[0]}}">{{result[0]}}</td>
+                  <td class="date" data-value="{{result[3]}}">{{result[3]}}</td>
+                  <td class="han" data-value="{{result[4]}}">{{result[4]}}</td>
+                  <td class="venue" data-value="{{result[7]}}">{{result[7]}}</td>
+                  <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
+                  <td class="score" data-value="{{result.opposition}}">{{result.opposition}}</td>
+                  <td class="result" data-value="{{result[13]}}">{{result[13]}}</td>
+
+                </tr>
+              </tbody>
             </table>
           </div>
           <div class="no-results">
@@ -166,9 +177,11 @@
 
     <!-- controllers -->
     <script src="js/controllers/FormController.js"></script>
+    <script src="js/controllers/ResultsController.js"></script>
 
     <!-- services -->
     <script src="js/services/filter.js"></script>
+    <script src="js/services/search.js"></script>
 
     <!-- directives -->
     <script src="js/directives/formSelect.js"></script>

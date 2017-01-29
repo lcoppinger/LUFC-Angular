@@ -2,10 +2,15 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
   $scope.season = filter.get('season').then(function(d){
     $scope.season = d;
   });
+  $scope.selected = 1;
+  $scope.select = function(index) {
+     $scope.selected = index;
+  };
   $scope.competition = {
     label: 'Competition',
     id: 'competition',
     placeholder: 'Choose a competition',
+    value: "All",
     options: filter.get('competition').then(function(d){
       $scope.competition.options = d;
     })
@@ -31,6 +36,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Manager',
     id: 'manager',
     placeholder: 'Choose a manager',
+    value: "All",
     options: filter.get('manager').then(function(d){
       $scope.manager.options = d;
     })
@@ -56,6 +62,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Venue',
     id: 'venue',
     placeholder: 'Choose a venue',
+    value: "All",
     options: filter.get('venue').then(function(d){
       $scope.venue.options = d;
     })
@@ -64,6 +71,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Goal scorers',
     id: 'scorers',
     placeholder: 'Choose a player',
+    value: "All",
     options: filter.get('scorers').then(function(d){
       $scope.scorers.options = d;
     })
@@ -72,6 +80,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Opposition',
     id: 'opposition',
     placeholder: 'Choose an opposition',
+    value: "All",
     options: filter.get('opposition').then(function(d){
       $scope.opposition.options = d;
     })
@@ -80,6 +89,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'City',
     id: 'city',
     placeholder: 'Choose a city',
+    value: "All",
     options: filter.get('city').then(function(d){
       $scope.city.options = d;
     })
@@ -88,6 +98,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Opposition manager',
     id: 'opposition_manager',
     placeholder: 'Choose an opposition manager',
+    value: "All",
     options: filter.get('opp_manager').then(function(d){
       $scope.opp_manager.options = d;
     })
@@ -96,6 +107,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Referee',
     id: 'referee',
     placeholder: 'Choose a referee',
+    value: "All",
     options: filter.get('referee').then(function(d){
       $scope.referee.options = d;
     })
@@ -104,6 +116,7 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     label: 'Assistant manager',
     id: 'assistant_manager',
     placeholder: 'Choose an assistant manager',
+    value: "All",
     options: filter.get('assistant_manager').then(function(d){
       $scope.assistant_manager.options = d;
     })

@@ -5,21 +5,13 @@ app.directive('formSelect', function(){
       select: '='
     },
     templateUrl: 'js/directives/formSelect.html',
-    link: function(scope, element, attrs) {
-
+    link: function($scope, element, attrs) {
+      $scope.class = "";
+      $scope.change = function(name) {
+        $scope.select.placeholder = name;
+        $scope.select.value = name;
+        $scope.class = "selected";
+      };
     }
   };
 });
-/*
-        scope.buttonText = "Install",
-      	scope.installed = false,
-        scope.download = function() {
-          element.toggleClass('btn-active');
-          if (scope.installed) {
-            scope.buttonText = "Install";
-            scope.installed = false;
-          } else {
-            scope.buttonText = "Uninstall";
-            scope.installed = true
-          }
-          */

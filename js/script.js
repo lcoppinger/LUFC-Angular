@@ -9,14 +9,16 @@ $(document).ready(function() {
   $(".scrtabs-js-tab-scroll-arrow-right").text("previous seasons");
   $(".scrtabs-js-tab-scroll-arrow-left").text("recent seasons");
 
+/*
   $(".parallelogram").click(function() {
     $(".parallelogram").not(this).each(function() {
       $(this).removeClass('active');
     });
     $(this).addClass('active');
   });
-
+*/
   //custom select form element
+  /*
   $(".custom-dropdown").each(function(){
     var button = $(this).children(".dropdown-toggle");
     var dropdown = $(this).children(".dropdown-menu");
@@ -34,6 +36,7 @@ $(document).ready(function() {
       });
     });
   });
+  */
 
   //Toggle dropdown text
   $(".more_button").click(function() {

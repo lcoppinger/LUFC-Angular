@@ -1,8 +1,8 @@
 .parallelogram {
+  height: 40px;
   text-align: center;
+  transform: skew(-20deg);
   width: 100px;
-	height: 40px;
-	transform: skew(-20deg);
 
   &.active {
     background-color: $default-background;
@@ -27,7 +27,6 @@
     color: $hightlight--font;
     outline: none;
   }
-
 }
 
 .scrtabs-tab-container {
@@ -35,17 +34,19 @@
 }
 
 .scrtabs-tabs-fixed-container {
-  width: 100% !important;
   padding-left: 8px;
+  width: 100% !important;
 }
 
 .scrtabs-tab-scroll-arrow {
   @extend %tab-font;
-  border: none;
+  border: 0;
   color: $base-font--inverse;
   width: auto;
 
-  &:hover, :focus, :active {
+  &:hover,
+  :focus,
+  :active {
     background-color: transparent;
     color: $unfocus--font;
   }
@@ -55,21 +56,21 @@
   position: absolute;
   right: 0;
 
-  &:after {
+  &::after {
+    background: url('../Images/chevron_right.svg') no-repeat center;
     content: '';
     display: inline-block;
-    width: 15px;
     height: 8px;
-    background: url("../Images/chevron_right.svg") no-repeat center;
+    width: 15px;
   }
 }
 
 .scrtabs-js-tab-scroll-arrow-left {
-  &:before {
+  &::before {
+    background: url('../Images/chevron_left.svg') no-repeat center;
     content: '';
     display: inline-block;
-    width: 15px;
     height: 8px;
-    background: url("../Images/chevron_left.svg") no-repeat center;
+    width: 15px;
   }
 }

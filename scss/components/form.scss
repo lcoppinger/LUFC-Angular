@@ -36,6 +36,10 @@ label {
     }
   }
 
+  .selected {
+    color: $base-font--default;
+  }
+
   .dropdown-menu {
     background-color: $default-background;
     border: 0;
