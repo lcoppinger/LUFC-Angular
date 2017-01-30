@@ -144,14 +144,29 @@
               </thead>
               <tbody id="results">
                 <tr ng-repeat="result in results">
-                  <td class="competition" data-value="{{result[0]}}">{{result[0]}}</td>
-                  <td class="date" data-value="{{result[3]}}">{{result[3]}}</td>
-                  <td class="han" data-value="{{result[4]}}">{{result[4]}}</td>
-                  <td class="venue" data-value="{{result[7]}}">{{result[7]}}</td>
+                  <td class="competition" data-value="{{result.competition}}">{{result.competition}}</td>
+                  <td class="date" data-value="{{result.date}}">{{result.date}}</td>
+                  <td class="han" data-value="{{result.han}}">{{result.han}}</td>
+                  <td class="venue" data-value="{{result.venue}}">{{result.venue}}</td>
                   <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
-                  <td class="score" data-value="{{result.opposition}}">{{result.opposition}}</td>
-                  <td class="result" data-value="{{result[13]}}">{{result[13]}}</td>
-
+                  <td class="score">{{result.score1}} - {{result.score2}}</td>
+                  <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
+                  <td class="scorers">
+                    <div class="dropdown">
+                      <div class="drop scorer" data-value="result.scorer1">{{result.scorer1}}</div>
+                      <div class="dropdown-content">
+                        <p data-value="result.scorer2">{{result.scorer2}}</p>
+                        <p data-value="result.scorer3">{{result.scorer3}}</p>
+                        <p data-value="result.scorer4">{{result.scorer4}}</p>
+                        <p data-value="result.scorer5">{{result.scorer5}}</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="manager" data-value="{{result.manager}}">{{result.manager}}</td>
+                  <td class="collapse-hide assistant_manager" data-value="{{result.assistant_manager}}">{{result.assistant_manager}}</td>
+                  <td class="collapse-hide opposition_manager" data-value="{{result.opposition_manager}}">{{result.opposition_manager}}</td>
+                  <td class="collapse-hide referee" data-value="{{result.referee}}">{{result.referee}}</td>
+                  <td class="collapse-hide city" data-value="{{result.city}}">{{result.city}}</td>
                 </tr>
               </tbody>
             </table>
