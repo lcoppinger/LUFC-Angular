@@ -1,13 +1,15 @@
-app.controller('FormController', ['$scope', 'filter', function($scope, filter){
+app.controller('FormController', ['$scope', 'filter', 'search', function($scope, filter, search){
   $scope.season = filter.get('season').then(function(d){
     $scope.season = d;
   });
   $scope.selected = 1;
-  $scope.search = "2016-2017";
+  $scope.searchValue = "2016-17";
   $scope.select = function(index) {
      $scope.selected = index;
-     $scope.search = $scope.season[index].value;
-     console.log($scope.search);
+     $scope.searchValue = $scope.season[index].value;
+  };
+  $scope.send = function() {
+    search.sendSeason($scope.searchValue);
   };
   $scope.competition = {
     label: 'Competition',

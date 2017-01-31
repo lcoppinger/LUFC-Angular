@@ -10,6 +10,10 @@
   }
 }
 
+.nav-tabs {
+  width: 400px;
+}
+
 .nav-tabs>li>a {
   @extend %small-font;
   border: $border-color--inverse;
