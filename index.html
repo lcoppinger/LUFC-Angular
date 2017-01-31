@@ -21,7 +21,7 @@
           <div class="col-md-8 pull-right right">
             <h1 class="title">Leeds United match statistics</h1>
             <ul class="nav nav-tabs" role="tablist">
-              <li ng-repeat="product in season"><a href="#" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</a></li>
+              <li ng-repeat="product in season" ng-click="select($index)"><a href="#" ng-class="{active: $index === selected}" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</a></li>
             </ul>
           </div>
           <form class="col-md-12 form">
@@ -151,14 +151,15 @@
                   <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
                   <td class="score">{{result.score1}} - {{result.score2}}</td>
                   <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
-                  <td class="scorers">
+                  <td class="scorers" ng-if="result.scorer.scorer2 == undefined" data-value="{{result.scorer.scorer1}}">{{result.scorer.scorer1}}</td>
+                  <td class="scorers" ng-if="result.scorer.scorer2 !== undefined">
                     <div class="dropdown">
-                      <div class="drop scorer" data-value="result.scorer1">{{result.scorer1}}</div>
+                      <div class="drop scorer" data-value="{{result.scorer.scorer1}}">{{result.scorer.scorer1}}</div>
                       <div class="dropdown-content">
-                        <p data-value="result.scorer2">{{result.scorer2}}</p>
-                        <p data-value="result.scorer3">{{result.scorer3}}</p>
-                        <p data-value="result.scorer4">{{result.scorer4}}</p>
-                        <p data-value="result.scorer5">{{result.scorer5}}</p>
+                        <p data-value="{{result.scorer.scorer2}}">{{result.scorer.scorer2}}</p>
+                        <p data-value="{{result.scorer.scorer3}}">{{result.scorer.scorer3}}</p>
+                        <p data-value="{{result.scorer.scorer4}}">{{result.scorer.scorer4}}</p>
+                        <p data-value="{{result.scorer.scorer5}}">{{result.scorer.scorer5}}</p>
                       </div>
                     </div>
                   </td>
@@ -184,7 +185,6 @@
     <script src="js/vendor/bootstrap.min.js"></script>
 
     <!-- carousel scripts -->
-    <script src="js/vendor/jquery.scrolling-tabs.min.js"></script>
     <script src="js/vendor/slick.min.js"></script>
 
     <!-- module -->

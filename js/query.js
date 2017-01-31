@@ -41,7 +41,7 @@ function search(season) {
           }
 
           //Determine Result and styling
-          if (values[13] == "Won" || values[13] == "Won (P)" || values[13] == "Won (P)") {
+          if (values[13] == "Won" || values[13] == "Won (P)" || values[13] == "Won (ET)") {
             result = "<td class='won result' data-value='"+values[13]+"'>" + values[13] + "</td>";
           } else if (values[13] == "Draw") {
             result = "<td class='draw result' data-value='"+values[13]+"'>" + values[13] + "</td>";

@@ -24,11 +24,13 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
         opposition_manager : value[16],
         referee : value[17],
         city : value[6],
-        scorer1 : value[18],
-        scorer2 : value[19],
-        scorer3 : value[20],
-        scorer4 : value[21],
-        scorer5 : value[22]
+        scorer : {
+          scorer1 : value[18],
+          scorer2 : value[19],
+          scorer3 : value[20],
+          scorer4 : value[21],
+          scorer5 : value[22]
+        }
       });
 
       scorers.push({
@@ -39,7 +41,7 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
         scorer5 : value[22]
       });
     });
-      console.log(scorers);
       $scope.results = arr;
+      $scope.scorers = scorers;
   });
 }]);

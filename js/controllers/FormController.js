@@ -3,8 +3,11 @@ app.controller('FormController', ['$scope', 'filter', function($scope, filter){
     $scope.season = d;
   });
   $scope.selected = 1;
+  $scope.search = "2016-2017";
   $scope.select = function(index) {
      $scope.selected = index;
+     $scope.search = $scope.season[index].value;
+     console.log($scope.search);
   };
   $scope.competition = {
     label: 'Competition',

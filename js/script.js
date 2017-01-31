@@ -1,8 +1,10 @@
 $(document).ready(function() {
   //scroll nav tabs
+  /*
   $('.nav-tabs').scrollingTabs({
     scrollToTabEdge: true
   });
+  */
 
   //custom tab controllers
   $(".glyphicon").remove();
