@@ -10,77 +10,58 @@
   }
 }
 
-.nav-tabs {
-  width: 400px;
+.tabs {
+  border-bottom: $border-color--inverse;
+  padding: 0;
 
   li {
-    display: inline-block;
-    float: left;
-    overflow: hidden;
+    @extend %small-font;
+    border: $border-color--inverse;
+    color: $base-font--inverse;
+    cursor: pointer;
+    padding: 10px 0;
+    text-align: center;
+
+    &:hover {
+      background-color: $default-background;
+      color: $hightlight--font;
+    }
+
+    &:focus {
+      background-color: $default-background;
+      color: $hightlight--font;
+      outline: none;
+    }
   }
-}
 
-.nav-tabs>li>a {
-  @extend %small-font;
-  border: $border-color--inverse;
-  border-radius: 0;
-  color: $base-font--inverse;
-  margin: 0;
+  .slick-next {
+    left: 0;
+    position: absolute;
+    top: 0;
 
-  &:hover {
-    background-color: $default-background;
-    color: $hightlight--font;
+    &::before {
+      background: url('../Images/chevron_left.svg') no-repeat center;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      width: 15px;
+    }
   }
 
-  &:focus {
-    background-color: $default-background;
-    color: $hightlight--font;
-    outline: none;
+  .slick-prev {
+    &::after {
+      background: url('../Images/chevron_right.svg') no-repeat center;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      width: 15px;
+    }
   }
-}
 
-.scrtabs-tab-container {
-  position: relative;
-}
-
-.scrtabs-tabs-fixed-container {
-  padding-left: 8px;
-  width: 100% !important;
-}
-
-.scrtabs-tab-scroll-arrow {
-  @extend %tab-font;
-  border: 0;
-  color: $base-font--inverse;
-  width: auto;
-
-  &:hover,
-  :focus,
-  :active {
-    background-color: transparent;
-    color: $unfocus--font;
-  }
-}
-
-.scrtabs-js-tab-scroll-arrow-right {
-  position: absolute;
-  right: 0;
-
-  &::after {
-    background: url('../Images/chevron_right.svg') no-repeat center;
-    content: '';
-    display: inline-block;
-    height: 8px;
-    width: 15px;
-  }
-}
-
-.scrtabs-js-tab-scroll-arrow-left {
-  &::before {
-    background: url('../Images/chevron_left.svg') no-repeat center;
-    content: '';
-    display: inline-block;
-    height: 8px;
-    width: 15px;
+  .slick-arrow {
+    @extend %tab-font;
+    background: 0;
+    border: 0;
+    color: $base-font--inverse;
   }
 }
