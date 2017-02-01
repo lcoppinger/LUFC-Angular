@@ -12,6 +12,12 @@
 
 .nav-tabs {
   width: 400px;
+
+  li {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+  }
 }
 
 .nav-tabs>li>a {
