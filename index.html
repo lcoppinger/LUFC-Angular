@@ -27,7 +27,7 @@
           <form class="col-md-12 form">
             <div class="col-md-9 pull-right no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
-                <form-select select="competition" ng-modal="searchCompetition"></form-select>
+                <form-select select="competition" ng-modal="competition.values"></form-select>
               </div>
               <form-checkbox check="han"></form-checkbox>
             </div>
@@ -198,6 +198,9 @@
     <!-- services -->
     <script src="js/services/filter.js"></script>
     <script src="js/services/search.js"></script>
+
+    <!-- filters -->
+    <script src="js/filters/searchFilter.js"></script>
 
     <!-- directives -->
     <script src="js/directives/formSelect.js"></script>

@@ -10,8 +10,17 @@ angular.filter('searchFilter', function($filter){
     if (!isSearchFilterEmpty) {
       var result = [];
       angular.forEach(items, function(item){
-        var isFound = false;
+        angular.forEach(item, function(value, key) {
+          angular.forEach(searchfilter, function(searchstring) {
+            if (searchstring == value) {
+              result.push(item);
+            }
+          });
+        });
       });
+      return result;
+    } else {
+      return items;
     }
   };
 });
