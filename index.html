@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="css/vendor/slick.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
-  <body ng-app="LUFCApp">
-    <div class="container-fluid landing-wrapper" ng-controller="FormController">
+  <body ng-app="LUFCApp" ng-controller="FormController">
+    <div class="container-fluid landing-wrapper">
       <div class="row">
         <img src="Images/Football.svg"/>
         <div class="col-md-6 pull-right">
@@ -27,25 +27,25 @@
           <form class="col-md-12 form">
             <div class="col-md-9 pull-right no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
-                <form-select select="competition" ng-modal="competition.values"></form-select>
+                <form-select select="competition" ng-model="compSelect"></form-select>
               </div>
               <form-checkbox check="han"></form-checkbox>
             </div>
             <div class="col-md-10 pull-right no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
-                <form-select select="manager"></form-select>
+                <form-select select="manager" ng-model="manageSelect"></form-select>
               </div>
               <form-checkbox check="wld"></form-checkbox>
             </div>
             <div class="col-md-11 pull-right no-padding">
               <div class="form-group col-md-4 custom-select no-padding">
-                <form-select select="venue"></form-select>
+                <form-select select="venue" ng-model="venueSelect"></form-select>
               </div>
               <div class="form-group col-md-4 custom-select">
-                <form-select select="scorers"></form-select>
+                <form-select select="scorers" ng-model="scorersSelect"></form-select>
               </div>
               <div class="form-group col-md-4 custom-select no-padding">
-                <form-select select="opposition"></form-select>
+                <form-select select="opposition" ng-model="oppoSelect"></form-select>
               </div>
             </div>
             <div class="col-md-12 pull-right no-padding">
@@ -59,16 +59,16 @@
                   <div id="collapse1" class="panel-collapse collapse">
                     <div class="panel-body">
                       <div class="form-group col-md-5 custom-select no-float">
-                        <form-select select="city"></form-select>
+                        <form-select select="city" ng-model="citySelect"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <form-select select="opp_manager"></form-select>
+                        <form-select select="opp_manager" ng-model="oppmanageSelect"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <form-select select="referee"></form-select>
+                        <form-select select="referee" ng-model="refereeSelect"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <form-select select="assistant_manager"></form-select>
+                        <form-select select="assistant_manager" ng-model="assistSelect"></form-select>
                       </div>
                     </div>
                   </div>
@@ -143,7 +143,7 @@
                 </tr>
               </thead>
               <tbody id="results">
-                <tr ng-repeat="result in results">
+                <tr ng-repeat="result in results | toArray | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect}">
                   <td class="competition" data-value="{{result.competition}}">{{result.competition}}</td>
                   <td class="date" data-value="{{result.date}}">{{result.date}}</td>
                   <td class="han" data-value="{{result.han}}">{{result.han}}</td>
@@ -181,6 +181,7 @@
 
     <!-- vendor scripts -->
     <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/toArrayFilter.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
 

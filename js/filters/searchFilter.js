@@ -1,4 +1,4 @@
-angular.filter('searchFilter', function($filter){
+app.filter('searchFilter', function($filter){
   return function(items, searchfilter) {
     var isSearchFilterEmpty = true;
     angular.forEach(searchfilter, function(searchvalue){

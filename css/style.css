@@ -105,6 +105,8 @@ label {
     border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
+    margin-left: 7px;
+    margin-right: -7px;
     padding: 10px 0;
     text-align: center; }
     .tabs li:hover {

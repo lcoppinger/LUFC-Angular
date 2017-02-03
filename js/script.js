@@ -1,13 +1,14 @@
 $(document).ready(function() {
   //scroll nav tabs
   $('.tabs').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
+    slidesToScroll: 4
   });
 
   //custom tab controllers
-  $(".slick-prev").text("previous seasons");
-  $(".slick-next").text("recent seasons");
+  $(".slick-prev").text("recent seasons");
+  $(".slick-next").text("previous seasons");
 
 /*
   $(".parallelogram").click(function() {
