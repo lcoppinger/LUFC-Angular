@@ -31,7 +31,7 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
       {
         name: 'Away',
         index: 2,
-        val: false
+        val: true
       },
       {
         name: 'Neutral',
@@ -130,13 +130,30 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
     })
   };
 
+  $scope.checked = function(items){
+    $scope.$watch( "han.options" , function(n,o){
+         var checked = [];
+         var trues = $filter("filter")( n , {val:true} );
+         angular.forEach(trues, function(item){
+           angular.forEach(trues, function(key, value){
+             if (key.name !== undefined) {
+               checked.push(key.name);
+             }
+           });
+         });
+         $scope.checked = checked;
+     }, true );
+  };
   $scope.$watch( "han.options" , function(n,o){
+       var checked = [];
        var trues = $filter("filter")( n , {val:true} );
-       for(var key in trues) {
-          var value = trues[key];
-          console.log(value);
-        }
-       $scope.flag = trues.length;
-       console.log($scope.flag);
+       angular.forEach(trues, function(item){
+         angular.forEach(trues, function(key, value){
+           if (key.name !== undefined) {
+             checked.push(key.name);
+           }
+         });
+       });
+       $scope.checked = checked;
    }, true );
 }]);
