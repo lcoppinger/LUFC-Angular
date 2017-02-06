@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div class="form-group col-md-7 no-padding" id="{{ check.label }}">
   <div class="form-check-inline" ng-repeat="product in check.options">
-    <input id="checkbox-{{ product.index }}" class="checkbox-custom" ng-model="Select[product.name]"  name="checkbox-{{ product.index }}" type="checkbox" value="{{ product.name }}">
+    <input id="checkbox-{{ product.index }}" class="checkbox-custom" ng-model="product.val"  name="checkbox-{{ product.index }}" type="checkbox" value="{{ product.name }}">
     <label for="checkbox-{{ product.index }}" class="checkbox-custom-label">{{ product.name }}</label>
   </div>
 </div>

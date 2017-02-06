@@ -1,26 +1,25 @@
 app.filter('searchFilter', function($filter){
-  return function(items, searchfilter) {
-    var isSearchFilterEmpty = true;
-    angular.forEach(searchfilter, function(searchvalue){
-      if (searchvalue !== "All") {
-        isSearchFilterEmpty = false;
-      }
+  return function(items, condition) {
+    var filtered = [];
+    var select = "";
+    var field = "";
+
+    angular.forEach(condition, function(value, key) {
+      select = value;
+      field = key;
     });
 
-    if (!isSearchFilterEmpty) {
-      var result = [];
-      angular.forEach(items, function(item){
-        angular.forEach(item, function(value, key) {
-          angular.forEach(searchfilter, function(searchstring) {
-            if (searchstring == value) {
-              result.push(item);
-            }
-          });
-        });
-      });
-      return result;
-    } else {
+    if(select === undefined || select === '' || select === 'All'){
       return items;
     }
+    angular.forEach(items, function(item) {
+      angular.forEach(item, function(value, key) {
+        if (select == value && key == field) {
+          filtered.push(item);
+        }
+      });
+    });
+
+    return filtered;
   };
 });

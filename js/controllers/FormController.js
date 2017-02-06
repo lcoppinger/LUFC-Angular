@@ -1,4 +1,4 @@
-app.controller('FormController', ['$scope', 'filter', 'search', function($scope, filter, search){
+app.controller('FormController', ['$scope', '$filter', 'filter', 'search', function($scope, $filter, filter, search){
   $scope.season = filter.get('season').then(function(d){
     $scope.season = d;
   });
@@ -25,15 +25,18 @@ app.controller('FormController', ['$scope', 'filter', 'search', function($scope,
     options: [
       {
         name: 'Home',
-        index: 1
+        index: 1,
+        val: true
       },
       {
         name: 'Away',
-        index: 2
+        index: 2,
+        val: false
       },
       {
         name: 'Neutral',
-        index: 3
+        index: 3,
+        val: false
       }
     ]
   };
@@ -126,4 +129,14 @@ app.controller('FormController', ['$scope', 'filter', 'search', function($scope,
       $scope.assistant_manager.options = d;
     })
   };
+
+  $scope.$watch( "han.options" , function(n,o){
+       var trues = $filter("filter")( n , {val:true} );
+       for(var key in trues) {
+          var value = trues[key];
+          console.log(value);
+        }
+       $scope.flag = trues.length;
+       console.log($scope.flag);
+   }, true );
 }]);
