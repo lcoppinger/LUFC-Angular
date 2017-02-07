@@ -123,7 +123,7 @@
               <div class="season" data-value="2007-08">2007/08</div>
             </div>
           </div>
-          <div class="table-responsive" ng-controller="ResultsController">
+          <div ng-controller="ResultsController">
             <table class="table">
               <thead>
                 <tr>
@@ -135,15 +135,17 @@
                   <th>Score</th>
                   <th>Result</th>
                   <th class="goal-scorers">Goal Scorers</th>
-                  <th>Manager <button type="button" class="plus-button plus" id="plus"><img src="Images/Plus_button.svg"/></button></th>
-                  <th class="collapse-hide">Assistant Manager</th>
-                  <th class="collapse-hide">Opposition Manager</th>
-                  <th class="collapse-hide">Referee</th>
-                  <th class="collapse-hide">City <button type="button" class="plus-button" id="minus"><img src="Images/Minus-button.svg"/></button></th>
+                  <th>Manager</th>
+                  <th ng-show="extra">Assistant Manager</th>
+                  <th ng-show="extra">Opposition Manager</th>
+                  <th ng-show="extra">Referee</th>
+                  <th ng-show="extra">City</th>
+                  <th><button type="button" class="extra-button" ng-class="{expanded: extra}" ng-click="extra = !extra"></button></th>
                 </tr>
               </thead>
               <tbody id="results">
-                <tr ng-repeat="result in results | toArray | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect}">
+                <tr ng-repeat="result in results | toArray | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+                | scorerFilter: scorersSelect">
                   <td class="competition" data-value="{{result.competition}}">{{result.competition}}</td>
                   <td class="date" data-value="{{result.date}}">{{result.date}}</td>
                   <td class="han" data-value="{{result.han}}">{{result.han}}</td>
@@ -151,23 +153,21 @@
                   <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
                   <td class="score">{{result.score1}} - {{result.score2}}</td>
                   <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
-                  <td class="scorers" ng-if="result.scorer.scorer2 == undefined" data-value="{{result.scorer.scorer1}}">{{result.scorer.scorer1}}</td>
-                  <td class="scorers" ng-if="result.scorer.scorer2 !== undefined">
+                  <td class="scorers" ng-if="result.scorers[0].scorer == undefined" data-value="{{result.scorer1}}">{{result.scorer1}}</td>
+                  <td class="scorers" ng-if="result.scorers[0].scorer !== undefined">
                     <div class="dropdown">
-                      <div class="drop scorer" data-value="{{result.scorer.scorer1}}">{{result.scorer.scorer1}}</div>
-                      <div class="dropdown-content">
-                        <p data-value="{{result.scorer.scorer2}}">{{result.scorer.scorer2}}</p>
-                        <p data-value="{{result.scorer.scorer3}}">{{result.scorer.scorer3}}</p>
-                        <p data-value="{{result.scorer.scorer4}}">{{result.scorer.scorer4}}</p>
-                        <p data-value="{{result.scorer.scorer5}}">{{result.scorer.scorer5}}</p>
+                      <div class="drop scorer" data-value="{{result.scorer1}}" ng-class="{open: dropdown}" ng-click="dropdown = !dropdown">{{result.scorer1}}</div>
+                      <div class="dropdown-content" ng-show="dropdown">
+                        <p ng-repeat="scorer in result.scorers">{{scorer.scorer}}</p>
                       </div>
                     </div>
                   </td>
                   <td class="manager" data-value="{{result.manager}}">{{result.manager}}</td>
-                  <td class="collapse-hide assistant_manager" data-value="{{result.assistant_manager}}">{{result.assistant_manager}}</td>
-                  <td class="collapse-hide opposition_manager" data-value="{{result.opposition_manager}}">{{result.opposition_manager}}</td>
-                  <td class="collapse-hide referee" data-value="{{result.referee}}">{{result.referee}}</td>
-                  <td class="collapse-hide city" data-value="{{result.city}}">{{result.city}}</td>
+                  <td class="assistant_manager" ng-show="extra" data-value="{{result.assistant_manager}}">{{result.assistant_manager}}</td>
+                  <td class="opposition_manager" ng-show="extra" data-value="{{result.opposition_manager}}">{{result.opposition_manager}}</td>
+                  <td class="referee" ng-show="extra" data-value="{{result.referee}}">{{result.referee}}</td>
+                  <td class="city" ng-show="extra" data-value="{{result.city}}">{{result.city}}</td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
@@ -203,6 +203,7 @@
     <!-- filters -->
     <script src="js/filters/searchFilter.js"></script>
     <script src="js/filters/checkboxFilter.js"></script>
+    <script src="js/filters/scorerFilter.js"></script>
 
     <!-- directives -->
     <script src="js/directives/formSelect.js"></script>

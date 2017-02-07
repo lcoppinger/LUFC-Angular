@@ -25,16 +25,32 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
             opposition_manager : value[16],
             referee : value[17],
             city : value[6],
-            scorer : {
-              scorer1 : value[18],
-              scorer2 : value[19],
-              scorer3 : value[20],
-              scorer4 : value[21],
-              scorer5 : value[22]
-            }
+            scorer1 : value[18],
+            scorers : [
+              {
+                scorer : value[19]
+              },
+              {
+                scorer : value[20]
+              },
+              {
+                scorer : value[21]
+              },
+              {
+                scorer : value[22]
+              },
+            ]
           });
         });
           $scope.results = arr;
         });
   });
 }]);
+
+/*
+scorer1 : value[18],
+scorer2 : value[19],
+scorer3 : value[20],
+scorer4 : value[21],
+scorer5 : value[22]
+*/

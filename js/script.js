@@ -54,12 +54,13 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 4000,
   });
-
+/*
   //Goal scorers dropdown
   $(this).on("click", ".drop", function() {
     $(this).toggleClass("open");
     $(this).siblings(".dropdown-content").toggleClass("visible");
   });
+  */
 
   //Season Carousel
   $('.season-tab').slick({
@@ -68,6 +69,7 @@ $(document).ready(function() {
     slidesToShow: 3
   });
 
+/*
   //toggle extra table
   $("#plus").click(function() {
     $(".collapse-hide").addClass('collapse-show');
@@ -79,5 +81,6 @@ $(document).ready(function() {
     $(".plus").show();
   });
 
+*/
 
 });

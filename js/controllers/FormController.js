@@ -26,12 +26,12 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
       {
         name: 'Home',
         index: 1,
-        val: true
+        val: false
       },
       {
         name: 'Away',
         index: 2,
-        val: true
+        val: false
       },
       {
         name: 'Neutral',
@@ -53,16 +53,19 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
     label: 'wld',
     options: [
       {
-        name: 'Win',
-        index: 4
+        name: 'Won',
+        index: 4,
+        val: false
       },
       {
-        name: 'Lose',
-        index: 5
+        name: 'Lost',
+        index: 5,
+        val: false
       },
       {
         name: 'Draw',
-        index: 6
+        index: 6,
+        val: false
       }
     ]
   };
@@ -130,30 +133,25 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
     })
   };
 
-  $scope.checked = function(items){
-    $scope.$watch( "han.options" , function(n,o){
-         var checked = [];
-         var trues = $filter("filter")( n , {val:true} );
-         angular.forEach(trues, function(item){
-           angular.forEach(trues, function(key, value){
-             if (key.name !== undefined) {
-               checked.push(key.name);
-             }
-           });
-         });
-         $scope.checked = checked;
-     }, true );
-  };
   $scope.$watch( "han.options" , function(n,o){
        var checked = [];
        var trues = $filter("filter")( n , {val:true} );
-       angular.forEach(trues, function(item){
-         angular.forEach(trues, function(key, value){
-           if (key.name !== undefined) {
-             checked.push(key.name);
-           }
-         });
+       angular.forEach(trues, function(key, value){
+         if (key.name !== undefined) {
+           checked.push(key.name);
+         }
        });
-       $scope.checked = checked;
+       $scope.checkedHan = checked;
    }, true );
+
+   $scope.$watch( "wld.options" , function(n,o){
+        var checked = [];
+        var trues = $filter("filter")( n , {val:true} );
+        angular.forEach(trues, function(key, value){
+          if (key.name !== undefined) {
+            checked.push(key.name);
+          }
+        });
+        $scope.checkedWld = checked;
+    }, true );
 }]);
