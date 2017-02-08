@@ -16,7 +16,7 @@ app.filter('checkboxFilter', function($filter){
     angular.forEach(items, function(item) {
       angular.forEach(item, function(value, key) {
         angular.forEach(select, function(name) {
-          if (name == value && key == field) {
+          if (name == value || name+' (P)' == value && key == field) {
             filtered.push(item);
           }
         });

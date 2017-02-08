@@ -154,4 +154,12 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
         });
         $scope.checkedWld = checked;
     }, true );
+
+    $scope.slickConfig = {
+      enabled: true,
+      method: {},
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 4
+    };
 }]);

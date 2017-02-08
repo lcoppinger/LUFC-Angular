@@ -1,10 +1,12 @@
 $(document).ready(function() {
+
   //scroll nav tabs
   $('.tabs').slick({
     infinite: false,
     slidesToShow: 4,
     slidesToScroll: 4
   });
+  //$('.angular-slick').slick();
 
   //custom tab controllers
   $(".slick-prev").text("recent seasons");

@@ -2,7 +2,14 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
   $scope.$on('season_shared',function(){
       $scope.results = search.get().then(function(data){
         var arr = [];
-        var scorers = [];
+        function makeCounter() {
+            var i = 0;
+            return function() {
+                return i++;
+            };
+        }
+        var Id = makeCounter();
+
         angular.forEach (data, function(value, key){
           var opposition = "";
           if (value[4] == "Home") {
@@ -12,6 +19,7 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
           }
 
           arr.push({
+            id: Id(),
             competition : value[0],
             date : value[3],
             han : value[4],

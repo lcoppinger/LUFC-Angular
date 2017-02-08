@@ -9,7 +9,6 @@
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/vendor/jquery.scrolling-tabs.min.css"/>
     <link rel="stylesheet" href="css/vendor/slick.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
@@ -23,6 +22,11 @@
             <ul class="tabs" role="tablist">
               <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
             </ul>
+            <!--
+            <slick class="angular-slick" settings="slickConfig">
+              <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
+            </slick>
+          -->
           </div>
           <form class="col-md-12 form">
             <div class="col-md-9 pull-right no-padding">
@@ -111,16 +115,7 @@
         <div class="results-wrapper">
           <div class="season-wrapper">
             <div class="season-tab">
-              <div class="season" data-value="2016-17">2016/17</div>
-              <div class="season" data-value="2015-16">2015/16</div>
-              <div class="season" data-value="2014-15">2014/15</div>
-              <div class="season" data-value="2013-14">2013/14</div>
-              <div class="season" data-value="2012-13">2012/13</div>
-              <div class="season" data-value="2011-12">2011/12</div>
-              <div class="season" data-value="2010-11">2010/11</div>
-              <div class="season" data-value="2009-10">2009/10</div>
-              <div class="season" data-value="2008-09">2008/09</div>
-              <div class="season" data-value="2007-08">2007/08</div>
+              <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
             </div>
           </div>
           <div ng-controller="ResultsController">
@@ -145,13 +140,14 @@
               </thead>
               <tbody id="results">
                 <tr ng-repeat="result in results | toArray | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
-                | scorerFilter: scorersSelect">
+                | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}
+                | orderBy: 'id'">
                   <td class="competition" data-value="{{result.competition}}">{{result.competition}}</td>
                   <td class="date" data-value="{{result.date}}">{{result.date}}</td>
                   <td class="han" data-value="{{result.han}}">{{result.han}}</td>
                   <td class="venue" data-value="{{result.venue}}">{{result.venue}}</td>
                   <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
-                  <td class="score">{{result.score1}} - {{result.score2}}</td>
+                  <td class="score"><span ng-class="{home: (result.han == 'Home')}">{{result.score1}}</span> - <span ng-class="{home: (result.han == 'Away')}">{{result.score2}}</span></td>
                   <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
                   <td class="scorers" ng-if="result.scorers[0].scorer == undefined" data-value="{{result.scorer1}}">{{result.scorer1}}</td>
                   <td class="scorers" ng-if="result.scorers[0].scorer !== undefined">
@@ -186,8 +182,8 @@
     <script src="js/vendor/bootstrap.min.js"></script>
 
     <!-- carousel scripts -->
-    <script src="js/vendor/jquery.scrolling-tabs.min.js"></script>
     <script src="js/vendor/slick.min.js"></script>
+    <script src="js/vendor/angular-slick.min.js"></script>
 
     <!-- module -->
     <script src="js/app.js"></script>

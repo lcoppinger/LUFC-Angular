@@ -346,14 +346,15 @@ label {
 .table > tbody > tr > td {
   border: 0;
   vertical-align: middle; }
-  .table > tbody > tr > td span {
-    font-weight: bold; }
 
 .table > tbody > tr:hover {
   background-color: #fafafa; }
 
 .goal-scorers {
-  min-width: 122px; }
+  min-width: 115px; }
+
+.home {
+  font-weight: bold; }
 
 .won {
   background-color: rgba(141, 190, 88, 0.5);
@@ -393,8 +394,6 @@ label {
             transition-duration: .5s;
     -webkit-transition-timing-function: ease;
             transition-timing-function: ease; }
-  .drop.no-view::after {
-    display: none; }
 
 .dropdown-content {
   background-color: #fafafa;
@@ -402,19 +401,6 @@ label {
   position: absolute;
   width: calc(100% + 8px);
   z-index: 2; }
-
-.collapse-hide {
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease; }
-
-.collapse-show {
-  display: table-cell;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease; }
 
 .no-results {
   display: table;

@@ -15,10 +15,6 @@
   @extend %base-font;
   border: 0;
   vertical-align: middle;
-
-  span {
-    font-weight: bold;
-  }
 }
 
 .table>tbody>tr:hover {
@@ -26,7 +22,11 @@
 }
 
 .goal-scorers {
-  min-width: 122px;
+  min-width: 115px;
+}
+
+.home {
+  font-weight: bold;
 }
 
 .won {
@@ -69,10 +69,6 @@
     transition-duration: .5s;
     transition-timing-function: ease;
   }
-
-  &.no-view::after {
-    display: none;
-  }
 }
 
 .dropdown-content {
@@ -81,18 +77,6 @@
   position: absolute;
   width: calc(100% + 8px);
   z-index: 2;
-}
-
-.collapse-hide {
-  //display: none;
-  transition-duration: .5s;
-  transition-timing-function: ease;
-}
-
-.collapse-show {
-  display: table-cell;
-  transition-duration: .5s;
-  transition-timing-function: ease;
 }
 
 .no-results {
