@@ -310,29 +310,37 @@ label {
   margin: 30px 0;
   text-align: center;
   width: 100%; }
+  .season-wrapper .slick-prev {
+    background: url("../Images/previous-arrow.svg") no-repeat center;
+    border: 0;
+    height: 32px;
+    margin-right: 10px; }
+    .season-wrapper .slick-prev:hover,
+    .season-wrapper .slick-prev :focus,
+    .season-wrapper .slick-prev :active {
+      outline: none; }
+  .season-wrapper .slick-next {
+    background: url("../Images/next-arrow.svg") no-repeat center;
+    border: 0;
+    height: 32px;
+    margin-left: 10px; }
+    .season-wrapper .slick-next:hover,
+    .season-wrapper .slick-next :focus,
+    .season-wrapper .slick-next :active {
+      outline: none; }
+
+.slick-wrapper {
+  display: inline-block;
+  width: 350px; }
 
 .season-tab {
   color: #404040;
-  display: inline-block;
   position: relative;
-  width: 350px; }
+  width: 100%; }
   .season-tab .season {
     text-align: center; }
   .season-tab .slick-center {
     color: #215b99; }
-  .season-tab .slick-prev {
-    background: url("../Images/previous-arrow.svg") no-repeat center;
-    border: 0;
-    height: 25px;
-    left: -20px;
-    position: absolute; }
-  .season-tab .slick-next {
-    background: url("../Images/next-arrow.svg") no-repeat center;
-    border: 0;
-    height: 25px;
-    position: absolute;
-    right: -20px;
-    top: 0; }
 
 .table {
   border: 1px solid #215b99; }

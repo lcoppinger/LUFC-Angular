@@ -1,16 +1,13 @@
 $(document).ready(function() {
-
   //scroll nav tabs
+  /*
   $('.tabs').slick({
     infinite: false,
     slidesToShow: 4,
     slidesToScroll: 4
   });
-  //$('.angular-slick').slick();
+*/
 
-  //custom tab controllers
-  $(".slick-prev").text("recent seasons");
-  $(".slick-next").text("previous seasons");
 
 /*
   $(".parallelogram").click(function() {
@@ -63,14 +60,14 @@ $(document).ready(function() {
     $(this).siblings(".dropdown-content").toggleClass("visible");
   });
   */
-
+/*
   //Season Carousel
   $('.season-tab').slick({
     centerMode: true,
     centerPadding: '0',
     slidesToShow: 3
   });
-
+*/
 /*
   //toggle extra table
   $("#plus").click(function() {

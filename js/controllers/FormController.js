@@ -2,7 +2,7 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
   $scope.season = filter.get('season').then(function(d){
     $scope.season = d;
   });
-  $scope.selected = 1;
+  $scope.selected = 0;
   $scope.searchValue = "2016-17";
   $scope.select = function(index) {
      $scope.selected = index;
@@ -155,11 +155,25 @@ app.controller('FormController', ['$scope', '$filter', 'filter', 'search', funct
         $scope.checkedWld = checked;
     }, true );
 
+    $scope.currentSlide = 0;
     $scope.slickConfig = {
       enabled: true,
       method: {},
-      infinite: false,
-      slidesToShow: 4,
-      slidesToScroll: 4
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      centerMode: true,
+      draggable: false,
+      arrows: false,
+      event: {
+        afterChange: function (event, slick, currentSlide, nextSlide) {
+          $scope.currentSlide = currentSlide;
+          $scope.currentValue = $scope.season[$scope.currentSlide].value;
+          $scope.update = function() {
+            search.sendSeason($scope.currentValue);
+          };
+          $scope.update();
+        }
+      }
     };
 }]);

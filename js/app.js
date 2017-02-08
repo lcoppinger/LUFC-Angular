@@ -1,1 +1,1 @@
-var app = angular.module('LUFCApp', ['angular-toArrayFilter','slickCarousel']);
+var app = angular.module('LUFCApp', ['slickCarousel','angular-toArrayFilter']);

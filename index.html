@@ -19,14 +19,9 @@
         <div class="col-md-6 pull-right">
           <div class="col-md-8 pull-right right">
             <h1 class="title">Leeds United match statistics</h1>
-            <ul class="tabs" role="tablist">
-              <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
-            </ul>
-            <!--
-            <slick class="angular-slick" settings="slickConfig">
-              <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
+            <slick class="tabs" infinite="false" slides-to-show="4" slides-to-scroll="4">
+                <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
             </slick>
-          -->
           </div>
           <form class="col-md-12 form">
             <div class="col-md-9 pull-right no-padding">
@@ -114,9 +109,13 @@
       <div class="row">
         <div class="results-wrapper">
           <div class="season-wrapper">
-            <div class="season-tab">
-              <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
+            <button class="slick-prev" ng-click="slickConfig.method.slickPrev()"></button>
+            <div class="slick-wrapper">
+              <slick class="season-tab" settings="slickConfig">
+                <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
+              </slick>
             </div>
+            <button class="slick-next" ng-click="slickConfig.method.slickNext()"></button>
           </div>
           <div ng-controller="ResultsController">
             <table class="table">
@@ -175,14 +174,17 @@
       </div>
     </div>
 
-    <!-- vendor scripts -->
+
+    <!-- Initialise carousel -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/slick.min.js"></script>
+
+    <!-- Vendor scripts -->
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/toArrayFilter.js"></script>
-    <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
 
-    <!-- carousel scripts -->
-    <script src="js/vendor/slick.min.js"></script>
+    <!-- angular carousel scripts -->
     <script src="js/vendor/angular-slick.min.js"></script>
 
     <!-- module -->
