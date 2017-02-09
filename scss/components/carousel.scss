@@ -16,10 +16,6 @@
     cursor: pointer;
     text-decoration: none;
   }
-
-  .slick-arrow {
-    display: none !important;
-  }
 }
 
 .slick-slide img {
@@ -27,7 +23,9 @@
 }
 
 .slide {
-  padding-right: 250px;
+  @media (min-width: $screen-sm-min) {
+    padding-right: 250px;
+  }
 }
 
 .season-wrapper {
@@ -64,7 +62,11 @@
 
 .slick-wrapper {
   display: inline-block;
-  width: 350px;
+  width: 200px;
+
+  @media (min-width: $screen-sm-min) {
+    width: 350px;
+  }
 }
 
 .season-tab {

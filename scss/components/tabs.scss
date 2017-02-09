@@ -67,3 +67,48 @@
     color: $base-font--inverse;
   }
 }
+
+.tabs-wrapper {
+  .slick-next {
+    @extend %tab-font;
+    background: 0;
+    border: 0;
+    color: $base-font--inverse;
+
+    &::after {
+      background: url('../Images/chevron_right.svg') no-repeat center;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      width: 15px;
+    }
+
+    &:hover,
+    :focus,
+    :active {
+      outline: none;
+    }
+  }
+
+  .slick-prev {
+    @extend %tab-font;
+    background: 0;
+    border: 0;
+    color: $base-font--inverse;
+    float: left;
+
+    &::before {
+      background: url('../Images/chevron_left.svg') no-repeat center;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      width: 15px;
+    }
+
+    &:hover,
+    :focus,
+    :active {
+      outline: none;
+    }
+  }
+}

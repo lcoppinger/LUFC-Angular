@@ -12,47 +12,51 @@
     <link rel="stylesheet" href="css/vendor/slick.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
-  <body ng-app="LUFCApp" ng-controller="FormController">
+  <body ng-app="LUFCApp" ng-controller="MainController">
     <div class="container-fluid landing-wrapper">
       <div class="row">
-        <img src="Images/Football.svg"/>
-        <div class="col-md-6 pull-right">
-          <div class="col-md-8 pull-right right">
+        <img class="non-mobile" src="Images/Football.svg"/>
+        <div class="col-md-6 pull-right-lg">
+          <div class="col-md-8 pull-right-lg right">
             <h1 class="title">Leeds United match statistics</h1>
-            <slick class="tabs" infinite="false" slides-to-show="4" slides-to-scroll="4">
-                <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
-            </slick>
+            <div class="tabs-wrapper">
+              <button class="slick-prev" ng-click="seasonConfig.method.slickPrev()">recent seasons</button>
+              <button class="slick-next" ng-click="seasonConfig.method.slickNext()">previous seasons</button>
+              <slick class="tabs" settings="seasonConfig">
+                  <li ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</li>
+              </slick>
+            </div>
           </div>
           <form class="col-md-12 form">
-            <div class="col-md-9 pull-right no-padding">
+            <div class="col-md-9  pull-right-lg no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
                 <form-select select="competition" ng-model="compSelect"></form-select>
               </div>
               <form-checkbox check="han"></form-checkbox>
             </div>
-            <div class="col-md-10 pull-right no-padding">
+            <div class="col-md-10  pull-right-lg no-padding">
               <div class="form-group col-md-5 custom-select no-padding">
                 <form-select select="manager" ng-model="manageSelect"></form-select>
               </div>
               <form-checkbox check="wld"></form-checkbox>
             </div>
-            <div class="col-md-11 pull-right no-padding">
+            <div class="col-md-11  pull-right-lg no-padding">
               <div class="form-group col-md-4 custom-select no-padding">
                 <form-select select="venue" ng-model="venueSelect"></form-select>
               </div>
-              <div class="form-group col-md-4 custom-select">
+              <div class="form-group col-md-4 custom-select mobile-no-padding">
                 <form-select select="scorers" ng-model="scorersSelect"></form-select>
               </div>
               <div class="form-group col-md-4 custom-select no-padding">
                 <form-select select="opposition" ng-model="oppoSelect"></form-select>
               </div>
             </div>
-            <div class="col-md-12 pull-right no-padding">
+            <div class="col-md-12  pull-right-lg no-padding">
               <div class="panel-group">
                 <div class="panel">
                   <div class="panel-heading">
                     <h4 class="panel-title">
-                      <a data-toggle="collapse" href="#collapse1" class="more_button">More options</a>
+                      <a data-toggle="collapse" href="#collapse1" class="more_button" ng-class="{open: !toggle}" ng-click="toggle = !toggle">{{toggleText}}</a>
                     </h4>
                   </div>
                   <div id="collapse1" class="panel-collapse collapse">
@@ -61,7 +65,7 @@
                         <form-select select="city" ng-model="citySelect"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
-                        <form-select select="opp_manager" ng-model="oppmanageSelect"></form-select>
+                        <form-select select="opposition_manager" ng-model="oppmanageSelect"></form-select>
                       </div>
                       <div class="form-group col-md-5 custom-select no-float">
                         <form-select select="referee" ng-model="refereeSelect"></form-select>
@@ -74,100 +78,85 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 pull-right center">
-              <button type="button" ng-click="send()" class="button-primary search">Search</button>
+            <div class="col-md-12  pull-right-lg center">
+              <button type="button" ng-click="send(); display=true; enableSlick()" class="button-primary search" scroll-window>Search</button>
             </div>
           </form>
         </div>
-        <div class="col-md-6">
-          <div class="slider">
-            <div class="col-md-8 slide">
-              <h2>Since 16th October, we’ve only lost to current 1st in Championship, 2nd in the Championship and 3rd in Premier League.</h2>
-              <a href="#" class="highlight">#lufc</a>
-              <a href="#"><img src="Images/twitter_logo.png"/></a>
+        <div class="col-md-6" ng-controller="TwitterController">
+          <slick class="slider" infinite="true" arrows="false" slides-to-show="1" autoplay="true" autoplay-speed="4000">
+            <div class="col-md-8 slide" ng-repeat="tweet in tweets">
+              <h2>{{tweet.message}}</h2>
+              <a href="#" class="highlight">{{tweet.hashtag}}</a>
+              <a href="#"><img ng-src="{{tweet.image}}"/></a>
             </div>
-            <div class="col-md-8 slide">
-              <h2>First time Leeds have scored four goals in a match this season.</h2>
-              <a href="#" class="highlight">#lufc</a>
-              <a href="#"><img src="Images/twitter_logo.png"/></a>
-            </div>
-            <div class="col-md-8 slide">
-              <h2>In all competitions this season Leeds have won 17 games so far, compared to last years total of 16 games.</h2>
-              <a href="#" class="highlight">#lufc</a>
-              <a href="#"><img src="Images/twitter_logo.png"/></a>
-            </div>
-            <div class="col-md-8 slide">
-              <h2>First time Leeds have scored more than three goals since February 2014 (5-1 v Huddersfield).</h2>
-              <a href="#" class="highlight">#lufc</a>
-              <a href="#"><img src="Images/twitter_logo.png"/></a>
-            </div>
-          </div>
+          </slick>
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" ng-show="display">
       <div class="row">
-        <div class="results-wrapper">
+        <div class="results-wrapper" ng-controller="ResultsController">
           <div class="season-wrapper">
             <button class="slick-prev" ng-click="slickConfig.method.slickPrev()"></button>
             <div class="slick-wrapper">
-              <slick class="season-tab" settings="slickConfig">
+              <slick class="season-tab" settings="slickConfig" >
                 <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
               </slick>
             </div>
             <button class="slick-next" ng-click="slickConfig.method.slickNext()"></button>
           </div>
-          <div ng-controller="ResultsController">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Competition</th>
-                  <th>Date</th>
-                  <th>H/A/N</th>
-                  <th>Venue</th>
-                  <th>Opposition</th>
-                  <th>Score</th>
-                  <th>Result</th>
-                  <th class="goal-scorers">Goal Scorers</th>
-                  <th>Manager</th>
-                  <th ng-show="extra">Assistant Manager</th>
-                  <th ng-show="extra">Opposition Manager</th>
-                  <th ng-show="extra">Referee</th>
-                  <th ng-show="extra">City</th>
-                  <th><button type="button" class="extra-button" ng-class="{expanded: extra}" ng-click="extra = !extra"></button></th>
-                </tr>
-              </thead>
-              <tbody id="results">
-                <tr ng-repeat="result in results | toArray | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
-                | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}
-                | orderBy: 'id'">
-                  <td class="competition" data-value="{{result.competition}}">{{result.competition}}</td>
-                  <td class="date" data-value="{{result.date}}">{{result.date}}</td>
-                  <td class="han" data-value="{{result.han}}">{{result.han}}</td>
-                  <td class="venue" data-value="{{result.venue}}">{{result.venue}}</td>
-                  <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
-                  <td class="score"><span ng-class="{home: (result.han == 'Home')}">{{result.score1}}</span> - <span ng-class="{home: (result.han == 'Away')}">{{result.score2}}</span></td>
-                  <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
-                  <td class="scorers" ng-if="result.scorers[0].scorer == undefined" data-value="{{result.scorer1}}">{{result.scorer1}}</td>
-                  <td class="scorers" ng-if="result.scorers[0].scorer !== undefined">
-                    <div class="dropdown">
-                      <div class="drop scorer" data-value="{{result.scorer1}}" ng-class="{open: dropdown}" ng-click="dropdown = !dropdown">{{result.scorer1}}</div>
-                      <div class="dropdown-content" ng-show="dropdown">
-                        <p ng-repeat="scorer in result.scorers">{{scorer.scorer}}</p>
-                      </div>
+          <table class="table">
+            <thead ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+            | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
+              <tr>
+                <th>Competition</th>
+                <th>Date</th>
+                <th>H/A/N</th>
+                <th>Venue</th>
+                <th>Opposition</th>
+                <th>Score</th>
+                <th>Result</th>
+                <th class="goal-scorers">Goal Scorers</th>
+                <th>Manager</th>
+                <th ng-show="extra">Assistant Manager</th>
+                <th ng-show="extra">Opposition Manager</th>
+                <th ng-show="extra">Referee</th>
+                <th ng-show="extra">City</th>
+                <th><button type="button" class="extra-button" ng-class="{expanded: extra}" ng-click="extra = !extra"></button></th>
+              </tr>
+            </thead>
+            <tbody id="results">
+              <tr ng-repeat="result in results | toArray | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+              | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}
+              | orderBy: 'id'">
+                <td class="competition" data-value="{{result.competition}}">{{result.competition}}</td>
+                <td class="date" data-value="{{result.date}}">{{result.date}}</td>
+                <td class="han" data-value="{{result.han}}">{{result.han}}</td>
+                <td class="venue" data-value="{{result.venue}}">{{result.venue}}</td>
+                <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
+                <td class="score"><span ng-class="{home: (result.han == 'Home')}">{{result.score1}}</span> - <span ng-class="{home: (result.han == 'Away')}">{{result.score2}}</span></td>
+                <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
+                <td class="scorers" ng-if="result.scorers[0].scorer == undefined" data-value="{{result.scorer1}}">{{result.scorer1}}</td>
+                <td class="scorers" ng-if="result.scorers[0].scorer !== undefined">
+                  <div class="dropdown">
+                    <div class="drop scorer" data-value="{{result.scorer1}}" ng-class="{open: dropdown}" ng-click="dropdown = !dropdown">{{result.scorer1}}</div>
+                    <div class="dropdown-content" ng-show="dropdown">
+                      <p ng-repeat="scorer in result.scorers">{{scorer.scorer}}</p>
                     </div>
-                  </td>
-                  <td class="manager" data-value="{{result.manager}}">{{result.manager}}</td>
-                  <td class="assistant_manager" ng-show="extra" data-value="{{result.assistant_manager}}">{{result.assistant_manager}}</td>
-                  <td class="opposition_manager" ng-show="extra" data-value="{{result.opposition_manager}}">{{result.opposition_manager}}</td>
-                  <td class="referee" ng-show="extra" data-value="{{result.referee}}">{{result.referee}}</td>
-                  <td class="city" ng-show="extra" data-value="{{result.city}}">{{result.city}}</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="no-results">
+                  </div>
+                </td>
+                <td class="manager" data-value="{{result.manager}}">{{result.manager}}</td>
+                <td class="assistant_manager" ng-show="extra" data-value="{{result.assistant_manager}}">{{result.assistant_manager}}</td>
+                <td class="opposition_manager" ng-show="extra" data-value="{{result.opposition_manager}}">{{result.opposition_manager}}</td>
+                <td class="referee" ng-show="extra" data-value="{{result.referee}}">{{result.referee}}</td>
+                <td class="city" ng-show="extra" data-value="{{result.city}}">{{result.city}}</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="no-results" ng-hide="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+          | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
             <p>Sorry, there are no results for your search.</p>
           </div>
         </div>
@@ -188,13 +177,15 @@
     <script src="js/vendor/angular-slick.min.js"></script>
 
     <!-- module -->
-    <script src="js/app.js"></script>
+    <script src="js/modules/app.js"></script>
 
     <!-- controllers -->
-    <script src="js/controllers/FormController.js"></script>
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/TwitterController.js"></script>
     <script src="js/controllers/ResultsController.js"></script>
 
     <!-- services -->
+    <script src="js/services/object.js"></script>
     <script src="js/services/filter.js"></script>
     <script src="js/services/search.js"></script>
 
@@ -206,8 +197,7 @@
     <!-- directives -->
     <script src="js/directives/formSelect.js"></script>
     <script src="js/directives/formCheckbox.js"></script>
+    <script src="js/directives/scrollWindow.js"></script>
 
-    <!-- page jquery -->
-    <script src="js/script.js"></script>
   </body>
 </html>

@@ -71,11 +71,16 @@ label {
 //checkboxes
 .form-check-inline {
   display: inline-block;
-  margin-right: 8px;
-  margin-top: 36px;
+  margin-right: 12px;
+  margin-top: 20px;
 
-  &:first-child {
-    margin-left: 16px;
+  @media (min-width: $screen-sm-min) {
+    margin-right: 8px;
+    margin-top: 36px;
+
+    &:first-child {
+      margin-left: 16px;
+    }
   }
 }
 
