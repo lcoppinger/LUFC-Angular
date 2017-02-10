@@ -24,7 +24,7 @@
             <div class="tabs-wrapper">
               <button class="slick-prev" ng-click="seasonConfig.method.slickPrev()">recent seasons</button>
               <button class="slick-next" ng-click="seasonConfig.method.slickNext()">previous seasons</button>
-              <slick class="tabs" settings="seasonConfig">
+              <slick class="tabs" settings="seasonConfig" init-onload="true">
                   <div ng-repeat="product in season" ng-class="{active: $index === selected}" ng-click="select($index)" class="parallelogram" data-value="{{ product.value }}">{{ product.name }}</div>
               </slick>
             </div>
