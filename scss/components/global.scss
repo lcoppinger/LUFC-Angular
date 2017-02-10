@@ -1,5 +1,6 @@
 .landing-wrapper {
-  background-color: blue;
+  background: url('../Images/Mobile_background.svg') no-repeat top;
+  background-size: cover;
 
   @media (min-device-width: $screen-md-min) {
     background: url('../Images/Background.svg') no-repeat top right;

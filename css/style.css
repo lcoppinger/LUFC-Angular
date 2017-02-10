@@ -60,7 +60,8 @@ label {
       font-size: 16px; } }
 
 .landing-wrapper {
-  background-color: blue; }
+  background: url("../Images/Mobile_background.svg") no-repeat top;
+  background-size: cover; }
   @media (min-device-width: 992px) {
     .landing-wrapper {
       background: url("../Images/Background.svg") no-repeat top right;

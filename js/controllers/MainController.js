@@ -144,9 +144,11 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
     }, true );
 
     //Tabs seasons carousel
+    $scope.initSlick = function() {
+     $scope.seasonConfig.enabled = true;
+    };
     $scope.seasonConfig = {
       arrows: false,
-      enabled: true,
       infinite: false,
       method: {},
       slidesToShow: 4,
