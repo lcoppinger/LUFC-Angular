@@ -61,7 +61,7 @@ label {
 
 .landing-wrapper {
   background-color: blue; }
-  @media (min-device-width: 768px) {
+  @media (min-device-width: 992px) {
     .landing-wrapper {
       background: url("../Images/Background.svg") no-repeat right;
       background-size: 80%;
@@ -78,7 +78,7 @@ label {
 .pull-right-lg {
   float: none; }
 
-@media (min-device-width: 768px) {
+@media (min-device-width: 992px) {
   .title {
     padding: 0 0 0 25px; }
   .right {
@@ -91,7 +91,7 @@ label {
 
 .mobile-no-padding {
   padding: 0; }
-  @media (min-device-width: 768px) {
+  @media (min-device-width: 992px) {
     .mobile-no-padding {
       padding: 0 15px; } }
 
@@ -99,7 +99,7 @@ label {
   display: block;
   float: none;
   text-align: left; }
-  @media (min-device-width: 768px) {
+  @media (min-device-width: 992px) {
     .no-float {
       display: inline-block; } }
 
@@ -112,7 +112,7 @@ label {
 
 .non-mobile {
   display: none; }
-  @media (min-device-width: 768px) {
+  @media (min-device-width: 992px) {
     .non-mobile {
       display: inline-block; } }
 
@@ -252,7 +252,7 @@ label {
   display: inline-block;
   margin-right: 12px;
   margin-top: 20px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .form-check-inline {
       margin-right: 8px;
       margin-top: 36px; }
@@ -365,7 +365,7 @@ label {
 .slick-slide img {
   display: inline-block; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .slide {
     padding-right: 250px; } }
 
@@ -395,7 +395,7 @@ label {
 .slick-wrapper {
   display: inline-block;
   width: 200px; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .slick-wrapper {
       width: 350px; } }
 

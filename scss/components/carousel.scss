@@ -23,7 +23,7 @@
 }
 
 .slide {
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
     padding-right: 250px;
   }
 }
@@ -64,7 +64,7 @@
   display: inline-block;
   width: 200px;
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
     width: 350px;
   }
 }
