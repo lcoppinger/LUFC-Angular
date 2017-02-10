@@ -146,13 +146,14 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
     //Tabs seasons carousel
     $scope.seasonConfig = {
       arrows: false,
+      enabled: true,
       infinite: false,
       method: {},
       slidesToShow: 4,
       slidesToScroll: 4,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -176,7 +177,7 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
       slidesToScroll: 3,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 769,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

@@ -3,6 +3,14 @@
   border: $border-color--color;
 }
 
+.table-wrapper {
+  overflow: scroll;
+
+  @media (min-device-width: $screen-lg-min) {
+    overflow: auto;
+  }
+}
+
 .table>thead>tr>th {
   @extend %sub-title-font;
   background-color: $highlight-background;

@@ -22,7 +22,7 @@
   font-size: 32px; }
   @media (min-device-width: 992px) {
     .title {
-      font-size: 48px; } }
+      font-size: 46px; } }
 
 .panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th {
   font-family: "Lato-Regular";
@@ -31,11 +31,11 @@
     .panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th {
       font-size: 18px; } }
 
-.tabs li, .custom-dropdown .dropdown-toggle {
+.parallelogram, .custom-dropdown .dropdown-toggle {
   font-family: "Lato-Regular";
   font-size: 14px; }
   @media (min-device-width: 992px) {
-    .tabs li, .custom-dropdown .dropdown-toggle {
+    .parallelogram, .custom-dropdown .dropdown-toggle {
       font-size: 14px; } }
 
 .tabs .slick-arrow, .tabs-wrapper .slick-next, .tabs-wrapper .slick-prev {
@@ -50,7 +50,7 @@
   font-size: 26px; }
   @media (min-device-width: 992px) {
     .slider {
-      font-size: 32px; } }
+      font-size: 28px; } }
 
 label {
   font-family: "Lato-Regular";
@@ -63,9 +63,17 @@ label {
   background-color: blue; }
   @media (min-device-width: 992px) {
     .landing-wrapper {
-      background: url("../Images/Background.svg") no-repeat right;
-      background-size: 80%;
+      background: url("../Images/Background.svg") no-repeat top right;
+      background-size: cover;
       min-height: 100vh; } }
+  @media (min-device-width: 1200px) {
+    .landing-wrapper {
+      background-size: 90%; } }
+
+.landing-image {
+  padding: 0; }
+  .landing-image img {
+    width: 80%; }
 
 .title {
   color: #fff;
@@ -76,7 +84,8 @@ label {
   text-align: center; }
 
 .pull-right-lg {
-  float: none; }
+  float: none;
+  overflow: hidden; }
 
 @media (min-device-width: 992px) {
   .title {
@@ -117,12 +126,25 @@ label {
       display: inline-block; } }
 
 .parallelogram {
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
   height: 40px;
+  margin-left: 7px;
+  margin-right: -7px;
+  padding: 10px 0;
   text-align: center;
   -webkit-transform: skew(-20deg);
       -ms-transform: skew(-20deg);
           transform: skew(-20deg);
   width: 100px; }
+  .parallelogram:hover {
+    background-color: #fff;
+    color: #215b99; }
+  .parallelogram:focus {
+    background-color: #fff;
+    color: #215b99;
+    outline: none; }
   .parallelogram.active {
     background-color: #fff;
     color: #215b99; }
@@ -130,21 +152,6 @@ label {
 .tabs {
   border-bottom: 1px solid #fff;
   padding: 0; }
-  .tabs li {
-    border: 1px solid #fff;
-    color: #fff;
-    cursor: pointer;
-    margin-left: 7px;
-    margin-right: -7px;
-    padding: 10px 0;
-    text-align: center; }
-    .tabs li:hover {
-      background-color: #fff;
-      color: #215b99; }
-    .tabs li:focus {
-      background-color: #fff;
-      color: #215b99;
-      outline: none; }
   .tabs .slick-next {
     left: 0;
     position: absolute;
@@ -252,7 +259,7 @@ label {
   display: inline-block;
   margin-right: 12px;
   margin-top: 20px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .form-check-inline {
       margin-right: 8px;
       margin-top: 36px; }
@@ -365,7 +372,7 @@ label {
 .slick-slide img {
   display: inline-block; }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .slide {
     padding-right: 250px; } }
 
@@ -410,6 +417,12 @@ label {
 
 .table {
   border: 1px solid #215b99; }
+
+.table-wrapper {
+  overflow: scroll; }
+  @media (min-device-width: 1200px) {
+    .table-wrapper {
+      overflow: auto; } }
 
 .table > thead > tr > th {
   background-color: #215b99;

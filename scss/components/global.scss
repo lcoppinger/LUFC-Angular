@@ -2,9 +2,21 @@
   background-color: blue;
 
   @media (min-device-width: $screen-md-min) {
-    background: url('../Images/Background.svg') no-repeat right;
-    background-size: 80%;
+    background: url('../Images/Background.svg') no-repeat top right;
+    background-size: cover;
     min-height: 100vh;
+  }
+
+  @media (min-device-width: $screen-lg-min) {
+    background-size: 90%;
+  }
+}
+
+.landing-image {
+  padding: 0;
+
+  img {
+    width: 80%;
   }
 }
 
@@ -21,6 +33,7 @@
 
 .pull-right-lg {
   float: none;
+  overflow: hidden;
 }
 
 @media (min-device-width: $screen-md-min) {

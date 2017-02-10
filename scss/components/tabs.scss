@@ -1,8 +1,26 @@
 .parallelogram {
+  @extend %small-font;
+  border: $border-color--inverse;
+  color: $base-font--inverse;
+  cursor: pointer;
   height: 40px;
+  margin-left: 7px;
+  margin-right: -7px;
+  padding: 10px 0;
   text-align: center;
   transform: skew(-20deg);
   width: 100px;
+
+  &:hover {
+    background-color: $default-background;
+    color: $hightlight--font;
+  }
+
+  &:focus {
+    background-color: $default-background;
+    color: $hightlight--font;
+    outline: none;
+  }
 
   &.active {
     background-color: $default-background;
@@ -13,28 +31,6 @@
 .tabs {
   border-bottom: $border-color--inverse;
   padding: 0;
-
-  li {
-    @extend %small-font;
-    border: $border-color--inverse;
-    color: $base-font--inverse;
-    cursor: pointer;
-    margin-left: 7px;
-    margin-right: -7px;
-    padding: 10px 0;
-    text-align: center;
-
-    &:hover {
-      background-color: $default-background;
-      color: $hightlight--font;
-    }
-
-    &:focus {
-      background-color: $default-background;
-      color: $hightlight--font;
-      outline: none;
-    }
-  }
 
   .slick-next {
     left: 0;
