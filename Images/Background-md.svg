@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="981px" height="768px" viewBox="0 0 981 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Background</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-43.000000, 0.000000)" fill="#215B99">
+            <g id="Background" transform="translate(43.000000, 0.000000)">
+                <polygon id="Rectangle" fill-opacity="0.699999988" points="517 0 981 0 981 768 0.5 768"></polygon>
+                <polygon id="Rectangle" points="570 0 981 0 981 768 56.5 768"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

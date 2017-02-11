@@ -18,7 +18,7 @@
         <div class="col-md-4 col-lg-6 landing-image">
           <img class="non-mobile" src="Images/Football.svg"/>
         </div>
-        <div class="col-md-8 col-lg-6 pull-right-lg">
+        <div class="col-md-8 col-lg-6 pull-right-lg mobile-form">
           <div class="col-md-8 pull-right-lg right">
             <h1 class="title">Leeds United match statistics</h1>
             <div class="tabs-wrapper">
@@ -108,10 +108,11 @@
             </div>
             <button class="slick-next" ng-click="slickConfig.method.slickNext()"></button>
           </div>
+          <loading></loading>
           <div class="table-wrapper">
-            <table class="table">
-              <thead ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
-              | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
+            <table class="table" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+            | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
+              <thead>
                 <tr>
                   <th>Competition</th>
                   <th>Date</th>
@@ -159,7 +160,7 @@
               </tbody>
             </table>
           </div>
-          <div class="no-results" ng-hide="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+          <div class="no-results"  ng-hide="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
           | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
             <p>Sorry, there are no results for your search.</p>
           </div>
@@ -202,6 +203,7 @@
     <script src="js/directives/formSelect.js"></script>
     <script src="js/directives/formCheckbox.js"></script>
     <script src="js/directives/scrollWindow.js"></script>
+    <script src="js/directives/loading.js"></script>
 
   </body>
 </html>

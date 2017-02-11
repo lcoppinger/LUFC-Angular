@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="320px" height="720px" viewBox="0 0 320 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+<svg width="320px" height="825px" viewBox="0 0 320 825" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
     <title>Mobile_background</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Mobile-Portrait" fill="#215B99">
-            <g id="Landing">
-                <g id="Mobile_background">
-                    <polygon id="Rectangle-12" fill-opacity="0.7" points="0 0 320 0 320 652.5 0 720"></polygon>
-                    <polygon id="Rectangle-12" points="0 0 320 0 320 616.25 0 680"></polygon>
-                </g>
+        <g id="Backgrounds" fill="#215B99">
+            <g id="Mobile_background">
+                <polygon id="Rectangle-12" fill-opacity="0.7" points="0 0 320 0 320 747.65625 0 825"></polygon>
+                <polygon id="Rectangle-12" points="0 0 320 0 320 706.119792 0 779.166667"></polygon>
             </g>
         </g>
     </g>

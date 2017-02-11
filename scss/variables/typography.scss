@@ -26,8 +26,8 @@ $tab-font-size--lg: $tab-font-size--md;
 
 $carousel-font-size--xs: 26px;
 $carousel-font-size--sm: $carousel-font-size--xs;
-$carousel-font-size--md: 28px;
-$carousel-font-size--lg: $carousel-font-size--md;
+$carousel-font-size--md: 20px;
+$carousel-font-size--lg: 28px;
 
 $light--font-family--lato: 'Lato-Light';
 $regular--font-family--lato: 'Lato-Regular';
@@ -83,6 +83,10 @@ $regular--font-family--lato: 'Lato-Regular';
 
   @media (min-device-width: $screen-md-min) {
     font-size: $carousel-font-size--md;
+  }
+
+  @media (min-device-width: $screen-lg-min) {
+    font-size: $carousel-font-size--lg;
   }
 }
 

@@ -1,7 +1,7 @@
 .slider {
   @extend %carousel-font;
   color: $base-font--default;
-  margin-top: 60px;
+  margin-top: 0;
   overflow: hidden;
 
   .highlight {
@@ -16,6 +16,10 @@
     cursor: pointer;
     text-decoration: none;
   }
+
+  @media (min-width: $screen-md-min) {
+    margin-top: 60px;
+  }
 }
 
 .slick-slide img {
@@ -23,6 +27,14 @@
 }
 
 .slide {
+  h2 {
+    @extend %carousel-font;
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-right: 40px;
+  }
+
   @media (min-width: $screen-lg-min) {
     padding-right: 250px;
   }

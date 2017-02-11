@@ -70,6 +70,8 @@
     background: 0;
     border: 0;
     color: $base-font--inverse;
+    display: block;
+    padding-left: 15px;
 
     &::after {
       background: url('../Images/chevron_right.svg') no-repeat center;
@@ -83,6 +85,11 @@
     :focus,
     :active {
       outline: none;
+    }
+
+    @media (min-width: $screen-md-min) {
+      display: inline-block;
+      padding-left: 0;
     }
   }
 

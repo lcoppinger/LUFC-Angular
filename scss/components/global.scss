@@ -1,15 +1,16 @@
 .landing-wrapper {
-  background: url('../Images/Mobile_background.svg') no-repeat top;
-  background-size: cover;
+  background: none;
 
   @media (min-device-width: $screen-md-min) {
-    background: url('../Images/Background.svg') no-repeat top right;
+    background: url('../Images/Background-md.svg') no-repeat top right;
     background-size: cover;
     min-height: 100vh;
   }
 
   @media (min-device-width: $screen-lg-min) {
+    background: url('../Images/Background.svg') no-repeat top right;
     background-size: 90%;
+    min-height: 100vh;
   }
 }
 
@@ -74,8 +75,14 @@
 }
 
 .center {
-  margin-bottom: 30px;
+  margin-bottom: 175px;
+  padding: 0;
   text-align: center;
+
+  @media (min-device-width: $screen-md-min) {
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
 }
 
 .results-wrapper {
