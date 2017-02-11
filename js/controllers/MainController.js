@@ -3,6 +3,7 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
   //Season object
   $scope.season = filter.get('season').then(function(d){
     $scope.season = d;
+    initSlick();
   });
 
   //Competition object
