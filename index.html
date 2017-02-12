@@ -140,7 +140,7 @@
                   <td class="venue" data-value="{{result.venue}}">{{result.venue}}</td>
                   <td class="opposition" data-value="{{result.opposition}}">{{result.opposition}}</td>
                   <td class="score"><span ng-class="{home: (result.han == 'Home')}">{{result.score1}}</span> - <span ng-class="{home: (result.han == 'Away')}">{{result.score2}}</span></td>
-                  <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
+                  <td class="result" ng-class="{won: (result.result == 'Won' || result.result == 'Won (P)' || result.result == 'Won (ET)'), lost: (result.result == 'Lost' || result.result == 'Lost (P)'|| result.result == 'Lost (ET)'), draw: (result.result == 'Draw')}" data-value="{{result.result}}">{{result.result}}</td>
                   <td class="scorers" ng-if="result.scorers[0].scorer == undefined" data-value="{{result.scorer1}}">{{result.scorer1}}</td>
                   <td class="scorers" ng-if="result.scorers[0].scorer !== undefined">
                     <div class="dropdown">
@@ -160,7 +160,7 @@
               </tbody>
             </table>
           </div>
-          <div class="no-results"  ng-hide="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+          <div class="no-results" ng-hide="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
           | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
             <p>Sorry, there are no results for your search.</p>
           </div>

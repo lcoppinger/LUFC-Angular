@@ -12,10 +12,10 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
 
         angular.forEach (data, function(value, key){
           var opposition = "";
-          if (value[4] == "Home") {
-            opposition = value[12];
-          } else {
+          if (value[12] == "Leeds United") {
             opposition = value[8];
+          } else if (value[8] == "Leeds United"){
+            opposition = value[12];
           }
 
           arr.push({
