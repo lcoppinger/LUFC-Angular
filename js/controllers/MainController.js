@@ -1,32 +1,10 @@
 app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'search', function($scope, $filter, object, filter, search){
 
-  //Tabs seasons carousel
-  $scope.initSlick = function() {
-   $scope.seasonConfig.enabled = true;
- };
-
   //Season object
   $scope.season = filter.get('season').then(function(d){
     $scope.season = d;
     $scope.initSlick();
   });
-  
-  $scope.seasonConfig = {
-    arrows: false,
-    infinite: false,
-    method: {},
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        }
-      }
-    ],
-  };
 
   //Competition object
   $scope.competition = object.create('competition');
@@ -134,7 +112,9 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
      $scope.searchValue = $scope.season[index].value;
   };
   $scope.send = function() {
+    $scope.enableSlick();
     search.sendSeason($scope.searchValue);
+    $scope.slickConfig.method.slickGoTo($scope.selected);
   };
 
   //Toggle extra fields
@@ -166,13 +146,35 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
         $scope.checkedWld = checked;
     }, true );
 
+    //Tabs seasons carousel
+    $scope.initSlick = function() {
+      $scope.seasonConfig.enabled = true;
+    };
+
+   $scope.seasonConfig = {
+     arrows: false,
+     infinite: false,
+     method: {},
+     slidesToShow: 4,
+     slidesToScroll: 4,
+     responsive: [
+       {
+         breakpoint: 769,
+         settings: {
+           slidesToShow: 3,
+           slidesToScroll: 3,
+         }
+       }
+     ],
+   };
+
     //Results season carousel
     $scope.enableSlick = function() {
      $scope.slickConfig.enabled = true;
     };
-    $scope.currentSlide = 0;
     $scope.slickConfig = {
       arrows: false,
+      enabled: true,
       centerMode: true,
       draggable: false,
       infinite: true,

@@ -1,4 +1,5 @@
 app.controller('TwitterController', ['$scope', function($scope){
+
   $scope.tweets = [
     {
       message: 'Since 16th October, we’ve only lost to current 1st in Championship, 2nd in the Championship and 3rd in Premier League.',
