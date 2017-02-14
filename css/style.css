@@ -64,12 +64,12 @@ label {
 
 .landing-wrapper {
   background: none; }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .landing-wrapper {
       background: url("../Images/Background-md.svg") no-repeat top right;
       background-size: cover;
       min-height: 100vh; } }
-  @media (min-device-width: 1200px) {
+  @media (min-width: 1200px) {
     .landing-wrapper {
       background: url("../Images/Background.svg") no-repeat top right;
       background-size: 90%;
@@ -93,7 +93,7 @@ label {
 
 @media (min-device-width: 992px) {
   .title {
-    padding: 0 0 0 25px; }
+    padding: 0 0 0 30px; }
   .right {
     text-align: right; }
   .pull-right-lg {
