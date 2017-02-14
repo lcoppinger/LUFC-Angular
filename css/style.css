@@ -104,17 +104,30 @@ label {
 
 .mobile-no-padding {
   padding: 0; }
+  @media (min-device-width: 768px) {
+    .mobile-no-padding {
+      padding-left: 15px; }
+      .mobile-no-padding .custom-dropdown .dropdown-menu {
+        left: 15px;
+        width: calc(100% - 15px); } }
   @media (min-device-width: 992px) {
     .mobile-no-padding {
-      padding: 0 15px; } }
+      padding: 0 15px; }
+      .mobile-no-padding .custom-dropdown .dropdown-menu {
+        left: 15px;
+        width: calc(100% - 30px); } }
 
 .no-float {
   display: block;
-  float: none;
+  float: inherit;
   text-align: left; }
+  @media (min-device-width: 768px) {
+    .no-float {
+      float: left; } }
   @media (min-device-width: 992px) {
     .no-float {
-      display: inline-block; } }
+      display: inline-block;
+      float: none; } }
 
 .center {
   margin-bottom: 175px;
@@ -221,7 +234,13 @@ label {
 
 .mobile-form {
   background: url("../Images/Mobile_background.svg") no-repeat top;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
+  @media (min-device-width: 768px) {
+    .mobile-form {
+      background: url("../Images/Mobile_background-ipad.svg") no-repeat top;
+      background-size: cover;
+      overflow: hidden; } }
   @media (min-device-width: 992px) {
     .mobile-form {
       background: none; } }

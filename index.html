@@ -21,7 +21,7 @@
         </div>
         <div class="col-md-8 col-lg-6 pull-right-lg mobile-form">
           <div class="col-md-8 pull-right-lg right">
-            <h1 class="title">Leeds United match statistics</h1>
+            <h1 class="title">Leeds United match stats</h1>
             <div class="tabs-wrapper">
               <button class="slick-prev" ng-click="seasonConfig.method.slickPrev()">recent seasons</button>
               <button class="slick-next" ng-click="seasonConfig.method.slickNext()">previous seasons</button>
@@ -31,27 +31,33 @@
             </div>
           </div>
           <form class="col-md-12 form">
-            <div class="col-md-10 col-lg-9 pull-right-lg no-padding">
-              <div class="form-group col-md-5 col-sm-6 custom-select no-padding">
-                <form-select select="competition" ng-model="compSelect"></form-select>
+            <div class="row">
+              <div class="col-md-10 col-lg-9 pull-right-lg">
+                <div class="form-group col-md-5 col-sm-6 custom-select no-padding">
+                  <form-select select="competition" ng-model="compSelect"></form-select>
+                </div>
+                <form-checkbox check="han"></form-checkbox>
               </div>
-              <form-checkbox check="han"></form-checkbox>
             </div>
-            <div class="col-md-11 col-lg-10  pull-right-lg no-padding">
-              <div class="form-group col-md-5 col-sm-6 custom-select no-padding">
-                <form-select select="manager" ng-model="manageSelect"></form-select>
+            <div class="row">
+              <div class="col-md-11 col-lg-10  pull-right-lg">
+                <div class="form-group col-md-5 col-sm-6 custom-select no-padding">
+                  <form-select select="manager" ng-model="manageSelect"></form-select>
+                </div>
+                <form-checkbox check="wld"></form-checkbox>
               </div>
-              <form-checkbox check="wld"></form-checkbox>
             </div>
-            <div class="col-md-12 col-lg-11 pull-right-lg no-padding">
-              <div class="form-group col-md-4 col-sm-6 custom-select no-padding">
-                <form-select select="venue" ng-model="venueSelect"></form-select>
-              </div>
-              <div class="form-group col-md-4 col-sm-6 custom-select mobile-no-padding">
-                <form-select select="scorers" ng-model="scorersSelect"></form-select>
-              </div>
-              <div class="form-group col-md-4 col-sm-6 custom-select no-padding">
-                <form-select select="opposition" ng-model="oppoSelect"></form-select>
+            <div class="row">
+              <div class="col-md-12 col-lg-11 pull-right-lg">
+                <div class="form-group col-sm-6 col-md-4 custom-select no-padding">
+                  <form-select select="venue" ng-model="venueSelect"></form-select>
+                </div>
+                <div class="form-group col-sm-6 col-md-4 custom-select mobile-no-padding">
+                  <form-select select="scorers" ng-model="scorersSelect"></form-select>
+                </div>
+                <div class="form-group col-sm-6 col-md-4 custom-select no-padding">
+                  <form-select select="opposition" ng-model="oppoSelect"></form-select>
+                </div>
               </div>
             </div>
             <div class="col-md-12  pull-right-lg no-padding">
@@ -190,6 +196,7 @@
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/toArrayFilter.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/oauth.min.js"></script>
 
     <!-- angular carousel scripts -->
     <script src="js/vendor/angular-slick.min.js"></script>
@@ -206,6 +213,7 @@
     <script src="js/services/object.js"></script>
     <script src="js/services/filter.js"></script>
     <script src="js/services/search.js"></script>
+    <script src="js/services/twitter.js"></script>
 
     <!-- filters -->
     <script src="js/filters/searchFilter.js"></script>

@@ -59,18 +59,37 @@
 .mobile-no-padding {
   padding: 0;
 
+  @media (min-device-width: $screen-sm-min) {
+    padding-left: 15px;
+
+    .custom-dropdown .dropdown-menu {
+      left: 15px;
+      width: calc(100% - 15px);
+    }
+  }
+
   @media (min-device-width: $screen-md-min) {
     padding: 0 15px;
+
+    .custom-dropdown .dropdown-menu {
+      left: 15px;
+      width: calc(100% - 30px);
+    }
   }
 }
 
 .no-float {
   display: block;
-  float: none;
+  float: inherit;
   text-align: left;
+
+  @media (min-device-width: $screen-sm-min) {
+    float: left;
+  }
 
   @media (min-device-width: $screen-md-min) {
     display: inline-block;
+    float: none;
   }
 }
 

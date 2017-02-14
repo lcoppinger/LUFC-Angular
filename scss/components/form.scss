@@ -1,6 +1,13 @@
 .mobile-form {
   background: url('../Images/Mobile_background.svg') no-repeat top;
   background-size: cover;
+  overflow: hidden;
+
+  @media (min-device-width: $screen-sm-min) {
+    background: url('../Images/Mobile_background-ipad.svg') no-repeat top;
+    background-size: cover;
+    overflow: hidden;
+  }
 
   @media (min-device-width: $screen-md-min) {
     background: none;

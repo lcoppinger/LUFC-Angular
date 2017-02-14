@@ -1,4 +1,5 @@
-app.factory('twitter', ['', function(){
+app.factory('twitter', ['$http', function($http){
+  
 
 }]);
 /*
