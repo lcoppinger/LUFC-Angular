@@ -1,6 +1,7 @@
 .mobile-form {
   background: url('../Images/Mobile_background.svg') no-repeat top;
   background-size: cover;
+  min-height: 700px;
   overflow: hidden;
 
   @media (min-device-width: $screen-sm-min) {
@@ -30,10 +31,18 @@ label {
 }
 
 .custom-dropdown {
+
+  &.open {
+    .dropdown-toggle {
+      box-shadow: inset 2px 2px 8px 0 $box-shadow-background;
+    }
+  }
+
   .dropdown-toggle {
     @extend %small-font;
     background-color: $default-background;
     border: 0;
+    border-radius: 2px;
     color: $unfocus--font;
     padding: 10px;
     width: 100%;
@@ -59,13 +68,28 @@ label {
   .dropdown-menu {
     background-color: $default-background;
     border: 0;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 2px;
+    box-shadow: 8px 8px 40px -4px $box-shadow-background;
     height: 200px;
-    overflow: scroll;
+    margin-top: 10px;
     padding: 0;
     position: absolute;
     width: 100%;
+
+    .overflow-list {
+      height: 100%;
+      overflow: scroll;
+    }
+
+    .arrow-up {
+      border-color: transparent transparent $default-background;
+      border-style: solid;
+      border-width: 0 10px 10px;
+      height: 0;
+      margin-left: 20px;
+      margin-top: -10px;
+      width: 0;
+    }
 
     .dropdown-item {
       color: $unfocus--font;

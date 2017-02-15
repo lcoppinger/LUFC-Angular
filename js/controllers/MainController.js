@@ -174,7 +174,6 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
     };
     $scope.slickConfig = {
       arrows: false,
-      enabled: true,
       centerMode: true,
       draggable: false,
       infinite: true,

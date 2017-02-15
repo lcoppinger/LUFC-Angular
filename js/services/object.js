@@ -15,7 +15,7 @@ app.factory('object', function(){
       var obj = {
         label: title,
         id: name,
-        placeholder: 'Choose a ' + place,
+        placeholder: 'Choose ' + place,
         value: 'All'
       };
       return obj;
