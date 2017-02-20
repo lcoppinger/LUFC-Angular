@@ -113,6 +113,7 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
   };
   $scope.send = function() {
     //removed (search.sendSeason($scope.searchValue);) to prevent duplicate API calls - sends season data to carousel
+    $scope.enableSlick();
     $scope.slickConfig.method.slickGoTo($scope.selected);
   };
 
@@ -173,7 +174,6 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
     };
     $scope.slickConfig = {
       arrows: false,
-      enabled: true,
       centerMode: true,
       draggable: false,
       infinite: true,
