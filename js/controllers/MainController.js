@@ -111,10 +111,11 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
      $scope.selected = index;
      $scope.searchValue = $scope.season[index].value;
   };
-  $scope.send = function() {
-    //removed (search.sendSeason($scope.searchValue);) to prevent duplicate API calls - sends season data to carousel
+  $scope.send = function(selected) {
+    //$scope.slickConfig.method.slickGoTo($scope.selected);
     $scope.enableSlick();
-    $scope.slickConfig.method.slickGoTo($scope.selected);
+    search.sendSeason($scope.searchValue);
+    $scope.slickConfig.initialSlide = selected;
   };
 
   //Toggle extra fields
@@ -167,7 +168,6 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
        }
      ],
    };
-
     //Results season carousel
     $scope.enableSlick = function() {
      $scope.slickConfig.enabled = true;
@@ -190,14 +190,14 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
         }
       ],
       event: {
-        afterChange: function (event, slick, currentSlide, nextSlide) {
-          $scope.currentSlide = currentSlide;
-          $scope.currentValue = $scope.season[$scope.currentSlide].value;
-          $scope.update = function() {
-            search.sendSeason($scope.currentValue);
-          };
-          $scope.update();
-        }
-      }
+          afterChange: function (event, slick, currentSlide, nextSlide) {
+            $scope.currentSlide = currentSlide;
+            $scope.currentValue = $scope.season[$scope.currentSlide].value;
+            $scope.update = function() {
+              search.sendSeason($scope.currentValue);
+            };
+            $scope.update();
+          }
+       }
     };
 }]);

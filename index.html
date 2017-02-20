@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="col-md-12  pull-right-lg center">
-              <button type="button" ng-click="send(); display=true;" class="button-primary search" scroll-window>Search</button>
+              <button type="button" ng-click="send(selected); display=true;" class="button-primary search" scroll-window>Search</button>
             </div>
           </form>
         </div>
@@ -129,7 +129,7 @@
                 <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
               </slick>
             </div>
-            <button class="slick-next" ng-click="slickConfig.method.slickNext()"></button>
+            <button class="slick-next" ng-click="slickConfig.method.slickNext(); slickConfig.event.custom()"></button>
           </div>
           <div class="table-wrapper">
             <table class="table" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
