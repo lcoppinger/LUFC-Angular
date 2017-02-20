@@ -1,61 +1,39 @@
 app.factory('twitter', ['$http', function($http){
-  
-
+  var bearer_token = "AAAAAAAAAAAAAAAAAAAAALmzzAAAAAAAHv5z%2BytmUaqiurO%2F%2F%2BAwwoLmNhE%3DF5nXTEZK5DuQQOTbpq0Gfs1ERTIvlTAXSPEuZvnEn8YDrmEiqc";
+  var twitter = {
+    get: function() {
+      var promise = $http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=lufcmatchstats&count=5',{
+        headers: {"Authorization": "Bearer " + bearer_token}
+      }).then(function(response){
+        console.log(response);
+        return response;
+      }).then(function(err){
+        console.log(err);
+        return err;
+      });
+      return promise;
+    }
+  };
+  return twitter;
 }]);
+
 /*
 FtaIwyC5h3ubIPGHNj4r-vjUW_E
+var bearer_token = "AAAAAAAAAAAAAAAAAAAAALmzzAAAAAAAHv5z%2BytmUaqiurO%2F%2F%2BAwwoLmNhE%3DF5nXTEZK5DuQQOTbpq0Gfs1ERTIvlTAXSPEuZvnEn8YDrmEiqc";
+var twitter = {
+  get: function() {
+    var promise = $http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=lufcmatchstats&count=5',{
+      headers: {"Authorization": "Bearer " + bearer_token}
+    }).then(function(response){
+      console.log(response);
+      return response;
+    }).then(function(err){
+      console.log(err);
+      return err;
+    });
+    return promise;
+  }
+};
+return twitter;
 
-var authorizationResult = false;
-
-    return {
-        initialize: function() {
-            //initialize OAuth.io with public key of the application
-            OAuth.initialize('FtaIwyC5h3ubIPGHNj4r-vjUW_E', {
-                cache: true
-            });
-            //try to create an authorization result when the page loads,
-            // this means a returning user won't have to click the twitter button again
-            authorizationResult = OAuth.create("twitter");
-        },
-        isReady: function() {
-            return (authorizationResult);
-        },
-        connectTwitter: function() {
-            var deferred = $q.defer();
-            OAuth.popup("twitter", {
-                cache: true
-            }, function(error, result) {
-                // cache means to execute the callback if the tokens are already present
-                if (!error) {
-                    authorizationResult = result;
-                    deferred.resolve();
-                } else {
-                    //do something if there's an error
-
-                }
-            });
-            return deferred.promise;
-        },
-        clearCache: function() {
-            OAuth.clearCache('twitter');
-            authorizationResult = false;
-        },
-        getLatestTweets: function(maxId) {
-            //create a deferred object using Angular's $q service
-            var deferred = $q.defer();
-            var url = '/1.1/statuses/home_timeline.json';
-            if (maxId) {
-                url += '?max_id=' + maxId;
-            }
-            var promise = authorizationResult.get(url).done(function(data) {
-                // https://dev.twitter.com/docs/api/1.1/get/statuses/home_timeline
-                // when the data is retrieved resolve the deferred object
-                deferred.resolve(data);
-            }).fail(function(err) {
-                deferred.reject(err);
-            });
-            //return the promise of the deferred object
-            return deferred.promise;
-        }
-    };
 */

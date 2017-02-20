@@ -1,6 +1,9 @@
-app.controller('ResultsController', ['$scope', 'search', function($scope, search){
+app.controller('ResultsController', ['$scope', 'search', 'graphs', function($scope, search, graphs){
   $scope.$on('season_shared',function(){
       $scope.results = search.get().then(function(data){
+        $scope.graphData = data[0].slice(24);
+        graphs.sendData($scope.graphData);
+
         var arr = [];
         function makeCounter() {
             var i = 0;
@@ -16,6 +19,10 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
             opposition = value[8];
           } else if (value[8] == "Leeds United"){
             opposition = value[12];
+          }
+
+          if (value[19] === ""){
+            value[19] = undefined;
           }
 
           arr.push({
@@ -51,14 +58,8 @@ app.controller('ResultsController', ['$scope', 'search', function($scope, search
           });
         });
           $scope.results = arr;
+          console.log(arr);
         });
+
   });
 }]);
-
-/*
-scorer1 : value[18],
-scorer2 : value[19],
-scorer3 : value[20],
-scorer4 : value[21],
-scorer5 : value[22]
-*/

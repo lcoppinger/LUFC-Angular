@@ -24,11 +24,11 @@
     .title {
       font-size: 46px; } }
 
-.panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th {
+.panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th, .top-scorer p {
   font-family: "Lato-Regular";
   font-size: 16px; }
   @media (min-device-width: 992px) {
-    .panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th {
+    .panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th, .top-scorer p {
       font-size: 18px; } }
 
 .parallelogram, .custom-dropdown .dropdown-toggle {
@@ -45,14 +45,14 @@
     .tabs .slick-arrow, .tabs-wrapper .slick-next, .tabs-wrapper .slick-prev {
       font-size: 10px; } }
 
-.slider, .slide h2 {
+.slider, .slide h2, .top-scorer h3 {
   font-family: "Lato-Regular";
   font-size: 26px; }
   @media (min-device-width: 992px) {
-    .slider, .slide h2 {
+    .slider, .slide h2, .top-scorer h3 {
       font-size: 20px; } }
   @media (min-device-width: 1200px) {
-    .slider, .slide h2 {
+    .slider, .slide h2, .top-scorer h3 {
       font-size: 28px; } }
 
 label {
@@ -566,3 +566,20 @@ label {
   padding: 40px 0;
   text-align: center;
   width: 100%; }
+
+.graph {
+  text-align: center; }
+
+.top-scorer {
+  background: #215b99;
+  border: 6px solid #648db8;
+  border-radius: 50%;
+  display: inline-block;
+  height: 220px;
+  margin-top: 50px;
+  width: 220px; }
+  .top-scorer h3 {
+    color: #fff;
+    margin: 40px 5px 18px; }
+  .top-scorer p {
+    color: #fff; }

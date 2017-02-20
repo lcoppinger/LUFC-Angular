@@ -5,6 +5,7 @@ $dark-grey: #404040;
 $light-grey: #ccc;
 $hover-grey: #fafafa;
 $color: #215b99;
+$light-color: #648db8;
 $won: #8dbe58;
 $loss: #c33f3f;
 $draw: #ffb439;
@@ -24,6 +25,7 @@ $box-shadow-background: rgba(64, 64, 64, .75);
 //border
 $border-color--inverse: 1px solid $white;
 $border-color--color: 1px solid $color;
+$border-color--graphs: 6px solid $light-color;
 
 //won/loss/draw
 $won-background: transparentize($won, .5);

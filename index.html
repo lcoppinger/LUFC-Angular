@@ -106,6 +106,22 @@
     <div class="container-fluid" ng-show="display">
       <div class="row">
         <div class="results-wrapper" ng-controller="ResultsController">
+          <loading></loading>
+          <div class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+          | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
+            <div class="col-md-4 graph" style="height: 320px;">
+              <am-chart id="resultsPie" options="resultsOptions"></am-chart>
+            </div>
+            <div class="col-md-4 graph" style="height: 320px;">
+              <am-chart id="goalsDonut" options="goalsOptions"></am-chart>
+            </div>
+            <div class="col-md-4 graph">
+              <div class="top-scorer">
+                <h3>{{topScorer}}</h3>
+                <p>{{topGoals}}</p>
+              </div>
+            </div>
+          </div>
           <div class="season-wrapper">
             <button class="slick-prev" ng-click="slickConfig.method.slickPrev()"></button>
             <div class="slick-wrapper">
@@ -115,7 +131,6 @@
             </div>
             <button class="slick-next" ng-click="slickConfig.method.slickNext()"></button>
           </div>
-          <loading></loading>
           <div class="table-wrapper">
             <table class="table" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
             | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
@@ -198,6 +213,11 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/vendor/oauth.min.js"></script>
 
+    <!-- Amcharts scripts -->
+    <script src="js/vendor/amcharts.js"></script>
+    <script src="js/vendor/pie.js"></script>
+    <script src="js/vendor/amChartsDirective.js"></script>
+
     <!-- angular carousel scripts -->
     <script src="js/vendor/angular-slick.min.js"></script>
 
@@ -208,12 +228,14 @@
     <script src="js/controllers/MainController.js"></script>
     <script src="js/controllers/TwitterController.js"></script>
     <script src="js/controllers/ResultsController.js"></script>
+    <script src="js/controllers/GraphController.js"></script>
 
     <!-- services -->
     <script src="js/services/object.js"></script>
+    <script src="js/services/twitter.js"></script>
     <script src="js/services/filter.js"></script>
     <script src="js/services/search.js"></script>
-    <script src="js/services/twitter.js"></script>
+    <script src="js/services/graphs.js"></script>
 
     <!-- filters -->
     <script src="js/filters/searchFilter.js"></script>
@@ -225,6 +247,5 @@
     <script src="js/directives/formCheckbox.js"></script>
     <script src="js/directives/scrollWindow.js"></script>
     <script src="js/directives/loading.js"></script>
-
   </body>
 </html>
