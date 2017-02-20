@@ -106,6 +106,15 @@
     <div class="container-fluid" ng-show="display">
       <div class="row">
         <div class="results-wrapper" ng-controller="ResultsController">
+          <div class="season-wrapper">
+            <button class="slick-prev" ng-click="slickConfig.method.slickPrev()"></button>
+            <div class="slick-wrapper">
+              <slick class="season-tab" settings="slickConfig" >
+                <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
+              </slick>
+            </div>
+            <button class="slick-next" ng-click="slickConfig.method.slickNext(); slickConfig.event.custom()"></button>
+          </div>
           <loading></loading>
           <div class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
           | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
@@ -121,15 +130,6 @@
                 <p>{{topGoals}}</p>
               </div>
             </div>
-          </div>
-          <div class="season-wrapper">
-            <button class="slick-prev" ng-click="slickConfig.method.slickPrev()"></button>
-            <div class="slick-wrapper">
-              <slick class="season-tab" settings="slickConfig" >
-                <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
-              </slick>
-            </div>
-            <button class="slick-next" ng-click="slickConfig.method.slickNext(); slickConfig.event.custom()"></button>
           </div>
           <div class="table-wrapper">
             <table class="table" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
