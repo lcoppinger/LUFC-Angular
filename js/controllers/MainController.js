@@ -1,4 +1,4 @@
-app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'search', function($scope, $filter, object, filter, search){
+app.controller('MainController', ['$scope', '$filter', '$timeout', 'object', 'filter', 'search', function($scope, $filter, $timeout, object, filter, search){
 
   //Season object
   $scope.season = filter.get('season').then(function(d){
@@ -199,8 +199,12 @@ app.controller('MainController', ['$scope', '$filter', 'object', 'filter', 'sear
             $scope.update = function() {
               search.sendSeason($scope.currentValue);
             };
-            $scope.update();
           }
        }
+    };
+    $scope.changeSeason = function() {
+      $timeout(function () {
+        $scope.update();
+      }, 400);
     };
 }]);

@@ -58,7 +58,6 @@ app.controller('ResultsController', ['$scope', 'search', 'graphs', function($sco
           });
         });
           $scope.results = arr;
-          console.log(arr);
         });
 
   });

@@ -107,13 +107,13 @@
       <div class="row">
         <div class="results-wrapper" ng-controller="ResultsController">
           <div class="season-wrapper">
-            <button class="slick-prev" ng-click="slickConfig.method.slickPrev()"></button>
+            <button class="slick-prev" ng-click="slickConfig.method.slickPrev(); changeSeason()"></button>
             <div class="slick-wrapper">
               <slick class="season-tab" settings="slickConfig" >
                 <div class="season" ng-repeat="product in season" data-value="{{ product.value }}">{{ product.name }}</div>
               </slick>
             </div>
-            <button class="slick-next" ng-click="slickConfig.method.slickNext(); slickConfig.event.custom()"></button>
+            <button class="slick-next" ng-click="slickConfig.method.slickNext(); changeSeason()"></button>
           </div>
           <loading></loading>
           <div class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
@@ -211,7 +211,6 @@
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/toArrayFilter.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/vendor/oauth.min.js"></script>
 
     <!-- Amcharts scripts -->
     <script src="js/vendor/amcharts.js"></script>
@@ -247,5 +246,8 @@
     <script src="js/directives/formCheckbox.js"></script>
     <script src="js/directives/scrollWindow.js"></script>
     <script src="js/directives/loading.js"></script>
+
+    <script src="test-twitter-built.js"></script>
+
   </body>
 </html>
