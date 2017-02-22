@@ -111,11 +111,13 @@ app.controller('MainController', ['$scope', '$filter', '$timeout', 'object', 'fi
      $scope.selected = index;
      $scope.searchValue = $scope.season[index].value;
   };
+
   $scope.send = function(selected) {
-    //$scope.disableSlick();
+    $scope.enableSlick();
     search.sendSeason($scope.searchValue);
-    //$scope.slickConfig.initialSlide = selected;
-    $scope.slickConfig.method.slickGoTo($scope.selected);
+    $timeout(function () {
+      $scope.slickConfig.method.slickGoTo($scope.selected);
+    }, 400);
   };
 
   //Toggle extra fields
@@ -171,9 +173,6 @@ app.controller('MainController', ['$scope', '$filter', '$timeout', 'object', 'fi
     //Results season carousel
     $scope.enableSlick = function() {
      $scope.slickConfig.enabled = true;
-    };
-    $scope.disableSlick = function() {
-     $scope.slickConfig.enabled = false;
     };
     $scope.slickConfig = {
       arrows: false,
