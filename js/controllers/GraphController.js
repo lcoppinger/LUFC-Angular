@@ -15,12 +15,15 @@ app.controller('GraphController', ['$scope', 'graphs', function($scope, graphs){
         outlineAlpha: 1,
     		outlineThickness: 2,
         color: "#FFFFFF",
-        fontSize: 14,
+        fontSize: 12,
         fontFamily: 'Lato',
-        labelRadius: -35,
-        labelText: "[[title]]",
+        labelRadius: -30,
+        labelText: "[[title]]: <br>[[value]]%",
         valueField: "percentage",
         titleField: "result",
+        radius: "33%",
+        panEventsEnabled: false,
+        pullOutRadius: 0,
         balloon: {
            fixedPosition: true
          }
@@ -43,10 +46,12 @@ app.controller('GraphController', ['$scope', 'graphs', function($scope, graphs){
       radius: "33%",
       innerRadius: "35%",
       color: "#FFFFFF",
-      fontSize: 14,
+      fontSize: 12,
       fontFamily: 'Lato',
       labelText: "[[title]]: <br>[[value]]",
-      labelRadius: -36
+      labelRadius: -36,
+      panEventsEnabled: false,
+      pullOutRadius: 0
     };
 
     $scope.topScorer = "";

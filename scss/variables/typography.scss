@@ -6,7 +6,7 @@ $base-font-size--lg: $base-font-size--md;
 
 $title-font-size--xs: 32px;
 $title-font-size--sm: $title-font-size--xs;
-$title-font-size--md: 46px;
+$title-font-size--md: 48px;
 $title-font-size--lg: $title-font-size--md;
 
 $sub-title-font-size--xs: 16px;
@@ -31,6 +31,7 @@ $carousel-font-size--lg: 28px;
 
 $light--font-family--lato: 'Lato-Light';
 $regular--font-family--lato: 'Lato-Regular';
+$regular--font-family--slabo: 'Slabo-Regular';
 
 %base-font {
   font-family: $light--font-family--lato;
@@ -42,7 +43,7 @@ $regular--font-family--lato: 'Lato-Regular';
 }
 
 %title-font {
-  font-family: $regular--font-family--lato;
+  font-family: $regular--font-family--slabo;
   font-size: $title-font-size--xs;
 
   @media (min-device-width: $screen-md-min) {

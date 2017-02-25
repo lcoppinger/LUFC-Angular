@@ -25,8 +25,20 @@
 .title {
   @extend %title-font;
   color: $base-font--inverse;
+  display: inline-block;
   margin: 30px 0;
   padding: 0;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 18px;
+  text-align: right;
+
+  img {
+    display: inline-block;
+    width: 70%;
+  }
 }
 
 .right {
@@ -35,12 +47,11 @@
 
 .pull-right-lg {
   float: none;
-  //overflow: hidden;
 }
 
 @media (min-device-width: $screen-md-min) {
   .title {
-    padding: 0 0 0 30px;
+    //padding: 0 0 0 30px;
   }
 
   .right {

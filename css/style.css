@@ -10,6 +10,10 @@
   font-family: 'Lato-ThinItalic';
   src: url("../scss/fonts/Lato-ThinItalic.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'Slabo-Regular';
+  src: url("../scss/fonts/Slabo27px-Regular.ttf") format("truetype"); }
+
 .season-tab, .table > tbody > tr > td, .no-results p {
   font-family: "Lato-Light";
   font-size: 14px; }
@@ -18,11 +22,11 @@
       font-size: 16px; } }
 
 .title {
-  font-family: "Lato-Regular";
+  font-family: "Slabo-Regular";
   font-size: 32px; }
   @media (min-device-width: 992px) {
     .title {
-      font-size: 46px; } }
+      font-size: 48px; } }
 
 .panel-title, .button-primary, .season-tab .slick-center, .table > thead > tr > th, .top-scorer p {
   font-family: "Lato-Regular";
@@ -82,8 +86,17 @@ label {
 
 .title {
   color: #fff;
+  display: inline-block;
   margin: 30px 0;
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
+
+.logo {
+  margin-top: 18px;
+  text-align: right; }
+  .logo img {
+    display: inline-block;
+    width: 70%; }
 
 .right {
   text-align: center; }
@@ -92,8 +105,6 @@ label {
   float: none; }
 
 @media (min-device-width: 992px) {
-  .title {
-    padding: 0 0 0 30px; }
   .right {
     text-align: right; }
   .pull-right-lg {
@@ -441,7 +452,6 @@ label {
     padding-right: 250px; } }
 
 .season-wrapper {
-  margin: 30px 0;
   text-align: center;
   width: 100%; }
   .season-wrapper .slick-prev {
@@ -480,9 +490,7 @@ label {
     color: #215b99; }
 
 .table {
-  border: 1px solid #215b99;
-  margin: 0 auto !important;
-  width: 100% !important; }
+  border: 1px solid #215b99; }
 
 .table-wrapper {
   overflow: scroll; }
