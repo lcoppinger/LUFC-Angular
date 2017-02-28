@@ -14,11 +14,11 @@
   font-family: 'Slabo-Regular';
   src: url("../scss/fonts/Slabo27px-Regular.ttf") format("truetype"); }
 
-.season-tab, .table > tbody > tr > td, .no-results p {
+.season-tab, .table > tbody > tr > td, .no-results p, .footer p {
   font-family: "Lato-Light";
   font-size: 14px; }
   @media (min-device-width: 992px) {
-    .season-tab, .table > tbody > tr > td, .no-results p {
+    .season-tab, .table > tbody > tr > td, .no-results p, .footer p {
       font-size: 16px; } }
 
 .title {
@@ -92,11 +92,11 @@ label {
   text-align: center; }
 
 .logo {
-  margin-top: 18px;
+  margin-top: 35px;
   text-align: right; }
   .logo img {
     display: inline-block;
-    width: 70%; }
+    width: 80px; }
 
 .right {
   text-align: center; }
@@ -592,4 +592,12 @@ label {
     color: #fff;
     margin: 40px 5px 18px; }
   .top-scorer p {
+    color: #fff; }
+
+.footer {
+  background-color: #215b99;
+  padding: 40px 3%; }
+  .footer .logo {
+    margin-top: 0; }
+  .footer p {
     color: #fff; }

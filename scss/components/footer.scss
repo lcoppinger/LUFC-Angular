@@ -1,0 +1,13 @@
+.footer {
+  background-color: $highlight-background;
+  padding: 40px 3%;
+
+  .logo {
+    margin-top: 0;
+  }
+
+  p {
+    @extend %base-font;
+    color: $base-font--inverse;
+  }
+}
