@@ -9,5 +9,19 @@
   p {
     @extend %base-font;
     color: $base-font--inverse;
+    margin-bottom: 18px;
+    width: 80%;
+  }
+}
+
+.contacts {
+  img {
+    height: 35px;
+    margin-right: 10px;
+  }
+
+  .email {
+    height: 42px;
+    margin-right: 5px;
   }
 }
