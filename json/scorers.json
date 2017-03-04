@@ -9,16 +9,7 @@
     "name" : "Adam Clayton"
   },
   {
-    "name" : "Adie Moses"
-  },
-  {
     "name" : "Aidan White"
-  },
-  {
-    "name" : "Alan Browne"
-  },
-  {
-    "name" : "Alan McDonald"
   },
   {
     "name" : "Alan Sheehan"
@@ -37,6 +28,9 @@
   },
   {
     "name" : "Alfe-Inge Haaland"
+  },
+  {
+    "name" : "Alfonso Pedraza"
   },
   {
     "name" : "Andros Townsend"
@@ -63,12 +57,6 @@
     "name" : "Anthony Elding"
   },
   {
-    "name" : "Antony Kay"
-  },
-  {
-    "name" : "Ben May"
-  },
-  {
     "name" : "Ben Parker"
   },
   {
@@ -84,15 +72,6 @@
     "name" : "Brian Deane"
   },
   {
-    "name" : "Brian Easton"
-  },
-  {
-    "name" : "Brian Gayle"
-  },
-  {
-    "name" : "Brian Kilcline"
-  },
-  {
     "name" : "Bruno Ribeiro"
   },
   {
@@ -102,9 +81,6 @@
     "name" : "Carlton Palmer"
   },
   {
-    "name" : "Charlie Daniels"
-  },
-  {
     "name" : "Charlie Taylor"
   },
   {
@@ -112,9 +88,6 @@
   },
   {
     "name" : "Chris Whyte"
-  },
-  {
-    "name" : "Chris Whyte "
   },
   {
     "name" : "Chris Wood"
@@ -127,9 +100,6 @@
   },
   {
     "name" : "Curtis Weston"
-  },
-  {
-    "name" : "Danny Batth"
   },
   {
     "name" : "Danny Mills"
@@ -145,9 +115,6 @@
   },
   {
     "name" : "Darren O'Dea"
-  },
-  {
-    "name" : "Dave Watson"
   },
   {
     "name" : "David Batty"
@@ -216,9 +183,6 @@
     "name" : "Frazer Richardson"
   },
   {
-    "name" : "Gabriel Tamaș"
-  },
-  {
     "name" : "Gary Kelly"
   },
   {
@@ -273,9 +237,6 @@
     "name" : "Imre Varadi"
   },
   {
-    "name" : "Jacob Laursen"
-  },
-  {
     "name" : "James Milner"
   },
   {
@@ -309,12 +270,6 @@
     "name" : "Jimmy Kébé"
   },
   {
-    "name" : "Joey Craddock"
-  },
-  {
-    "name" : "John Beresford"
-  },
-  {
     "name" : "John Oster"
   },
   {
@@ -322,9 +277,6 @@
   },
   {
     "name" : "Jonathan Douglas"
-  },
-  {
-    "name" : "Jonathan Gould"
   },
   {
     "name" : "Jonathan Woodgate"
@@ -351,9 +303,6 @@
     "name" : "Lee Bowyer"
   },
   {
-    "name" : "Lee Bullen"
-  },
-  {
     "name" : "Lee Chapman"
   },
   {
@@ -364,9 +313,6 @@
   },
   {
     "name" : "Lee Trundle"
-  },
-  {
-    "name" : "Leif Andersen"
   },
   {
     "name" : "Leigh Bromby"
@@ -411,19 +357,10 @@
     "name" : "Marcus Antonsson"
   },
   {
-    "name" : "Marino Keith"
-  },
-  {
     "name" : "Mark de Vries"
   },
   {
     "name" : "Mark Ford"
-  },
-  {
-    "name" : "Mark Pembridge"
-  },
-  {
-    "name" : "Mark Venus"
   },
   {
     "name" : "Mark Viduka"
@@ -480,9 +417,6 @@
     "name" : "Neil Kilkenny"
   },
   {
-    "name" : "Neil Maddison"
-  },
-  {
     "name" : "Nick Barmby"
   },
   {
@@ -495,12 +429,6 @@
     "name" : "Olivier Dacourt"
   },
   {
-    "name" : "Olivier Tebily"
-  },
-  {
-    "name" : "Olly Lancashire"
-  },
-  {
     "name" : "Pablo Hernández"
   },
   {
@@ -510,9 +438,6 @@
     "name" : "Paul Butler"
   },
   {
-    "name" : "Paul Caddis"
-  },
-  {
     "name" : "Paul Green"
   },
   {
@@ -520,18 +445,6 @@
   },
   {
     "name" : "Paul Robinson"
-  },
-  {
-    "name" : "Paul Robinson"
-  },
-  {
-    "name" : "Peter Garland"
-  },
-  {
-    "name" : "Peter Gilbert"
-  },
-  {
-    "name" : "Phil King"
   },
   {
     "name" : "Phil Masinga"
@@ -550,9 +463,6 @@
   },
   {
     "name" : "Richard Naylor"
-  },
-  {
-    "name" : "Rigobert Song"
   },
   {
     "name" : "Rio Ferdinand"
@@ -600,9 +510,6 @@
     "name" : "Sanchez Watt"
   },
   {
-    "name" : "Scott Marshall"
-  },
-  {
     "name" : "Scott Wootton"
   },
   {
@@ -615,9 +522,6 @@
     "name" : "Shaun Derry"
   },
   {
-    "name" : "Sílvio"
-  },
-  {
     "name" : "Simon Walton"
   },
   {
@@ -628,9 +532,6 @@
   },
   {
     "name" : "Stephen McPhail"
-  },
-  {
-    "name" : "Stephen Purches"
   },
   {
     "name" : "Stephen Warnock"
@@ -648,9 +549,6 @@
     "name" : "Steve Stone"
   },
   {
-    "name" : "Steve Yates"
-  },
-  {
     "name" : "Steven Caldwell"
   },
   {
@@ -660,9 +558,6 @@
     "name" : "Teddy Lucic"
   },
   {
-    "name" : "Tim Sherwood"
-  },
-  {
     "name" : "Tom Adeyemi"
   },
   {
@@ -670,9 +565,6 @@
   },
   {
     "name" : "Tomas Brolin"
-  },
-  {
-    "name" : "Tony Adams"
   },
   {
     "name" : "Tony Dorigo"
@@ -690,16 +582,10 @@
     "name" : "Tresor Kandol"
   },
   {
-    "name" : "Troy Deeney"
-  },
-  {
     "name" : "Tyler Denton"
   },
   {
     "name" : "Ugo Ehiogu"
-  },
-  {
-    "name" : "Wayne Thomas"
   },
   {
     "name" : "Willem Korsten"
