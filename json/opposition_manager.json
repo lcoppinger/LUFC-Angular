@@ -3,21 +3,960 @@
     "name" : "All"
   },
   {
-    "name" : "Jimmy Floyd Hasselbaink"
+    "name" : "Aidy Boothroyd"
   },
   {
-    "name" : "Uwe Rosler"
+    "name" : "Aimé Anthuenis"
   },
   {
-    "name" : "Gary Rowett"
+    "name" : "Aitor Karanka"
   },
   {
-    "name" : "Slavisa Jokanovic"
+    "name" : "Alain Perrin"
+  },
+  {
+    "name" : "Alan Ball"
+  },
+  {
+    "name" : "Alan Buckley"
+  },
+  {
+    "name" : "Alan Cork"
+  },
+  {
+    "name" : "Alan Curbishley"
+  },
+  {
+    "name" : "Alan Curbishley and Steve Gritt"
+  },
+  {
+    "name" : "Alan Knill"
+  },
+  {
+    "name" : "Alan Pardew"
+  },
+  {
+    "name" : "Alan Smith"
+  },
+  {
+    "name" : "Alberto Zaccheroni"
+  },
+  {
+    "name" : "Alex Ferguson"
+  },
+  {
+    "name" : "Alex Neil"
+  },
+  {
+    "name" : "André Villas-Boas"
+  },
+  {
+    "name" : "Andy Hessenthaler"
+  },
+  {
+    "name" : "Andy King"
+  },
+  {
+    "name" : "Andy Ritchie"
+  },
+  {
+    "name" : "Andy Scott"
+  },
+  {
+    "name" : "Andy Thorn"
+  },
+  {
+    "name" : "Arsène Wenger"
+  },
+  {
+    "name" : "Augusto Inácio"
+  },
+  {
+    "name" : "Barry Ferguson"
+  },
+  {
+    "name" : "Barry Fry"
+  },
+  {
+    "name" : "Beppe Sannino"
+  },
+  {
+    "name" : "Bill Green"
+  },
+  {
+    "name" : "Billy Bonds"
+  },
+  {
+    "name" : "Billy Davies"
+  },
+  {
+    "name" : "Bob Peeters"
+  },
+  {
+    "name" : "Bobby Gould"
+  },
+  {
+    "name" : "Bobby Robson"
+  },
+  {
+    "name" : "Bobby Williamson"
+  },
+  {
+    "name" : "Brendan Rogers"
+  },
+  {
+    "name" : "Brian Clough"
+  },
+  {
+    "name" : "Brian Horton"
+  },
+  {
+    "name" : "Brian Kidd"
+  },
+  {
+    "name" : "Brian Laws"
+  },
+  {
+    "name" : "Brian Little"
+  },
+  {
+    "name" : "Brian McDermott"
+  },
+  {
+    "name" : "Brian Talbot"
+  },
+  {
+    "name" : "Bruce Rioch"
+  },
+  {
+    "name" : "Bryan Robson"
+  },
+  {
+    "name" : "Bryan Robson and Terry Venables"
   },
   {
     "name" : "Carlos Carvalhal"
   },
   {
+    "name" : "Chic Bates"
+  },
+  {
+    "name" : "Chris Casper"
+  },
+  {
+    "name" : "Chris Coleman"
+  },
+  {
+    "name" : "Chris Hughton"
+  },
+  {
+    "name" : "Chris Hutchings"
+  },
+  {
+    "name" : "Chris Nicholl"
+  },
+  {
+    "name" : "Chris Powell"
+  },
+  {
+    "name" : "Chris Sutton"
+  },
+  {
+    "name" : "Chris Turner"
+  },
+  {
+    "name" : "Chris Wilder"
+  },
+  {
+    "name" : "Christian Gross"
+  },
+  {
+    "name" : "Christoph Daum"
+  },
+  {
+    "name" : "Claudio Ranieri"
+  },
+  {
+    "name" : "Colin Calderwood"
+  },
+  {
+    "name" : "Colin Lee"
+  },
+  {
+    "name" : "Colin Murphy"
+  },
+  {
+    "name" : "Colin Todd"
+  },
+  {
+    "name" : "Craig Levein"
+  },
+  {
+    "name" : "Danny Wilson"
+  },
+  {
+    "name" : "Dario Gradi"
+  },
+  {
+    "name" : "Darren Ferguson"
+  },
+  {
+    "name" : "Dave Bassett"
+  },
+  {
+    "name" : "Dave Jones"
+  },
+  {
+    "name" : "Dave Penney"
+  },
+  {
+    "name" : "Dave Stringer"
+  },
+  {
+    "name" : "David Flitcroft"
+  },
+  {
+    "name" : "David Hodgson"
+  },
+  {
+    "name" : "David Merrington"
+  },
+  {
+    "name" : "David Moyes"
+  },
+  {
+    "name" : "David O'Leary"
+  },
+  {
+    "name" : "David Pleat"
+  },
+  {
+    "name" : "David Wagner"
+  },
+  {
+    "name" : "David Webb"
+  },
+  {
+    "name" : "David Williams"
+  },
+  {
+    "name" : "Dean Saunders"
+  },
+  {
+    "name" : "Dean Smith"
+  },
+  {
+    "name" : "Dean Wilkins"
+  },
+  {
+    "name" : "Denis Smith"
+  },
+  {
+    "name" : "Dennis Wise"
+  },
+  {
+    "name" : "Derek McInnes"
+  },
+  {
+    "name" : "Dick Advocaat"
+  },
+  {
+    "name" : "Dino Zoff"
+  },
+  {
+    "name" : "Don Howe"
+  },
+  {
+    "name" : "Doug Livermore"
+  },
+  {
+    "name" : "Dougie Freedman"
+  },
+  {
+    "name" : "Dror Kashtan"
+  },
+  {
+    "name" : "Eddie Howe"
+  },
+  {
+    "name" : "Egil Olsen"
+  },
+  {
+    "name" : "Eric Gerets"
+  },
+  {
+    "name" : "Eric Winstanley"
+  },
+  {
+    "name" : "Fabio Capello"
+  },
+  {
+    "name" : "Fatih Terim"
+  },
+  {
+    "name" : "Frank Clark"
+  },
+  {
+    "name" : "František Cipro"
+  },
+  {
+    "name" : "Garry Parker"
+  },
+  {
+    "name" : "Garry Waddock"
+  },
+  {
+    "name" : "Gary Ablett"
+  },
+  {
+    "name" : "Gary Bowyer"
+  },
+  {
+    "name" : "Gary Brazil"
+  },
+  {
+    "name" : "Gary Caldwell"
+  },
+  {
+    "name" : "Gary Johnson"
+  },
+  {
+    "name" : "Gary Megson"
+  },
+  {
+    "name" : "Gary Rowett"
+  },
+  {
+    "name" : "Gary Speed"
+  },
+  {
+    "name" : "Gary Waddock"
+  },
+  {
+    "name" : "George Burley"
+  },
+  {
+    "name" : "George Graham"
+  },
+  {
+    "name" : "Geraint Williams"
+  },
+  {
+    "name" : "Gérard Houllier"
+  },
+  {
+    "name" : "Gerry Francis"
+  },
+  {
+    "name" : "Gerry Murphy"
+  },
+  {
+    "name" : "Gianfranco Zola"
+  },
+  {
+    "name" : "Gianluca Vialli"
+  },
+  {
+    "name" : "Giuseppe Sannino"
+  },
+  {
+    "name" : "Glenn Hoddle"
+  },
+  {
+    "name" : "Glenn Roeder"
+  },
+  {
+    "name" : "Gordon Strachan"
+  },
+  {
+    "name" : "Graeme Sharp"
+  },
+  {
+    "name" : "Graeme Souness"
+  },
+  {
+    "name" : "Graham Barrow"
+  },
+  {
+    "name" : "Graham Taylor"
+  },
+  {
+    "name" : "Graham Turner"
+  },
+  {
+    "name" : "Greg Abbott"
+  },
+  {
+    "name" : "Guðjón Þórðarson"
+  },
+  {
+    "name" : "Gus Poyet"
+  },
+  {
+    "name" : "Guy Luzon"
+  },
+  {
+    "name" : "Hans-Peter Zaugg"
+  },
+  {
+    "name" : "Harry Redknapp"
+  },
+  {
+    "name" : "Héctor Cúper"
+  },
+  {
+    "name" : "Howard Kendall"
+  },
+  {
+    "name" : "Howard Wilkinson"
+  },
+  {
+    "name" : "Iain Dowie"
+  },
+  {
+    "name" : "Ian Branfoot"
+  },
+  {
+    "name" : "Ian Holloway"
+  },
+  {
+    "name" : "Ian Porterfield"
+  },
+  {
+    "name" : "Iffy Onuora and Mick Docherty"
+  },
+  {
+    "name" : "Jaap Stam"
+  },
+  {
+    "name" : "James Beattie"
+  },
+  {
+    "name" : "Javier Irureta"
+  },
+  {
+    "name" : "Jean Tigana"
+  },
+  {
+    "name" : "Jim Gannon"
+  },
+  {
+    "name" : "Jim Jeffries"
+  },
+  {
+    "name" : "Jim Magilton"
+  },
+  {
+    "name" : "Jim Smith"
+  },
+  {
+    "name" : "Jimmy Floyd Hasselbaink"
+  },
+  {
+    "name" : "Jimmy Mullen"
+  },
+  {
+    "name" : "Joaquín Peiró"
+  },
+  {
+    "name" : "Joe Dunne"
+  },
+  {
+    "name" : "Joe Kinnear"
+  },
+  {
+    "name" : "Joe Royle"
+  },
+  {
+    "name" : "Johan Boskamp"
+  },
+  {
+    "name" : "John Aldridge "
+  },
+  {
+    "name" : "John Barnes"
+  },
+  {
+    "name" : "John Coleman"
+  },
+  {
+    "name" : "John Deehan"
+  },
+  {
+    "name" : "John Gorman"
+  },
+  {
+    "name" : "John Gregory"
+  },
+  {
+    "name" : "John King"
+  },
+  {
+    "name" : "John Lyall"
+  },
+  {
+    "name" : "John Pemberton"
+  },
+  {
+    "name" : "John Rudge"
+  },
+  {
+    "name" : "John Sheridan"
+  },
+  {
+    "name" : "John Ward"
+  },
+  {
+    "name" : "Jon Rudkin and Mike Stowell"
+  },
+  {
+    "name" : "José Riga"
+  },
+  {
+    "name" : "Jürgen Klopp"
+  },
+  {
+    "name" : "Karel Fraeye"
+  },
+  {
+    "name" : "Karl Robinson"
+  },
+  {
+    "name" : "Keith Downing"
+  },
+  {
+    "name" : "Keith Hill"
+  },
+  {
+    "name" : "Keith Millen"
+  },
+  {
+    "name" : "Kenny Dalglish"
+  },
+  {
+    "name" : "Kenny Jackett"
+  },
+  {
+    "name" : "Kevin Blackwell"
+  },
+  {
+    "name" : "Kevin Bond"
+  },
+  {
+    "name" : "Kevin Keegan"
+  },
+  {
+    "name" : "Kit Symons"
+  },
+  {
+    "name" : "Lee Clark"
+  },
+  {
+    "name" : "Lee Harper"
+  },
+  {
+    "name" : "Lee Johnson"
+  },
+  {
+    "name" : "Lee Sinnott"
+  },
+  {
+    "name" : "Lennie Lawrence"
+  },
+  {
+    "name" : "Les Parry"
+  },
+  {
+    "name" : "Lorenzo Serra Ferrer"
+  },
+  {
+    "name" : "Malcolm Crosby"
+  },
+  {
+    "name" : "Malky Mackay"
+  },
+  {
+    "name" : "Marinus Dijkhuizen"
+  },
+  {
+    "name" : "Mark Hughes"
+  },
+  {
+    "name" : "Mark Lillis"
+  },
+  {
+    "name" : "Mark McGhee"
+  },
+  {
+    "name" : "Mark Robins"
+  },
+  {
+    "name" : "Mark Stimson"
+  },
+  {
+    "name" : "Mark Warburton"
+  },
+  {
+    "name" : "Mark Wright"
+  },
+  {
+    "name" : "Martin Allen"
+  },
+  {
+    "name" : "Martin Ling"
+  },
+  {
+    "name" : "Martin O'Neill"
+  },
+  {
+    "name" : "Maurice Malpas"
+  },
+  {
+    "name" : "Michael Appleton"
+  },
+  {
+    "name" : "Mick Gooding and Jimmy Quinn"
+  },
+  {
+    "name" : "Mick Harford"
+  },
+  {
+    "name" : "Mick McCarthy"
+  },
+  {
+    "name" : "Micky Adams"
+  },
+  {
+    "name" : "Mike Newell"
+  },
+  {
+    "name" : "Mike Walker"
+  },
+  {
+    "name" : "Miodrag Ješić"
+  },
+  {
     "name" : "Nathan Jones"
+  },
+  {
+    "name" : "Neil Adams"
+  },
+  {
+    "name" : "Neil Lennon"
+  },
+  {
+    "name" : "Neil Redfearn"
+  },
+  {
+    "name" : "Neil Warnock"
+  },
+  {
+    "name" : "Neil Woods"
+  },
+  {
+    "name" : "Nelo Vingada"
+  },
+  {
+    "name" : "Nevio Scala"
+  },
+  {
+    "name" : "Nick Barmby"
+  },
+  {
+    "name" : "Nigel Adkins"
+  },
+  {
+    "name" : "Nigel Clough"
+  },
+  {
+    "name" : "Nigel Pearson"
+  },
+  {
+    "name" : "Nigel Worthington"
+  },
+  {
+    "name" : "Oleg Romantsev"
+  },
+  {
+    "name" : "Oleh Lutkov"
+  },
+  {
+    "name" : "Óscar García"
+  },
+  {
+    "name" : "Osvaldo Ardiles"
+  },
+  {
+    "name" : "Owen Coyle"
+  },
+  {
+    "name" : "Paul Clement"
+  },
+  {
+    "name" : "Paul Cook"
+  },
+  {
+    "name" : "Paul Dickov"
+  },
+  {
+    "name" : "Paul Doswell"
+  },
+  {
+    "name" : "Paul Fairclough"
+  },
+  {
+    "name" : "Paul Heckingbottom"
+  },
+  {
+    "name" : "Paul Ince"
+  },
+  {
+    "name" : "Paul Jewell"
+  },
+  {
+    "name" : "Paul Lambert"
+  },
+  {
+    "name" : "Paul Simpson"
+  },
+  {
+    "name" : "Paul Sturrock"
+  },
+  {
+    "name" : "Paul Tisdale"
+  },
+  {
+    "name" : "Paul Trollope"
+  },
+  {
+    "name" : "Paul Warne"
+  },
+  {
+    "name" : "Paulo Sousa"
+  },
+  {
+    "name" : "Peter Grant"
+  },
+  {
+    "name" : "Peter Jackson"
+  },
+  {
+    "name" : "Peter Reid"
+  },
+  {
+    "name" : "Peter Shreeves"
+  },
+  {
+    "name" : "Peter Taylor"
+  },
+  {
+    "name" : "Peter Withe"
+  },
+  {
+    "name" : "Phil Brown"
+  },
+  {
+    "name" : "Phil Neal"
+  },
+  {
+    "name" : "Phil Parkinson"
+  },
+  {
+    "name" : "Phil Thompson"
+  },
+  {
+    "name" : "Philippe Montanier"
+  },
+  {
+    "name" : "Quique Flores"
+  },
+  {
+    "name" : "Rafael Benitez"
+  },
+  {
+    "name" : "Ray Harford"
+  },
+  {
+    "name" : "Ray Lewington"
+  },
+  {
+    "name" : "Ray Wilkins"
+  },
+  {
+    "name" : "Richard Money"
+  },
+  {
+    "name" : "Richard Shaw"
+  },
+  {
+    "name" : "Rob Kelly"
+  },
+  {
+    "name" : "Roberto Di Matteo"
+  },
+  {
+    "name" : "Roberto Mancini"
+  },
+  {
+    "name" : "Roberto Martínez"
+  },
+  {
+    "name" : "Ron Atkinson"
+  },
+  {
+    "name" : "Ronnie Moore"
+  },
+  {
+    "name" : "Roy Evans"
+  },
+  {
+    "name" : "Roy Hodgson"
+  },
+  {
+    "name" : "Roy Keane"
+  },
+  {
+    "name" : "Roy McFarland"
+  },
+  {
+    "name" : "Russell Slade"
+  },
+  {
+    "name" : "Ruud Gullit"
+  },
+  {
+    "name" : "Sam Allardyce"
+  },
+  {
+    "name" : "Sami Hyypiä"
+  },
+  {
+    "name" : "Sean Dyche"
+  },
+  {
+    "name" : "Sean O'Driscoll"
+  },
+  {
+    "name" : "Shaun Derry"
+  },
+  {
+    "name" : "Simon Davey"
+  },
+  {
+    "name" : "Simon Davies"
+  },
+  {
+    "name" : "Simon Grayson"
+  },
+  {
+    "name" : "Slaviša Jokanović"
+  },
+  {
+    "name" : "Ståle Solbakken"
+  },
+  {
+    "name" : "Stan Ternent "
+  },
+  {
+    "name" : "Steve Bruce"
+  },
+  {
+    "name" : "Steve Clarke"
+  },
+  {
+    "name" : "Steve Coppell"
+  },
+  {
+    "name" : "Steve Cotterill"
+  },
+  {
+    "name" : "Steve Evans"
+  },
+  {
+    "name" : "Steve Fallon"
+  },
+  {
+    "name" : "Steve Holland"
+  },
+  {
+    "name" : "Steve Kean"
+  },
+  {
+    "name" : "Steve Lomas"
+  },
+  {
+    "name" : "Steve McClaren"
+  },
+  {
+    "name" : "Steve Perryman"
+  },
+  {
+    "name" : "Steve Staunton"
+  },
+  {
+    "name" : "Steve Tilson"
+  },
+  {
+    "name" : "Stuart Gray"
+  },
+  {
+    "name" : "Stuart McCall"
+  },
+  {
+    "name" : "Stuart Pearce"
+  },
+  {
+    "name" : "Sven-Göran Eriksson"
+  },
+  {
+    "name" : "Terry Bullivant"
+  },
+  {
+    "name" : "Terry Butcher"
+  },
+  {
+    "name" : "Terry Fenwick"
+  },
+  {
+    "name" : "Terry Skiverton"
+  },
+  {
+    "name" : "Terry Westley"
+  },
+  {
+    "name" : "Tony Mowbray"
+  },
+  {
+    "name" : "Tony Parkes"
+  },
+  {
+    "name" : "Tony Pulis"
+  },
+  {
+    "name" : "Trevor Francis"
+  },
+  {
+    "name" : "Uwe Rösler"
+  },
+  {
+    "name" : "Vacant"
+  },
+  {
+    "name" : "Vicente del Bosque"
+  },
+  {
+    "name" : "Walter Smith"
+  },
+  {
+    "name" : "Walter Zenga"
+  },
+  {
+    "name" : "Werner Lorant"
+  },
+  {
+    "name" : "Yuriy Semin"
+  },
+  {
+    "name" : "Zdeněk Zeman"
   }
 ]

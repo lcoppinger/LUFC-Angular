@@ -6,18 +6,291 @@
     "name" : "Leeds"
   },
   {
-    "name" : "London"
+    "name" : "Anderlecht"
   },
   {
-    "name" : "Sheffield"
+    "name" : "Barcelona"
+  },
+  {
+    "name" : "Barnsley"
+  },
+  {
+    "name" : "Birkenhead"
+  },
+  {
+    "name" : "Birmingham"
+  },
+  {
+    "name" : "Blackburn"
+  },
+  {
+    "name" : "Blackpool"
+  },
+  {
+    "name" : "Bolton"
+  },
+  {
+    "name" : "Bournemouth"
+  },
+  {
+    "name" : "Bradford"
+  },
+  {
+    "name" : "Brighton"
+  },
+  {
+    "name" : "Bristol"
+  },
+  {
+    "name" : "Burnley"
+  },
+  {
+    "name" : "Cambridge "
+  },
+  {
+    "name" : "Cardiff"
+  },
+  {
+    "name" : "Carlisle"
+  },
+  {
+    "name" : "Cheltenham"
+  },
+  {
+    "name" : "Chester"
+  },
+  {
+    "name" : "Colchester"
+  },
+  {
+    "name" : "Coventry"
+  },
+  {
+    "name" : "Crewe"
+  },
+  {
+    "name" : "Darlington"
+  },
+  {
+    "name" : "Derby"
+  },
+  {
+    "name" : "Dnipropetrovsk"
+  },
+  {
+    "name" : "Doncaster"
+  },
+  {
+    "name" : "Eindhoven"
+  },
+  {
+    "name" : "Exeter"
+  },
+  {
+    "name" : "Fleetwood"
+  },
+  {
+    "name" : "Florence"
+  },
+  {
+    "name" : "Funchal"
+  },
+  {
+    "name" : "Gillingham"
+  },
+  {
+    "name" : "Glasgow"
+  },
+  {
+    "name" : "Hartlepool"
+  },
+  {
+    "name" : "Heerenveen"
+  },
+  {
+    "name" : "Hereford"
+  },
+  {
+    "name" : "High Wycombe"
+  },
+  {
+    "name" : "Histon"
+  },
+  {
+    "name" : "Huddersfield"
+  },
+  {
+    "name" : "Hull"
+  },
+  {
+    "name" : "Ipswich"
+  },
+  {
+    "name" : "Irthlingborough"
+  },
+  {
+    "name" : "Istanbul"
+  },
+  {
+    "name" : "Kettering"
+  },
+  {
+    "name" : "Kingston upon Hull"
+  },
+  {
+    "name" : "La Coruña"
+  },
+  {
+    "name" : "Leicester"
+  },
+  {
+    "name" : "Liverpool"
+  },
+  {
+    "name" : "London"
   },
   {
     "name" : "Luton"
   },
   {
+    "name" : "Macclesfield"
+  },
+  {
+    "name" : "Madrid"
+  },
+  {
+    "name" : "Malaga"
+  },
+  {
+    "name" : "Manchester"
+  },
+  {
+    "name" : "Mansfield"
+  },
+  {
+    "name" : "Middlesbrough"
+  },
+  {
+    "name" : "Milan"
+  },
+  {
+    "name" : "Milton Keynes"
+  },
+  {
+    "name" : "Monaco"
+  },
+  {
+    "name" : "Moscow"
+  },
+  {
+    "name" : "Munich"
+  },
+  {
+    "name" : "Newcastle"
+  },
+  {
+    "name" : "Northampton"
+  },
+  {
+    "name" : "Norwich"
+  },
+  {
     "name" : "Nottingham"
   },
   {
-    "name" : "Cardiff"
+    "name" : "Oldham"
+  },
+  {
+    "name" : "Oxford"
+  },
+  {
+    "name" : "Peterborough"
+  },
+  {
+    "name" : "Plymouth"
+  },
+  {
+    "name" : "Portsmouth"
+  },
+  {
+    "name" : "Prague"
+  },
+  {
+    "name" : "Preston"
+  },
+  {
+    "name" : "Reading"
+  },
+  {
+    "name" : "Rochdale"
+  },
+  {
+    "name" : "Rome"
+  },
+  {
+    "name" : "Rotherham"
+  },
+  {
+    "name" : "Scunthorpe"
+  },
+  {
+    "name" : "Sheffield"
+  },
+  {
+    "name" : "Sofia"
+  },
+  {
+    "name" : "Southampton"
+  },
+  {
+    "name" : "Southend-on-Sea"
+  },
+  {
+    "name" : "Stockport"
+  },
+  {
+    "name" : "Stoke-on-Trent"
+  },
+  {
+    "name" : "Stuttgart"
+  },
+  {
+    "name" : "Sunderland"
+  },
+  {
+    "name" : "Sutton"
+  },
+  {
+    "name" : "Swansea"
+  },
+  {
+    "name" : "Swindon"
+  },
+  {
+    "name" : "Troyes"
+  },
+  {
+    "name" : "Valencia"
+  },
+  {
+    "name" : "Walsall"
+  },
+  {
+    "name" : "Watford"
+  },
+  {
+    "name" : "West Bromwich"
+  },
+  {
+    "name" : "Wigan"
+  },
+  {
+    "name" : "Wolverhampton"
+  },
+  {
+    "name" : "Yeovil"
+  },
+  {
+    "name" : "Zurich"
   }
 ]

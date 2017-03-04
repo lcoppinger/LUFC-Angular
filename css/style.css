@@ -84,19 +84,30 @@ label {
   .landing-image img {
     width: 80%; }
 
+.title-wrapper {
+  text-align: left; }
+
 .title {
   color: #fff;
   display: inline-block;
-  margin: 30px 0;
+  margin: 45px 15px;
   padding: 0;
   text-align: center; }
 
 .logo {
-  margin-top: 35px;
+  margin-top: 50px;
   text-align: right; }
   .logo img {
     display: inline-block;
-    width: 80px; }
+    width: 50px; }
+  @media (min-device-width: 768px) {
+    .logo {
+      margin-top: 40px; } }
+  @media (min-device-width: 992px) {
+    .logo {
+      margin-top: 35px; }
+      .logo img {
+        width: 80px; } }
 
 .right {
   text-align: center; }
@@ -105,6 +116,10 @@ label {
   float: none; }
 
 @media (min-device-width: 992px) {
+  .title-wrapper {
+    text-align: center; }
+  .title {
+    margin: 30px 0; }
   .right {
     text-align: right; }
   .pull-right-lg {
@@ -585,12 +600,15 @@ label {
   border: 6px solid #648db8;
   border-radius: 50%;
   display: inline-block;
+  margin-bottom: 40px;
   height: 220px;
-  margin-top: 50px;
   width: 220px; }
+  @media (min-device-width: 992px) {
+    .top-scorer {
+      margin-top: 50px; } }
   .top-scorer h3 {
     color: #fff;
-    margin: 40px 5px 18px; }
+    margin: 40px 7px 18px; }
   .top-scorer p {
     color: #fff; }
 
@@ -598,6 +616,7 @@ label {
   background-color: #215b99;
   padding: 40px 3%; }
   .footer .logo {
+    float: right;
     margin-top: 0; }
   .footer p {
     color: #fff;

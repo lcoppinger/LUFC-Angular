@@ -3,18 +3,372 @@
     "name" : "All"
   },
   {
-    "name" : "Queens Park Rangers"
+    "name" : "AC Milan"
+  },
+  {
+    "name" : "Accrington Stanley"
+  },
+  {
+    "name" : "AFC Bournemouth"
+  },
+  {
+    "name" : "Anderlecht"
+  },
+  {
+    "name" : "Arsenal"
+  },
+  {
+    "name" : "AS Monaco"
+  },
+  {
+    "name" : "AS Roma"
+  },
+  {
+    "name" : "Aston Villa"
+  },
+  {
+    "name" : "Barcelona"
+  },
+  {
+    "name" : "Barnet"
+  },
+  {
+    "name" : "Barnsley"
+  },
+  {
+    "name" : "Beşiktaş"
+  },
+  {
+    "name" : "Birmingham City"
+  },
+  {
+    "name" : "Blackburn Rovers"
+  },
+  {
+    "name" : "Blackpool"
+  },
+  {
+    "name" : "Bolton Wanderers"
+  },
+  {
+    "name" : "Bradford City"
+  },
+  {
+    "name" : "Brentford"
+  },
+  {
+    "name" : "Brighton and Hove Albion"
+  },
+  {
+    "name" : "Bristol City"
+  },
+  {
+    "name" : "Bristol Rovers"
+  },
+  {
+    "name" : "Burnley"
+  },
+  {
+    "name" : "Burton Albion"
+  },
+  {
+    "name" : "Bury"
+  },
+  {
+    "name" : "Cambridge United"
+  },
+  {
+    "name" : "Cardiff City"
+  },
+  {
+    "name" : "Carlisle United"
+  },
+  {
+    "name" : "Charlton Athletic"
+  },
+  {
+    "name" : "Chelsea"
+  },
+  {
+    "name" : "Cheltenham Town"
+  },
+  {
+    "name" : "Chester City"
+  },
+  {
+    "name" : "Chesterfield"
+  },
+  {
+    "name" : "Colchester United"
+  },
+  {
+    "name" : "Coventry City"
+  },
+  {
+    "name" : "Crewe Alexandra"
+  },
+  {
+    "name" : "Crystal Palace"
+  },
+  {
+    "name" : "Darlington"
+  },
+  {
+    "name" : "Deportivo La Coruña"
+  },
+  {
+    "name" : "Derby County"
+  },
+  {
+    "name" : "Doncaster Rovers"
+  },
+  {
+    "name" : "Everton"
+  },
+  {
+    "name" : "Exeter City"
   },
   {
     "name" : "Fleetwood Town"
   },
   {
-    "name" : "Sheffield Wednesday"
+    "name" : "Fulham"
+  },
+  {
+    "name" : "Galatasaray"
+  },
+  {
+    "name" : "Gillingham"
+  },
+  {
+    "name" : "Grasshoppers"
+  },
+  {
+    "name" : "Grimsby Town"
+  },
+  {
+    "name" : "Hapoel Tel Aviv"
+  },
+  {
+    "name" : "Hartlepool United"
+  },
+  {
+    "name" : "Hereford United"
+  },
+  {
+    "name" : "Histon"
+  },
+  {
+    "name" : "Huddersfield Town"
+  },
+  {
+    "name" : "Hull City"
+  },
+  {
+    "name" : "Ipswich Town"
+  },
+  {
+    "name" : "Kettering Town"
+  },
+  {
+    "name" : "Lazio"
+  },
+  {
+    "name" : "Leicester City"
+  },
+  {
+    "name" : "Leyton Orient"
+  },
+  {
+    "name" : "Lincoln City"
+  },
+  {
+    "name" : "Liverpool"
+  },
+  {
+    "name" : "Lokomotiv Moscow"
   },
   {
     "name" : "Luton Town"
   },
   {
+    "name" : "Macclesfield Town"
+  },
+  {
+    "name" : "Malaga"
+  },
+  {
+    "name" : "Manchester City"
+  },
+  {
+    "name" : "Manchester United"
+  },
+  {
+    "name" : "Mansfield Town"
+  },
+  {
+    "name" : "Marítimo"
+  },
+  {
+    "name" : "Metalurg Zaporozhye"
+  },
+  {
+    "name" : "Middlesbrough"
+  },
+  {
+    "name" : "Millwall"
+  },
+  {
+    "name" : "Milton Keynes Dons"
+  },
+  {
+    "name" : "Newcastle United"
+  },
+  {
+    "name" : "Northampton Town"
+  },
+  {
+    "name" : "Norwich City"
+  },
+  {
     "name" : "Nottingham Forest"
+  },
+  {
+    "name" : "Notts County"
+  },
+  {
+    "name" : "Oldham Athletic"
+  },
+  {
+    "name" : "Oxford United"
+  },
+  {
+    "name" : "Partizan Belgrade"
+  },
+  {
+    "name" : "Peterborough United"
+  },
+  {
+    "name" : "Plymouth Argyle"
+  },
+  {
+    "name" : "Port Vale"
+  },
+  {
+    "name" : "Portsmouth"
+  },
+  {
+    "name" : "Preston North End"
+  },
+  {
+    "name" : "PSV Eindhoven"
+  },
+  {
+    "name" : "Queens Park Rangers"
+  },
+  {
+    "name" : "Rangers"
+  },
+  {
+    "name" : "Reading"
+  },
+  {
+    "name" : "Real Madrid"
+  },
+  {
+    "name" : "Rochdale"
+  },
+  {
+    "name" : "Rotherham United"
+  },
+  {
+    "name" : "Rushden & Diamonds"
+  },
+  {
+    "name" : "Scunthorpe United"
+  },
+  {
+    "name" : "Sheffield United"
+  },
+  {
+    "name" : "Sheffield Wednesday"
+  },
+  {
+    "name" : "Shrewsbury Town"
+  },
+  {
+    "name" : "Slavia Prague"
+  },
+  {
+    "name" : "Southampton"
+  },
+  {
+    "name" : "Southend United"
+  },
+  {
+    "name" : "Spartak Moscow"
+  },
+  {
+    "name" : "Stockport County"
+  },
+  {
+    "name" : "Stoke City"
+  },
+  {
+    "name" : "Sunderland"
+  },
+  {
+    "name" : "Sutton United"
+  },
+  {
+    "name" : "Swansea City"
+  },
+  {
+    "name" : "Swindon Town"
+  },
+  {
+    "name" : "Tottenham Hotspur"
+  },
+  {
+    "name" : "Tranmere Rovers"
+  },
+  {
+    "name" : "Troyes"
+  },
+  {
+    "name" : "TSV 1860 Munich"
+  },
+  {
+    "name" : "Valencia"
+  },
+  {
+    "name" : "VfB Stuttgart"
+  },
+  {
+    "name" : "Walsall"
+  },
+  {
+    "name" : "Watford"
+  },
+  {
+    "name" : "West Bromwich Albion"
+  },
+  {
+    "name" : "West Ham United"
+  },
+  {
+    "name" : "Wigan Athletic"
+  },
+  {
+    "name" : "Wimbledon"
+  },
+  {
+    "name" : "Wolverhampton Wanderers"
+  },
+  {
+    "name" : "Wycombe Wanderers"
+  },
+  {
+    "name" : "Yeovil Town"
   }
 ]

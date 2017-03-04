@@ -6,18 +6,426 @@
     "name" : "Elland Road"
   },
   {
-    "name" : "Loftus Road"
+    "name" : "Abe Lenstra Stadion"
+  },
+  {
+    "name" : "Adams Park"
+  },
+  {
+    "name" : "Ali Sami Yen Stadium"
+  },
+  {
+    "name" : "Anfield"
+  },
+  {
+    "name" : "Ashton Gate"
+  },
+  {
+    "name" : "Ayresome Park"
+  },
+  {
+    "name" : "Balfour Webnet Darlington Arena"
+  },
+  {
+    "name" : "Baseball Ground"
+  },
+  {
+    "name" : "Bescot Stadium"
+  },
+  {
+    "name" : "BJK İnönü Stadium"
+  },
+  {
+    "name" : "Bloomfield Road"
+  },
+  {
+    "name" : "Boundary Park"
+  },
+  {
+    "name" : "Bramall Lane"
+  },
+  {
+    "name" : "Brisbane Road"
+  },
+  {
+    "name" : "Britannia Stadium"
+  },
+  {
+    "name" : "Brunton Park"
+  },
+  {
+    "name" : "Burnden Park"
+  },
+  {
+    "name" : "Cambs Glass Stadium"
+  },
+  {
+    "name" : "Cardiff City Stadium"
+  },
+  {
+    "name" : "Carrow Road"
+  },
+  {
+    "name" : "City Ground"
+  },
+  {
+    "name" : "City of Manchester Stadium"
+  },
+  {
+    "name" : "Colchester Community Stadium"
+  },
+  {
+    "name" : "Constant Vanden Stock Stadion"
+  },
+  {
+    "name" : "County Ground"
+  },
+  {
+    "name" : "Craven Cottage"
+  },
+  {
+    "name" : "Dean Court"
+  },
+  {
+    "name" : "Deepdale"
+  },
+  {
+    "name" : "Deva Stadium"
+  },
+  {
+    "name" : "Don Valley Stadium"
+  },
+  {
+    "name" : "DW Stadium"
+  },
+  {
+    "name" : "Edgar Street"
+  },
+  {
+    "name" : "Edgeley Park"
+  },
+  {
+    "name" : "Emirates Stadium"
+  },
+  {
+    "name" : "Estádio dos Barreiros"
+  },
+  {
+    "name" : "Estadio La Rosaleda"
+  },
+  {
+    "name" : "Estadio Mestalla"
+  },
+  {
+    "name" : "Estadio Riazor"
+  },
+  {
+    "name" : "Etihad Stadium"
+  },
+  {
+    "name" : "Ewood Park"
+  },
+  {
+    "name" : "Falmer Stadium"
+  },
+  {
+    "name" : "Feethams Ground"
+  },
+  {
+    "name" : "Field Mill"
+  },
+  {
+    "name" : "Filbert Street"
+  },
+  {
+    "name" : "Fitness First Stadium"
+  },
+  {
+    "name" : "Fratton Park"
+  },
+  {
+    "name" : "Friends Provident St Mary's Stadium"
+  },
+  {
+    "name" : "Galpharm Stadium"
+  },
+  {
+    "name" : "Gander Green Lane"
+  },
+  {
+    "name" : "Georgi Asparuhov Stadium"
+  },
+  {
+    "name" : "Glanford Park"
+  },
+  {
+    "name" : "Glassworld Stadium"
+  },
+  {
+    "name" : "Goodison Park"
+  },
+  {
+    "name" : "Gresty Road"
+  },
+  {
+    "name" : "Griffin Park"
+  },
+  {
+    "name" : "Highbury"
   },
   {
     "name" : "Highbury Stadium"
   },
   {
+    "name" : "Highfield Road"
+  },
+  {
     "name" : "Hillsborough Stadium"
+  },
+  {
+    "name" : "Home Park"
+  },
+  {
+    "name" : "Huish Park"
+  },
+  {
+    "name" : "Ibrox Stadium"
+  },
+  {
+    "name" : "JJB Stadium"
+  },
+  {
+    "name" : "John Smith's Stadium"
+  },
+  {
+    "name" : "KC Stadium"
+  },
+  {
+    "name" : "Keepmoat Stadium"
   },
   {
     "name" : "Kenilworth Road"
   },
   {
-    "name" : "City Ground"
+    "name" : "King Power Stadium"
+  },
+  {
+    "name" : "KRBS Priestfield Stadium"
+  },
+  {
+    "name" : "Layer Road"
+  },
+  {
+    "name" : "Letzigrund"
+  },
+  {
+    "name" : "Liberty Stadium"
+  },
+  {
+    "name" : "Loftus Road"
+  },
+  {
+    "name" : "Lokomotiv Stadium"
+  },
+  {
+    "name" : "London Road"
+  },
+  {
+    "name" : "Macron Stadium"
+  },
+  {
+    "name" : "Madejski Stadium"
+  },
+  {
+    "name" : "Maine Road"
+  },
+  {
+    "name" : "Manor Ground"
+  },
+  {
+    "name" : "Matchroom Stadium"
+  },
+  {
+    "name" : "Meadow Lane"
+  },
+  {
+    "name" : "Memorial Stadium"
+  },
+  {
+    "name" : "Meteor Stadium"
+  },
+  {
+    "name" : "Millenium Stadium"
+  },
+  {
+    "name" : "Millmoor"
+  },
+  {
+    "name" : "Molineux Stadium"
+  },
+  {
+    "name" : "Moss Rose"
+  },
+  {
+    "name" : "Neckarstadion"
+  },
+  {
+    "name" : "Nene Park"
+  },
+  {
+    "name" : "New York Stadium"
+  },
+  {
+    "name" : "Ninian Park"
+  },
+  {
+    "name" : "Nou Camp"
+  },
+  {
+    "name" : "Oakwell"
+  },
+  {
+    "name" : "Old Trafford"
+  },
+  {
+    "name" : "Olympiastadion"
+  },
+  {
+    "name" : "Philips Stadion"
+  },
+  {
+    "name" : "Portman Road"
+  },
+  {
+    "name" : "Prenton Park"
+  },
+  {
+    "name" : "Pride Park Stadium"
+  },
+  {
+    "name" : "Priestfield Stadium"
+  },
+  {
+    "name" : "Reebok Stadium"
+  },
+  {
+    "name" : "Ricoh Arena"
+  },
+  {
+    "name" : "Riverside Stadium"
+  },
+  {
+    "name" : "Rockingham Road"
+  },
+  {
+    "name" : "Roker Park"
+  },
+  {
+    "name" : "Roots Hall"
+  },
+  {
+    "name" : "San Siro"
+  },
+  {
+    "name" : "Santiago Bernabéu"
+  },
+  {
+    "name" : "Selhurst Park"
+  },
+  {
+    "name" : "Sixfields"
+  },
+  {
+    "name" : "Spotland Stadium"
+  },
+  {
+    "name" : "St Andrew's"
+  },
+  {
+    "name" : "St James Park"
+  },
+  {
+    "name" : "St James' Park"
+  },
+  {
+    "name" : "St Mary's Stadium"
+  },
+  {
+    "name" : "Stade de l'Aube"
+  },
+  {
+    "name" : "Stade Louis II"
+  },
+  {
+    "name" : "Stadio Artemio Franchi"
+  },
+  {
+    "name" : "Stadio Olimpico"
+  },
+  {
+    "name" : "Stadion Evžena Rošického"
+  },
+  {
+    "name" : "Stadium of Light"
+  },
+  {
+    "name" : "stadium:mk"
+  },
+  {
+    "name" : "Stamford Bridge"
+  },
+  {
+    "name" : "The Amex"
+  },
+  {
+    "name" : "The Darlington Arena"
+  },
+  {
+    "name" : "The Dell"
+  },
+  {
+    "name" : "The Den"
+  },
+  {
+    "name" : "The Hawthorns"
+  },
+  {
+    "name" : "The Valley"
+  },
+  {
+    "name" : "Turf Moor"
+  },
+  {
+    "name" : "Upton Park"
+  },
+  {
+    "name" : "Vale Park"
+  },
+  {
+    "name" : "Valley Parade"
+  },
+  {
+    "name" : "Vicarage Road"
+  },
+  {
+    "name" : "Victoria Park"
+  },
+  {
+    "name" : "Villa Park"
+  },
+  {
+    "name" : "Walkers Stadium"
+  },
+  {
+    "name" : "Wembley Stadium"
+  },
+  {
+    "name" : "Whaddon Road"
+  },
+  {
+    "name" : "White Hart Lane"
+  },
+  {
+    "name" : "Withdean Stadium"
   }
 ]

@@ -21,10 +21,10 @@
         </div>
         <div class="col-md-8 col-lg-6 pull-right-lg mobile-form">
           <div class="col-md-8 pull-right-lg right">
-            <div class="col-md-4 logo">
+            <div class="col-xs-3 col-sm-4 col-md-4 logo">
               <img src="Images/Logo.png"/>
             </div>
-            <div class="col-md-8 no-padding">
+            <div class="col-xs-9 col-sm-8 col-md-8 no-padding title-wrapper">
               <h1 class="title">Leeds United Match Stats</h1>
             </div>
             <div class="tabs-wrapper">
@@ -123,10 +123,10 @@
           <loading></loading>
           <div class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
           | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
-            <div class="col-md-4 graph" style="height: 320px;">
+            <div class="col-sm-6 col-md-4 graph" style="height: 320px;">
               <am-chart id="resultsPie" options="resultsOptions"></am-chart>
             </div>
-            <div class="col-md-4 graph" style="height: 320px;">
+            <div class="col-sm-6 col-md-4 graph" style="height: 320px;">
               <am-chart id="goalsDonut" options="goalsOptions"></am-chart>
             </div>
             <div class="col-md-4 graph">
@@ -206,7 +206,7 @@
               <a href="https://twitter.com/lufcmatchstats"><img src="Images/Twitter.png"/></a>
             </div>
           </div>
-          <div class="col-md-2 logo">
+          <div class="col-xs-3 col-md-2 logo">
             <img src="Images/Logo.png"/>
           </div>
         </div>

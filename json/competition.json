@@ -6,15 +6,36 @@
     "name" : "Championship"
   },
   {
-    "name" : "League Cup"
+    "name" : "Championship Playoffs"
+  },
+  {
+    "name" : "FA Charity Shield"
   },
   {
     "name" : "FA Cup"
   },
   {
-    "name" : "League One"
+    "name" : "Football League First Division"
   },
   {
     "name" : "Football League Trophy"
+  },
+  {
+    "name" : "League Cup"
+  },
+  {
+    "name" : "League One"
+  },
+  {
+    "name" : "League One Playoffs"
+  },
+  {
+    "name" : "Premier League"
+  },
+  {
+    "name" : "UEFA Champions League"
+  },
+  {
+    "name" : "UEFA Cup"
   }
 ]
