@@ -5,7 +5,7 @@
 .table-wrapper {
   overflow: scroll;
 
-  @media (min-device-width: $screen-lg-min) {
+  @media (min-width: $screen-lg-min) {
     overflow: auto;
   }
 }

@@ -11,7 +11,7 @@
   height: 220px;
   width: 220px;
 
-  @media (min-device-width: $screen-md-min) {
+  @media (min-width: $screen-md-min) {
     margin-top: 50px;
   }
 
