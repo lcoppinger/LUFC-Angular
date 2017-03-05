@@ -44,11 +44,11 @@
     width: 50px;
   }
 
-  @media (min-device-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
     margin-top: 40px;
   }
 
-  @media (min-device-width: $screen-md-min) {
+  @media (min-width: $screen-md-min) {
     margin-top: 35px;
 
     img {
@@ -65,7 +65,7 @@
   float: none;
 }
 
-@media (min-device-width: $screen-md-min) {
+@media (min-width: $screen-md-min) {
   .title-wrapper {
     text-align: center;
   }
@@ -90,7 +90,7 @@
 .mobile-no-padding {
   padding: 0;
 
-  @media (min-device-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-min) {
     padding-left: 15px;
 
     .custom-dropdown .dropdown-menu {
@@ -99,7 +99,7 @@
     }
   }
 
-  @media (min-device-width: $screen-md-min) {
+  @media (min-width: $screen-md-min) {
     padding: 0 15px;
 
     .custom-dropdown .dropdown-menu {
@@ -114,11 +114,11 @@
   float: inherit;
   text-align: left;
 
-  @media (min-device-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-min) {
     float: left;
   }
 
-  @media (min-device-width: $screen-md-min) {
+  @media (min-width: $screen-md-min) {
     display: inline-block;
     float: none;
   }
@@ -129,7 +129,7 @@
   padding: 0;
   text-align: center;
 
-  @media (min-device-width: $screen-md-min) {
+  @media (min-width: $screen-md-min) {
     margin-bottom: 30px;
     padding: 0 15px;
   }
@@ -142,7 +142,7 @@
 .non-mobile {
   display: none;
 
-  @media (min-device-width: $screen-md-min) {
+  @media (min-width: $screen-md-min) {
     display: inline-block;
   }
 }

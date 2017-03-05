@@ -100,10 +100,10 @@ label {
   .logo img {
     display: inline-block;
     width: 50px; }
-  @media (min-device-width: 768px) {
+  @media (min-width: 992px) {
     .logo {
       margin-top: 40px; } }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .logo {
       margin-top: 35px; }
       .logo img {
@@ -115,7 +115,7 @@ label {
 .pull-right-lg {
   float: none; }
 
-@media (min-device-width: 992px) {
+@media (min-width: 992px) {
   .title-wrapper {
     text-align: center; }
   .title {
@@ -130,13 +130,13 @@ label {
 
 .mobile-no-padding {
   padding: 0; }
-  @media (min-device-width: 768px) {
+  @media (min-width: 768px) {
     .mobile-no-padding {
       padding-left: 15px; }
       .mobile-no-padding .custom-dropdown .dropdown-menu {
         left: 15px;
         width: calc(100% - 15px); } }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .mobile-no-padding {
       padding: 0 15px; }
       .mobile-no-padding .custom-dropdown .dropdown-menu {
@@ -147,10 +147,10 @@ label {
   display: block;
   float: inherit;
   text-align: left; }
-  @media (min-device-width: 768px) {
+  @media (min-width: 768px) {
     .no-float {
       float: left; } }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .no-float {
       display: inline-block;
       float: none; } }
@@ -159,7 +159,7 @@ label {
   margin-bottom: 175px;
   padding: 0;
   text-align: center; }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .center {
       margin-bottom: 30px;
       padding: 0 15px; } }
@@ -169,7 +169,7 @@ label {
 
 .non-mobile {
   display: none; }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .non-mobile {
       display: inline-block; } }
 
