@@ -263,12 +263,12 @@ label {
   background-size: cover;
   min-height: 700px;
   overflow: hidden; }
-  @media (min-device-width: 768px) {
+  @media (min-width: 768px) {
     .mobile-form {
       background: url("../Images/Mobile_background-ipad.svg") no-repeat top;
       background-size: cover;
       overflow: hidden; } }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .mobile-form {
       background: none; } }
 
@@ -509,7 +509,7 @@ label {
 
 .table-wrapper {
   overflow: scroll; }
-  @media (min-device-width: 1200px) {
+  @media (min-width: 1200px) {
     .table-wrapper {
       overflow: auto; } }
 
@@ -603,7 +603,7 @@ label {
   margin-bottom: 40px;
   height: 220px;
   width: 220px; }
-  @media (min-device-width: 992px) {
+  @media (min-width: 992px) {
     .top-scorer {
       margin-top: 50px; } }
   .top-scorer h3 {
