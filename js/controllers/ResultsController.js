@@ -4,7 +4,9 @@ app.controller('ResultsController', ['$scope', 'search', 'graphs', function($sco
         $scope.graphData = data[0].slice(24);
         graphs.sendData($scope.graphData);
 
+        //create result data array
         var arr = [];
+        var scorers = [];
         function makeCounter() {
             var i = 0;
             return function() {
@@ -24,6 +26,8 @@ app.controller('ResultsController', ['$scope', 'search', 'graphs', function($sco
           if (value[19] === ""){
             value[19] = undefined;
           }
+
+          scorers.push(value[18],value[19],value[20],value[21],value[22]);
 
           arr.push({
             id: Id(),
@@ -58,7 +62,48 @@ app.controller('ResultsController', ['$scope', 'search', 'graphs', function($sco
           });
         });
           $scope.results = arr;
+
+          //calculate top scorer
+          function topScorer() {
+            var cleanScorers = [];
+            var topScorer;
+
+            scorers.forEach(function(value) {
+              if (value !== "" && value !== undefined) {
+                cleanScorers.push(value);
+              }
+            });
+            topScorer = mostFreqStr(cleanScorers);
+            $scope.topScorer = topScorer.name;
+            $scope.topGoals = "Top goal scorer this season: " + topScorer.goals + " goals.";
+          }
+
+          //initiate top scorere function
+          topScorer();
         });
 
+        //caluclate most frequent goal scorer and number of goals
+        function mostFreqStr(arr) {
+          var obj = {}, mostFreq = 0, name = [];
+
+          arr.forEach(ea => {
+            if (!obj[ea]) {
+              obj[ea] = 1;
+            } else {
+              obj[ea]++;
+            }
+
+            if (obj[ea] > mostFreq) {
+              mostFreq = obj[ea];
+              name = [ea];
+            } else if (obj[ea] === mostFreq) {
+              name.push(ea);
+            }
+          });
+          return {
+            name: name[0],
+            goals: mostFreq
+          };
+        }
   });
 }]);

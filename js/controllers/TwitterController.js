@@ -2,22 +2,17 @@ app.controller('TwitterController', ['$scope', function($scope){
 
   $scope.tweets = [
     {
-      message: 'Since 16th October, we’ve only lost to current 1st in Championship, 2nd in the Championship and 3rd in Premier League.',
+      message: 'The 0-0 draw vs QPR was Leeds first 0-0 draw of the season.',
       hashtag: '#lufc',
       image: 'Images/twitter_logo.png'
     },
     {
-      message: 'First time Leeds have scored four goals in a match this season.',
+      message: 'Leeds have not won against QPR in their last three games at Elland Road. 0-0 03/17, 1-1 04/16, 0-1 08/13.',
       hashtag: '#lufc',
       image: 'Images/twitter_logo.png'
     },
     {
-      message: 'In all competitions this season Leeds have won 17 games so far, compared to last years total of 16 games.',
-      hashtag: '#lufc',
-      image: 'Images/twitter_logo.png'
-    },
-    {
-      message: 'First time Leeds have scored more than three goals since February 2014 (5-1 v Huddersfield).',
+      message: 'Leeds are unbeaten in the last six league games (won three, drawn three)',
       hashtag: '#lufc',
       image: 'Images/twitter_logo.png'
     }

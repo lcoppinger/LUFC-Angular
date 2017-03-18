@@ -54,23 +54,12 @@ app.controller('GraphController', ['$scope', 'graphs', function($scope, graphs){
       pullOutRadius: 0
     };
 
-    $scope.topScorer = "";
-    $scope.topGoals = "";
-
   $scope.$on('graph_shared',function(){
     graphs.getPieResults().then(function(response){
       $scope.$broadcast('amCharts.updateData', response, 'resultsPie');
-      //$scope.$broadcast('amCharts.triggerChartAnimate','resultsPie');
     });
     graphs.getDonutResults().then(function(response){
       $scope.$broadcast('amCharts.updateData', response, 'goalsDonut');
-      //$scope.$broadcast('amCharts.triggerChartAnimate','goalsDonut');
-    });
-    graphs.getScorer().then(function(response){
-      $scope.topScorer = response;
-    });
-    graphs.getGoals().then(function(response){
-      $scope.topGoals = "Top goal scorer this season: " + response + " goals.";
     });
   });
 }]);

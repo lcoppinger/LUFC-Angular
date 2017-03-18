@@ -12,9 +12,27 @@
     <link rel="stylesheet" href="css/vendor/slick.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="Images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="Images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="Images/ms-icon-144x144.png">
+
   </head>
   <body ng-app="LUFCApp" ng-controller="MainController">
-    <div class="container-fluid landing-wrapper">
+    <div class="container-fluid landing-wrapper" ng-cloak>
       <div class="row">
         <div class="col-md-4 col-lg-6 landing-image">
           <img class="non-mobile" src="Images/Football.svg"/>
@@ -121,7 +139,7 @@
             <button class="slick-next" ng-click="slickConfig.method.slickNext(); changeSeason()"></button>
           </div>
           <loading></loading>
-          <div class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+          <div ng-cloak class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
           | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
             <div class="col-sm-6 col-md-4 graph" style="height: 320px;">
               <am-chart id="resultsPie" options="resultsOptions"></am-chart>
@@ -220,7 +238,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-91856472-1', 'auto');
+      ga('create', 'UA-91856472-2', 'auto');
       ga('send', 'pageview');
 
     </script>

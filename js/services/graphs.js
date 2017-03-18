@@ -37,20 +37,6 @@ app.factory('graphs', ['$rootScope', '$q', function($rootScope, $q){
       );
       deferred.resolve(donutData);
       return deferred.promise;
-    },
-    getScorer: function() {
-      var deferred = $q.defer();
-      topScorer = data[5];
-
-      deferred.resolve(topScorer);
-      return deferred.promise;
-    },
-    getGoals: function() {
-      var deferred = $q.defer();
-      topGoals = data[6];
-
-      deferred.resolve(topGoals);
-      return deferred.promise;
     }
   };
   return graphData;
