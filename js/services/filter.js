@@ -1,3 +1,6 @@
+/*
+Copyright © 2017 of Litebulb Ltd - LUFC Match Stats
+*/
 app.factory('filter', ['$http', function($http){
 var selectOptions = {
   get: function(name) {

@@ -1,3 +1,6 @@
+/*
+Copyright © 2017 of Litebulb Ltd - LUFC Match Stats
+*/
 app.controller('TwitterController', ['$scope', function($scope){
 
   $scope.tweets = [

@@ -1,3 +1,6 @@
+/*
+Copyright © 2017 of Litebulb Ltd - LUFC Match Stats
+*/
 app.controller('ResultsController', ['$scope', 'search', 'graphs', function($scope, search, graphs){
   $scope.$on('season_shared',function(){
       $scope.results = search.get().then(function(data){

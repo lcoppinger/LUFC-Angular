@@ -1,3 +1,6 @@
+/*
+Copyright © 2017 of Litebulb Ltd - LUFC Match Stats
+*/
 app.controller('GraphController', ['$scope', 'graphs', function($scope, graphs){
   $scope.resultsOptions = {
         data: [{

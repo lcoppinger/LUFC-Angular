@@ -1,3 +1,6 @@
+/*
+Copyright © 2017 of Litebulb Ltd - LUFC Match Stats
+*/
 app.controller('MainController', ['$scope', '$filter', '$timeout', 'object', 'filter', 'search', function($scope, $filter, $timeout, object, filter, search){
 
   //Season object
