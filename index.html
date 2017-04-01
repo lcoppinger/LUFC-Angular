@@ -35,8 +35,8 @@
     <meta name="msapplication-TileImage" content="Images/ms-icon-144x144.png">
 
   </head>
-  <body ng-app="LUFCApp" ng-controller="MainController">
-    <div class="container-fluid landing-wrapper" ng-cloak>
+  <body ng-app="LUFCApp" ng-controller="MainController" ng-cloak>
+    <div class="container-fluid landing-wrapper">
       <div class="row">
         <div class="col-md-4 col-lg-6 landing-image">
           <img class="non-mobile" src="Images/Football.svg"/>
@@ -143,7 +143,7 @@
             <button class="slick-next" ng-click="slickConfig.method.slickNext(); changeSeason()"></button>
           </div>
           <loading></loading>
-          <div ng-cloak class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
+          <div class="graph-wrapper row" ng-controller="GraphController" ng-show="(results | searchFilter: {competition: compSelect} | searchFilter: {manager: manageSelect} | checkboxFilter: {han: checkedHan} | checkboxFilter: {result: checkedWld} | searchFilter: {venue: venueSelect}
           | scorerFilter: scorersSelect | searchFilter: {opposition: oppoSelect} | searchFilter: {city: citySelect} | searchFilter: {opposition_manager: oppmanageSelect} | searchFilter: {referee: refereeSelect} | searchFilter: {assistant_manager: assistSelect}).length">
             <div class="col-sm-6 col-md-4 graph" style="height: 320px;">
               <am-chart id="resultsPie" options="resultsOptions"></am-chart>

@@ -5,17 +5,27 @@ app.controller('TwitterController', ['$scope', function($scope){
 
   $scope.tweets = [
     {
-      message: 'The 0-0 draw vs QPR was Leeds first 0-0 draw of the season.',
+      message: 'Leeds are unbeaten in the last 5 games against Reading (won 3, drawn 2).',
       hashtag: '#lufc',
       image: 'Images/twitter_logo.png'
     },
     {
-      message: 'Leeds have not won against QPR in their last three games at Elland Road. 0-0 03/17, 1-1 04/16, 0-1 08/13.',
+      message: "Last loss at the Madejski Stadium was a 1-0 defeat in Sep 2013.",
       hashtag: '#lufc',
       image: 'Images/twitter_logo.png'
     },
     {
-      message: 'Leeds are unbeaten in the last six league games (won three, drawn three)',
+      message: 'Leeds have scored in their last 8 Championship away games, scoring 15 goals. (Failed to score against Brighton in Dec)',
+      hashtag: '#lufc',
+      image: 'Images/twitter_logo.png'
+    },
+    {
+      message: 'Including today we have had a different manager for our last 7 visits to the Madejski',
+      hashtag: '#lufc',
+      image: 'Images/twitter_logo.png'
+    },
+    {
+      message: 'Today: Monk, Aug 15: Rösler, Feb 15: Redfearn, Sep 13: McDermott, Apr 12: Warnock, Nov 11: Grayson, Oct 05: Blackwell.',
       hashtag: '#lufc',
       image: 'Images/twitter_logo.png'
     }
