@@ -109,7 +109,7 @@ app.controller('MainController', ['$scope', '$filter', '$timeout', 'object', 'fi
 
   //Select season for data request
   $scope.selected = 0;
-  $scope.searchValue = "2016-17";
+  $scope.searchValue = "2017-18";
   $scope.select = function(index) {
      $scope.selected = index;
      $scope.searchValue = $scope.season[index].value;
